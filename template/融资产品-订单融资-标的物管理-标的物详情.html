@@ -1,0 +1,78 @@
+{% extends "_layout/wrapper.html" %}
+{# content内容 #}
+{% block content %}
+
+    {# 菜单导航 #}
+    {{ navigator.current('nav2') }}
+
+    <!-- tab -->
+    <div class="tabs-wrap type1 fn-mb-10">
+      <ul class="tabs">
+        <li>
+          <a href="融资产品-订单融资-融资记录.html" class="tabs-btn tab-disabled">融资记录</a>
+        </li>
+        <li class="active">
+          <a href="融资产品-订单融资-标的物管理.html" class="tabs-btn tab-disabled">标的物管理</a>
+        </li>
+      </ul>
+    </div>
+
+    <h5 class="fn-pt-10 fn-mb-15">标的物信息</h5>
+    <table class="table border-bottom inverse fn-mb-20 table-view">
+        <tbody>
+
+            <tr>
+                <th>标的物编号</th>
+                <td>201512241111202398</td>
+                <th>审核状态</th>
+                <td>融资中</td>
+            </tr>
+            <tr>
+                <th>订单编号</th>
+                <td>65685629545656</td>
+                <th>订单金额</th>
+                <td>200.00 元</td>
+            </tr>
+            <tr>
+                <th>质押率</th>
+                <td>8%</td>
+                <th>附件</th>
+                <td><a href="###" class="link-standard">订单附件.jpg</a></td>
+            </tr>
+            <tr>
+                <th>备注</th>
+                <td colspan="3"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- 如没有融资，不出现此块内容 -->
+    <h5 class="fn-pt-10 fn-mb-15">融资信息</h5>
+    <table class="table border-bottom inverse fn-mb-20">
+        <tbody>
+        <tr>
+            <th>融资订单号</th>
+            <th>融资申请金额（元）</th>
+            <th>融资状态</th>
+            <th>操作</th>
+        </tr>
+        <tr>
+            <td>BDW12512390097870</td>
+            <td>500.00</td>
+            <td>处理中</td>
+            <td><a href="###" class="link-standard">详情</a></td>
+        </tr>
+        </tbody>
+    </table>
+
+
+    <div class="text-align-center fn-mt-40">
+        <a href="融资产品-订单融资-标的物管理.html" class="btn primary">返回</a>
+        <!-- 如标的物审核不通过，显示编辑按钮-->
+        <!--<a href="融资产品-质押信息-标的物管理-标的物新增（编辑）.html" class="btn primary">编辑</a>-->
+    </div>
+
+
+{% endblock %}
+
+

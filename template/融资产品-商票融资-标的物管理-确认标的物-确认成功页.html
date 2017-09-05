@@ -1,0 +1,35 @@
+{% extends "_layout/wrapper.html" %}
+{# content内容 #}
+{% block content %}
+
+    {# 菜单导航 #}
+    {{ navigator.current('nav1') }}
+
+    <!-- tab -->
+    <div class="tabs-wrap type1 fn-mb-10">
+      <ul class="tabs">
+        <li>
+          <a href="融资产品-商票融资-融资记录.html" class="tabs-btn tab-disabled" >融资记录</a>
+        </li>
+        <li class="active">
+          <a href="融资产品-商票融资-标的物管理.html" class="tabs-btn tab-disabled">标的物管理</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="notice-wrap success">
+        <div class="notice-box">
+            <span class="notice-img"></span>
+            <h3 class="success-FontColor1">标的物信息已提交审核！
+            </h3>
+            <p>请耐心等待审核结果，审核通过后可申请融资，审核结果将会以短信通知。</p>
+            <div class="text-align-left plural-btns fn-pt-30">
+                <a href="融资产品-商票融资-标的物管理.html" class="btn primary">返回列表</a>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
+
+

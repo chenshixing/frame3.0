@@ -1,0 +1,119 @@
+{% extends "_layout/wrapper.html" %}
+{# content内容 #}
+{% block content %}
+    
+    <h3 class="fn-pb-20">
+        请完成以下资料填写，以便为您开通融资服务。
+    </h3>
+    
+	{# 步骤 #}
+	{{ Step.foursteps('pass2','完善企业信息','身份验证','企业安全认证','提交结果') }}
+    <div class=" fn-mb-20">
+        <h4 class="fn-mb-20">经办人申请</h4>
+        <div class="step-flows">
+            <ul class="clearfix six-li">
+                <li class="cur">经办人基本信息</li>
+                <li class="cur">经办人其他信息</li>
+                <li class="cur">经办人人脸识别</li>
+                <li class="cur">法人基本信息</li>
+                <li>法人其他信息</li>
+                <li>法人人脸识别</li>
+            </ul>
+        </div>
+    </div>
+
+
+    {# 法人代表信息 #}
+	<div class="form-frame fn-mb-10">
+        <div class="form-title">法人代表信息</div>
+        <div class="form-layer1">
+            <div class="form-layer2">
+                <form autocomplete="off">
+                    {# 法人代表真实姓名 #}
+					<div class="form-group">
+                        <label class="form-control-label" for="yourname">
+                            <b>*</b>
+                            <span>法人代表真实姓名</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <input type="text" class="form-control" id="yourname" placeholder="">
+                        </div>
+                    </div>
+
+
+                    {# 身份证号码 #}
+					<div class="form-group">
+                        <label class="form-control-label" for="yourID">
+                            <b>*</b>
+                            <span>身份证号码</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <input type="text" class="form-control" id="yourID" value="">
+                        </div>
+                    </div>
+
+                    {# 身份证图片正面 #}
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            <b>*</b>
+                            <span>身份证图片正面</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-data form-control-check">
+                            <button class="btn small-btn secondary">点击上传</button>
+                        </div>
+                    </div>
+
+                    {# 身份证图片反面 #}
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            <b>*</b>
+                            <span>身份证图片反面</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-data form-control-check">
+                            <button class="btn small-btn secondary">点击上传</button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            <span>证件要求</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-data fn-pb-20" style="height: auto;">
+                            <ul class="with-lt">
+                                <li>上传的身份证图片需调整为<span class="warning-FontColor">横向且保证文字方向为正向</span>。</li>
+                                <li>必须为清晰彩色原件扫描件或数码照，图片大小不超过 <span class="warning-FontColor">2M</span>，
+                                    <br />
+                                    仅支持jpg,jpeg,bmp的图片格式。</li>
+                                <li>如果提交的证件错误，您的申请将不通过。</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-control-wrap">
+                            <a href="核身-企业融资人核身-step2经办人认证-完善法人信息-其他信息.html" class="btn primary" role="button">确认无误，下一步</a>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+	</div>
+
+{% endblock %}
+
+{% block jsPage %}
+<script>
+	$(function() {
+		
+	})
+</script>
+{% endblock %}
+
+

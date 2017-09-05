@@ -1,0 +1,114 @@
+{% extends "_layout/wrapper.html" %}
+{# content内容 #}
+{% block content %}
+    
+    <h3 class="fn-pb-20">
+        请完成以下资料填写，以便为您开通融资服务。
+    </h3>
+    
+	{# 步骤 #}
+	{{ Step.foursteps('pass2','完善企业信息','身份验证','企业安全认证','提交结果') }}
+    <div class=" fn-mb-20">
+        <h4 class="fn-mb-20">经办人申请</h4>
+        <div class="step-flows">
+            <ul class="clearfix four-li">
+                <li class="cur">经办人基本信息</li>
+                <li class="cur">经办人其他信息</li>
+                <li class="cur">经办人人脸识别</li>
+                <li>法人验证邀请</li>
+            </ul>
+        </div>
+    </div>
+
+	<div class="form-frame fn-mb-10 fn-pt-30">
+
+        <div class="facevr-wrap" id="videoCase1">
+            <!--<div class="fn-pt-10 clearfix">
+                <div class="code-box float-left">
+                    扫码认证
+                    <div class="code-in">
+                        <p class="text-align-center fn-pb-10 fn-pt-10">
+                            扫码下载APP进行人脸识别</br>
+                            （仅支持安卓系统）
+                        </p>
+                        <img src="" alt="">
+                    </div>
+                </div>
+            </div>-->
+            <p class="text-align-right fn-pb-10">
+                <a class="link-standard h5" href="#">
+                    <i class="icon-help"></i>&nbsp;帮助
+                </a>
+            </p>
+            <div class="notice-wrap success">
+                <div class="notice-box">
+                    <span class="notice-img"></span>
+                    <h3 class="fn-mb-10">
+                        您已在APP中完成人脸识别。请继续完成余下验证。
+                    </h3>
+                    <a href="核身-企业融资人核身-step2经办人认证-完善经办人信息-法人验证邀请.html" class="btn primary">下一步</a>
+                </div>
+            </div>
+        </div>
+        <div class="facevr-wrap" style="display: none;" id="videoCase2">
+            <div class="text-align-right plural-btns fn-mb-10">
+                <button type="button" class="btn primary small-btn">重新认证</button>
+                <button type="button" class="btn primary small-btn disabled" disabled="disabled">停止</button>
+            </div>
+            <div class="facevr-box-step1 fn-pa-30">
+                <h2 class="fn-pb-20">
+                    请平视前方
+                </h2>
+                <div class="pb-wrap">
+                    <div class="pb-box">
+                        <div class="pb" style="width: 50%;"></div>
+                        <em>剩余时间</em>
+                    </div>
+                </div>
+                <!--<button type="button" class="btn primary fn-mt-20 fn-mb-20" id="videoConfirm">确定</button>-->
+                <div class="fn-mt-30" id="videoConfirm">
+                    <video style="background-color: #f3f3f3; width: 100%;"></video>
+                </div>
+            </div>
+        </div>
+        <div class="facevr-wrap" style="display: none;" id="videoCase3">
+            <div class="facevr-box-step1 fn-pa-30">
+                <h2 class="fn-pb-20">
+                    录制完成
+                </h2>
+                <div class="notice-wrap waiting in-modal">
+                    <div class="notice-box">
+                        <span class="notice-img"></span>
+                        <h3>处理中...
+                        </h3>
+                        <p>
+                            请不要关闭浏览器，系统正在处理中
+                        </p>
+                    </div>
+                </div>
+                <div class="facevr-cut">
+                    <img src="" alt="用户头像" />
+                </div>
+            </div>
+        </div>
+
+	</div>
+
+{% endblock %}
+
+{% block jsPage %}
+<script>
+	$(function() {
+	    $("#videoStart").click(function () {
+	        $("#videoCase2").show();
+	        $("#videoCase1").hide();
+	    });
+	    $("#videoConfirm").click(function () {
+	        $("#videoCase2").hide();
+	        $("#videoCase3").show();
+	    });
+	})
+</script>
+{% endblock %}
+
+

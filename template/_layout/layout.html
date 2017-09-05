@@ -1,0 +1,21 @@
+{% extends "_layout/base.html" %}
+
+{% block globalCss %}
+	<link rel="stylesheet" href="{{static}}/css/main.css?v={{ version }}">
+{% endblock %}
+
+{% block globalJs %}
+    <script>
+        // TODO: 配置参数，方便控制权限
+        var CONFIG = {
+            // 用户验证，通过1，未通过0
+            userVerify: 0,
+            // 权限url，未验证时弹层
+            limitUrl: ['偿债方式-贷款明细.html', '偿债方式-贷款明细.html', '偿债方式-收支明细.html', '偿债方式-收支明细.html', '偿债方式-收支明细.html']
+        };
+    </script>
+    <script src="{{ bower_components }}/jquery/dist/jquery.min.js?v={{ version }}"></script>
+    <script src="{{ bower_components }}/frontui/js/ui.js"></script>
+    <script src="{{ bower_components }}/frontui/js/datetimepicker/datetimepicker.js"></script>
+    <script src="{{ static }}/js/common.js"></script>
+{% endblock %}

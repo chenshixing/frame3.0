@@ -1,0 +1,185 @@
+{% extends "_layout/wrapper.html" %}
+{# content内容 #}
+{% block content %}
+
+    {# 菜单导航 #}
+    {{ navigator.current('nav3') }}
+
+    <!-- tab -->
+    <div class="tabs-wrap type1 fn-mb-10">
+      <ul class="tabs">
+        <li  class="active">
+          <a href="融资产品-收融易-融资管理.html" class="tabs-btn tab-disabled" >融资记录</a>
+        </li>
+        <li>
+          <a href="融资产品-收融易-标的物管理.html" class="tabs-btn tab-disabled">标的物管理</a>
+        </li>
+      </ul>
+    </div>
+
+
+    <!-- 搜索过滤 -->
+    <form action="##" method="post" class="form-frame form-frame-filter fn-mb-10">
+        <div class="form-layer-gray-box">
+            <div class="form-group">
+                <label class="form-control-label">
+                    <span>状态</span><em>：</em>
+                </label>
+                <div class="form-control-wrap">
+                    <div class="form-control-check" data-toggle="switcher" data-keep="true" data-item=".filter-check-item">
+                        <label class="filter-check-item active"><input type="radio" name="type" checked="">全部</label>
+                        <label class="filter-check-item"><input type="radio" name="type">处理中</label>
+                        <label class="filter-check-item"><input type="radio" name="type">已放款（ <b class="error-FontColor1">10</b>）</label>
+                        <label class="filter-check-item"><input type="radio" name="type">已结清</label>
+                        <label class="filter-check-item"><input type="radio" name="type">已逾期</label>
+                        <label class="filter-check-item"><input type="radio" name="type">失败</label>
+                        <label class="filter-check-item"><input type="radio" name="type">还款处理中</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-control-label">
+                    <span>时间</span><em>：</em>
+                </label>
+                <div class="form-control-wrap">
+                    <div class="form-control-check" data-toggle="switcher" data-keep="true" data-item=".filter-check-item">
+                        <label class="filter-check-item active"><input type="radio" name="type" checked="">最近三个月</label>
+                        <label class="filter-check-item"><input type="radio" name="type">三个月前</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-control-label">
+                    <span>关键字</span>
+                    <em>：</em>
+                </label>
+                <div class="form-control-wrap form-control-helper">
+                    <input type="text" class="form-control" placeholder="融资订单号" data-toggle="searchInput">
+                    <button type="button" class="btn primary small-btn hidden">搜索</button>
+                </div>
+            </div>
+
+        </div>
+    </form>
+    <h5 class="fn-mb-10 fn-pt-10">你在2015.10.01-2015.10.07期间，即将到期的融资金额为：<b class="warning-FontColor">150,000.00</b> 元，共 <b class="warning-FontColor"> 3</b> 笔。</h5>
+    <table class="table inverse">
+        <colgroup>
+            <col/>
+            <col/>
+            <col/>
+            <col/>
+            <col/>
+            <col/>
+            <col/>
+            <col/>
+            <col/>
+        </colgroup>
+        <thead>
+        <tr>
+            <th>融资订单号</th>
+            <th>起息日</th>
+            <th>到期日</th>
+            <th>融资期限</th>
+            <th>融资本金（元）</th>
+            <th>融资成本（元）</th>
+            <th>还款方式</th>
+            <th>状态</th>
+            <th width="90" class="text-align-left">操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>aJZT2348078</td>
+            <td class="viceText-FontColor">以实际起息日为准</td>
+            <td class="viceText-FontColor">以实际起息日为准</td>
+            <td class="viceText-FontColor">以实际起息日为准</td>
+            <td class="viceText-FontColor">以实际起息日为准</td>
+            <td class="viceText-FontColor">以实际起息日为准</td>
+            <td>还本付息</td>
+            <td>处理中</td>
+            <td class="text-align-left"><a href="融资产品-收融易-融资记录-融资详情（处理中）.html" class="link-standard">详情</a></td>
+        </tr>
+        <tr>
+            <td>JZT2348078</td>
+            <td>2015-09-07</td>
+            <td>2015-10-06</td>
+            <td>30天</td>
+            <td>500.00</td>
+            <td>9500.00</td>
+            <td>还本付息</td>
+            <td>已放款</td>
+            <td class="text-align-left">
+                <div class="table-ctrls">
+                    详情<span class="caret-down"></span>
+                    <div class="ctrls">
+                        <a href="融资产品-收融易-融资记录-融资详情（除处理中外）.html">详情</a>
+                        <a href="###">打印凭证</a>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>JZT2348078</td>
+            <td>2015-09-07</td>
+            <td>2015-10-06</td>
+            <td>30天</td>
+            <td>500.00</td>
+            <td>9500.00</td>
+            <td>还本付息</td>
+            <td>已结清</td>
+            <td class="text-align-left">
+                <a href="融资产品-收融易-融资记录-融资详情（除处理中外）.html" class="link-standard">详情</a>
+            </td>
+        </tr>
+        <tr>
+            <td>JZT2348078</td>
+            <td>2015-09-07</td>
+            <td>2015-10-06</td>
+            <td>30天</td>
+            <td>500.00</td>
+            <td>9500.00</td>
+            <td>还本付息</td>
+            <td>已逾期</td>
+            <td class="text-align-left">
+                <a href="融资产品-收融易-融资记录-融资详情（除处理中外）.html" class="link-standard">详情</a>
+            </td>
+        </tr>
+        <tr>
+            <td>JZT2348078</td>
+            <td>2015-09-07</td>
+            <td>2015-10-06</td>
+            <td>30天</td>
+            <td>500.00</td>
+            <td>9500.00</td>
+            <td>还本付息</td>
+            <td>失败</td>
+            <td class="text-align-left">
+                <a href="融资产品-收融易-融资记录-融资详情（除处理中外）.html" class="link-standard">详情</a>
+            </td>
+        </tr>
+        <tr>
+            <td>JZT2348078</td>
+            <td>2015-09-07</td>
+            <td>2015-10-06</td>
+            <td>30天</td>
+            <td>500.00</td>
+            <td>9500.00</td>
+            <td>还本付息</td>
+            <td>还款处理中</td>
+            <td class="text-align-left">
+                <a href="融资产品-收融易-融资记录-融资详情（除处理中外）.html" class="link-standard">详情</a>
+            </td>
+        </tr>
+
+
+        </tbody>
+    </table>
+    {# 分页 #}
+    {{ Pager.render() }}
+
+
+
+
+{% endblock %}
+
+

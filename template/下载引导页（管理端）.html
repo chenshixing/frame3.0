@@ -1,0 +1,40 @@
+{% extends "_layout/default_login_layout.html" %}
+{# content内容 #}
+{% block bodyClass %}
+class="login-body"
+{% endblock %}
+{% block content %}
+    <div class="default-login-wrap">
+        
+        <!-- head -->
+        <div class="default-login-head">
+            <div class="default-login-main-wrap">
+                <div class="eaccount-logo-wrap">
+                    <a href="default_login.html">
+                        <img src="{{ static }}/images/eaccountlogo.png" alt=""/>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- body -->
+        <div class="default-login-bg-wrap download-wrap download-manage-wrap">
+            <div class="default-login-main-wrap in-bg-wrap">
+                <div class="download-content">
+                    <h2 class="fb">欢迎使用</h2>
+                    <h1 class="fb">E+互联网供应链 &nbsp;管理端</h1>
+                    <div class="h2 fn-pt-25">在线融资服务</div>
+                    <div class="fs-22">专业、快速、安全，为您的财富保驾护航</div>
+                    <a href="###" class="download-btn fn-mt-50"><i></i>下载客户端</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+
+{% block jsPage %}
+
+{% endblock %}
+

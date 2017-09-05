@@ -1,0 +1,399 @@
+{% extends "_layout/wrapper.html" %}
+
+{% block newNav %}
+{{ navigatorNew.theNav('实名认证') }}
+{% endblock %}
+
+{# content内容 #}
+{% block content %}
+    
+    <h3 class="fn-pb-20">
+        请完成以下资料填写，以便为您开通融资服务。
+    </h3>
+    
+	{# 步骤 #}
+	{{ Step.newFourSteps(step='pass1',text1='填写基本信息',text2='身份验证',text3='企业安全验证',text4='提交结果') }}
+
+    {# 基本信息 #}
+	<div class="form-frame fn-mb-10">
+		<div class="form-title">
+			基本信息
+		</div>
+
+        <div class="form-layer1">
+            <div class="form-layer2">
+                <form autocomplete="off">
+
+                    {# 企业名称 #}
+					<div class="form-group">
+                        <label class="form-control-label" for="username" data-toggle="toSBC">
+                            <b>*</b>
+                            <span>企业名称</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <input type="text" class="form-control" id="username" value="xxx公司" data-toggle="toSBC">
+                        </div>
+                    </div>
+
+                    {# 营业执照类型 #}
+					<div class="form-group">
+                        <label class="form-control-label" for="name1">
+                            <b>*</b>
+                            <span>营业执照类型</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <div class="form-control-check">
+                                <label id="addnot">
+                                    普通营业执照
+                                    <input type="radio" name="name1" checked></label>
+                                <label id="add">
+                                    多证合一营业执照
+                                    <input type="radio" name="name1" id=""></label>
+                            </div>
+                        </div>
+                    </div>
+
+                    {# 统一社会信用代码 #}
+					<div class="form-group" id="on" style="display: none;">
+                        <label class="form-control-label" for="form-control-3">
+                            <b>*</b>
+                            <span>统一社会信用代码</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <input type="text" class="form-control" id="Text1">
+                        </div>
+                    </div>
+
+                    {# 营业执照注册号 #}
+					<div class="form-group">
+                        <label class="form-control-label" for="form-control-3">
+                            <b>*</b>
+                            <span>营业执照注册号</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <input type="text" class="form-control" id="form-control-3">
+                        </div>
+                    </div>
+
+                    {# 营业执照到期日 #}
+					<div class="form-group">
+                        <label class="form-control-label" for="form-control-4">
+                            <b>*</b>
+                            <span>营业执照到期日</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <div class="form-control-date">
+                                <span class="form-control-date-btn"><i></i></span>
+                                <input type="text" data-toggle="datetimepicker" class="form-control" id="form-control-4">
+                            </div>
+                            <div class="form-control-bar" style="left: 445px">
+                                <div class="form-control-check">
+                                    <label class="fn-ml-20 link-border">
+                                        长期
+                                        <input type="checkbox" id="j-long-time" data-target="#form-control-4"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {# 组织代码机构 #}
+					<div class="form-group">
+                        <label class="form-control-label" for="form-control-5">
+                            <b>*</b>
+                            <span>组织机构代码</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <input type="text" class="form-control" id="form-control-5">
+                        </div>
+                    </div>
+
+                    {# 税务登记证号 #}
+					<div class="form-group">
+                        <label class="form-control-label" for="form-control-6">
+                            <b>*</b>
+                            <span>税务登记证号</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <input type="text" class="form-control" id="form-control-6">
+                        </div>
+                    </div>
+
+                    {# 银行开户许可证号 #}
+					<div class="form-group">
+                        <label class="form-control-label" for="form-control-7">
+                            <b>*</b>
+                            <span>银行开户许可证号</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <input type="text" class="form-control" id="form-control-7">
+                        </div>
+                    </div>
+
+                    {# 财政登记证号 #}
+					<div class="form-group">
+                        <label class="form-control-label" for="form-control-8">
+                            <b>*</b>
+                            <span>财政登记证号</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <input type="text" class="form-control" id="form-control-8" placeholder="">
+                        </div>
+                    </div>
+
+                    <div id="defaultOn" style="display: block;">
+
+                        {# 普通营业执照副本影印件 #}
+                        <div class="form-group">
+                            <label class="form-control-label">
+                                <b>*</b>
+                                <span>普通营业执照副本影印件</span>
+                                <em>：</em>
+                            </label>
+                            <div class="form-control-data form-control-check">
+                                <button class="btn small-btn secondary">点击上传</button>
+                            </div>
+                        </div>
+
+                        {# 组织机构代码证副本影印件 #}
+                        <div class="form-group">
+                            <label class="form-control-label">
+                                <b>*</b>
+                                <span>组织机构代码证副本影印件</span>
+                                <em>：</em>
+                            </label>
+                            <div class="form-control-data form-control-check">
+                                <button class="btn small-btn secondary">点击上传</button>
+                            </div>
+                        </div>
+
+                        {# 税务登记证副本影印件 #}
+                        <div class="form-group">
+                            <label class="form-control-label">
+                                <b>*</b>
+                                <span>税务登记证副本影印件</span>
+                                <em>：</em>
+                            </label>
+                            <div class="form-control-data form-control-check">
+                                <button class="btn small-btn secondary">点击上传</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div id="defaultOff" style="display: none;">
+
+                        {# 三证合一营业执照副本影印件 #}
+                        <div class="form-group">
+                            <label class="form-control-label">
+                                <b>*</b>
+                                <span>三证合一营业执照<br />副本影印件</span>
+                                <em>：</em>
+                            </label>
+                            <div class="form-control-data form-control-check">
+                                <button class="btn small-btn secondary">点击上传</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    {# 银行开户许可证副本影印件 #}
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            <b>*</b>
+                            <span>银行开户许可证副本影印件</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-data form-control-check">
+                            <button class="btn small-btn secondary">点击上传</button>
+                        </div>
+                    </div>
+
+                    {# 财政登记证副本影印件 #}
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            <span>财政登记证副本影印件</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-data form-control-check">
+                            <button class="btn small-btn secondary">点击上传</button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            <span>证件要求</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-data fn-pb-20" style="height:auto;">
+                            <ul class="with-lt">
+                                <li>必须为清晰彩色原件扫描件或数码照，图片大小不超过10M，
+                                    <br />
+                                    仅支持jpg，jpeg，bmp的图片格式。</li>
+                                <li>必须在有效期内且年检章齐全（当年成立的公司可无年检章）</li>
+                                <li>如果提交的证件错误，您的申请将不通过。</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+	</div>
+
+    {# 其他信息 #}
+	<div class="form-frame fn-mb-10">
+		<div class="form-title">
+			其他信息
+		</div>
+
+        <div class="form-layer1">
+            <div class="form-layer2">
+                <form autocomplete="off">
+
+
+                    {# 企业征信查询授权书 #}
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            <b>*</b>
+                            <span>企业征信查询授权书</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-data form-control-check">
+                            <button class="btn small-btn secondary">点击上传</button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-control-data fn-pb-20" style="height:auto;">
+                            <ul class="with-lt">
+                                <li>请点击下载 <a href="###" class="link-standard">企业征信查询授权书</a>，打印填写并签盖公司公章，不能是合同/业务专用章。</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    {# 企业法定代表人身份证明书 #}
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            <b>*</b>
+                            <span>企业法定代表人身份证明书</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-data form-control-check">
+                            <button class="btn small-btn secondary">点击上传</button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-control-data fn-pb-20" style="height:auto;">
+                            <ul class="with-lt">
+                                <li>请点击下载 <a href="###" class="link-standard">企业法定代表人身份证明书</a>，打印填写并签盖公司公章，不能是合同/业务专用章。</li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+                    {# 企业征信查询结果书 #}
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            <span>企业征信查询结果书</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-data form-control-check">
+                            <button class="btn small-btn secondary">点击上传</button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-control-data fn-pb-20" style="height:auto;">
+                            <ul class="with-lt">
+                                <li>可进入网上 <a href="###" class="link-standard">中国人民银行征信中心</a> 查询企业信用报告，下载后上传。查看 <a
+                                        href="###" class="link-standard">企业信用报告样本</a>。</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    {# 企业章程 #}
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            <span>企业章程</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-data form-control-check">
+                            <button class="btn small-btn secondary">点击上传</button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            <span>附件要求</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-data fn-pb-20" style="height:auto;">
+                            <ul class="with-lt">
+                                <li>上传清晰彩色原件扫描件或数码照，图片大小不超过10M，支持的文件后缀类型为.jpg .jpeg .bmp .png .gif .doc .docx .pdf。</li>
+                                <li>如果提交的证件错误，您的申请将不通过。</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-control-wrap text-align-left">
+                            <a href="核身-企业融资人核身-step2经办人认证-完善经办人信息-基本信息.html" class="btn primary" role="button">确认无误，下一步</a>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+	</div>
+
+{% endblock %}
+
+{% block jsPage %}
+<script>
+	$(function() {
+		$('#form-control-4').on('choose.ui.datetimepicker', function(e) {
+			var thisVal = $(e.relatedTarget).val();
+			console.log(thisVal)
+		});
+		/*
+		// jquery 一直没解决的问题
+		$('#form-control-4').on('change propertychange input', function(e) {
+			console.log($(this).val())
+		});*/
+
+		$("#add").click(function () {
+		    $("#on").show();
+		    $("#defaultOff").show();
+		    $("#defaultOn").hide();
+		});
+		$("#addnot").click(function () {
+		    $("#on").hide();
+		    $("#defaultOff").hide();
+		    $("#defaultOn").show();
+		});
+
+        // 长期
+        $('#j-long-time').on('click', function() {
+            var checked = $(this).is(':checked');
+            var $target = $($(this).attr('data-target'));
+            //$target.length && $target.prop('readonly', checked).attr('data-toggle', checked ? '' : 'datetimepicker');
+            $target.length && $target.prop('disabled', checked).attr('data-toggle', checked ? '' : 'datetimepicker').val('');
+        })
+	})
+</script>
+{% endblock %}
+
+

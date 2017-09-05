@@ -1,0 +1,10 @@
+{% macro current(cur='') %}
+    <div class="main-nav-wrap fn-mb-10">
+        <ul class="main-nav">
+            <li {% if cur == 'nav1' or cur == 'nav5' %}class="current"{% endif %}><a href="融资产品-商票融资-融资记录.html">票据融资</a></li>
+            <li {% if cur == 'nav2' %}class="current"{% endif %}><a href="融资产品-订单融资-融资记录.html">订单融资</a></li>
+            <li {% if cur == 'nav3' %}class="current"{% endif %}><a href="融资产品-收融易-融资记录.html">收融易</a></li>
+            <li {% if cur == 'nav4' %}class="current"{% endif %}><a href="融资产品-保费-融资记录.html">保费融资</a></li>
+        </ul>
+    </div>
+{% endmacro %}

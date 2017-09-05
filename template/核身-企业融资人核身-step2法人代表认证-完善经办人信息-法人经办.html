@@ -1,0 +1,415 @@
+{% extends "_layout/wrapper.html" %}
+{# content内容 #}
+{% block content %}
+    
+    <h3 class="fn-pb-20">
+        请完成以下资料填写，以便为您开通融资服务。
+    </h3>
+    
+	{# 步骤 #}
+	{{ Step.foursteps('pass2','完善企业信息','身份验证','企业安全认证','提交结果','fn-mb-20') }}
+    <div class="fn-mb-20">
+        <h4 class="fn-mb-20">法人代表申请</h4>
+        <div class="step-flows">
+            <ul class="clearfix">
+                <li class="cur">基本信息</li>
+                <li class="cur">其他信息</li>
+                <li>人脸识别</li>
+            </ul>
+        </div>
+    </div>
+
+
+    {# 基本信息 #}
+	<div class="form-frame fn-mb-10 ">
+        <div class="alert alert-warning fn-ml-10 fn-mb-20">
+            <i></i>
+            <em></em>
+            请如实填写以下信息用于实名身份认证，我们不会保存您银行卡任何信息。银行卡需开通网上银行服务。（<a href="###" class="link-standard" data-toggle="modal" data-target="#bankModal">支持银行卡认证的银行</a>）
+        </div>
+        <div class="form-layer1">
+            <div class="form-layer2">
+                <form autocomplete="off">
+                    <h4 class="form-section-title fn-ml-10 fn-mb-20">
+                        法人代表实名认证
+                    </h4>
+
+                    {# 银行卡号 #}
+					<div class="form-group">
+                        <label class="form-control-label" for="bankAccountNumber">
+                            <b>*</b>
+                            <span>银行卡号</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <input type="text" class="form-control" id="bankAccountNumber" value="" placeholder="卡号是16-19位数字">
+                        </div>
+                    </div>
+
+                    {# 开户银行 #}
+                    <div class="form-group" style="*z-index: 2">
+                        <label class="form-control-label" for="bank">
+                            <b>*</b>
+                            <span>开户行</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+
+                            <div class="form-control-dropdown">
+                                <span class="form-control-dropdown-btn">
+                                    <i></i>
+                                </span>
+
+                                <div class="form-control-dropdown-value" tabindex="1" data-auto="bank" title="请选择银行" aria-expanded="false">
+                                    <span class="bank-icon icon-cmb" title="招商银行"></span>
+                                    <span class="form-control-bank-card">招商银行</span>
+                                </div>
+                                <ul class="form-control-dropdown-menu">
+                                    <li title="option">
+                                        <span class="bank-icon icon-cmb" title="招商银行"></span>
+                                        <span class="form-control-bank-card">招商银行</span>
+                                    </li>
+                                    <li title="option">
+                                        <span class="bank-icon icon-icbc" title="工商银行"></span>
+                                        <span class="form-control-bank-card">工商银行</span>
+                                    </li>
+                                    <li title="option">
+                                        <span class="bank-icon icon-ccb" title="建设银行"></span>
+                                        <span class="form-control-bank-card">建设银行</span>
+                                    </li>
+                                    <li title="option">
+                                        <span class="bank-icon icon-abc" title="农业银行"></span>
+                                        <span class="form-control-bank-card">农业银行</span>
+                                    </li>
+                                    <li title="option">
+                                        <span class="bank-icon icon-boc" title="中国银行"></span>
+                                        <span class="form-control-bank-card">中国银行</span>
+                                    </li>
+                                    <li title="option">
+                                        <span class="bank-icon icon-comm" title="交通银行"></span>
+                                        <span class="form-control-bank-card">交通银行</span>
+                                    </li>
+                                    <li title="option">
+                                        <span class="bank-icon icon-pingan" title="平安银行"></span>
+                                        <span class="form-control-bank-card">平安银行</span>
+                                    </li>
+                                    <li title="option">
+                                        <span class="bank-icon icon-psbc" title="邮政银行"></span>
+                                        <span class="form-control-bank-card">邮政银行</span>
+                                    </li>
+                                    <li title="option">
+                                        <span class="bank-icon icon-shbc" title="上海银行"></span>
+                                        <span class="form-control-bank-card">上海银行</span>
+                                    </li>
+                                    <li title="option">
+                                        <span class="bank-icon icon-wzbc" title="温州银行"></span>
+                                        <span class="form-control-bank-card">温州银行</span>
+                                    </li>
+                                    <li title="option">
+                                        <span class="bank-icon icon-spdb" title="浦发银行"></span>
+                                        <span class="form-control-bank-card">浦发银行</span>
+                                    </li>
+                                    <li title="option">
+                                        <span class="bank-icon icon-ecitic" title="中信银行"></span>
+                                        <span class="form-control-bank-card">中信银行</span>
+                                    </li>
+                                    <li title="option">
+                                        <span class="bank-icon icon-cgbchina" title="广发银行"></span>
+                                        <span class="form-control-bank-card">广发银行</span>
+                                    </li>
+                                    <li title="option">
+                                        <span class="bank-icon icon-cmbc" title="民生银行"></span>
+                                        <span class="form-control-bank-card">民生银行</span>
+                                    </li>
+                                    <li title="option">
+                                        <span class="bank-icon icon-cib" title="兴业银行"></span>
+                                        <span class="form-control-bank-card">兴业银行</span>
+                                    </li>
+                                    <li title="option">
+                                        <span class="bank-icon icon-cebbank" title="光大银行"></span>
+                                        <span class="form-control-bank-card">光大银行</span>
+                                    </li>
+                                    <li title="option">
+                                        <span class="bank-icon icon-srcb" title="上海农商银行"></span>
+                                        <span class="form-control-bank-card">上海农商银行</span>
+                                    </li>
+                                    <li title="option">
+                                        <span class="bank-icon icon-bankofbeijing" title="北京银行"></span>
+                                        <span class="form-control-bank-card">北京银行</span>
+                                    </li>
+                                    <li title="option">
+                                        <span class="bank-icon icon-bjrcb" title="北京农商银行"></span>
+                                        <span class="form-control-bank-card">北京农商银行</span>
+                                    </li>
+                                    <li title="option">
+                                        <span class="bank-icon icon-szfz" title="深圳发展银行"></span>
+                                        <span class="form-control-bank-card">深圳发展银行</span>
+                                    </li>
+                                    <li title="option">
+                                        <span class="bank-icon icon-nbcb" title="宁波银行"></span>
+                                        <span class="form-control-bank-card">宁波银行</span>
+                                    </li>
+                                    <li title="option">
+                                        <span class="bank-icon icon-hzbank" title="杭州银行"></span>
+                                        <span class="form-control-bank-card">杭州银行</span>
+                                    </li>
+                                    <li title="option">
+                                        <span class="bank-icon icon-dongguanbank" title="东莞银行"></span>
+                                        <span class="form-control-bank-card">东莞银行</span>
+                                    </li>
+                                    <li title="option">
+                                        <span class="bank-icon icon-hsbc" title="汇丰银行"></span>
+                                        <span class="form-control-bank-card">汇丰银行</span>
+                                    </li>
+                                    <li title="option">
+                                        <span class="bank-icon icon-hkbea" title="东亚银行"></span>
+                                        <span class="form-control-bank-card">东亚银行</span>
+                                    </li>
+                                    <li title="option">
+                                        <span class="bank-icon icon-961111" title="广州农商银行"></span>
+                                        <span class="form-control-bank-card">广州农商银行</span>
+                                    </li>
+                                    <li title="option">
+                                        <span class="bank-icon icon-hxb" title="华夏银行"></span>
+                                        <span class="form-control-bank-card">华夏银行</span>
+                                    </li>
+                                    <li title="option">
+                                        <span class="bank-icon icon-crbank" title="华润银行"></span>
+                                        <span class="form-control-bank-card">华润银行</span>
+                                    </li>
+                                    <li title="option">
+                                        <span class="bank-icon icon-lanzhou" title="兰州银行"></span>
+                                        <span class="form-control-bank-card">兰州银行</span>
+                                    </li>
+                                    <li title="option">
+                                        <span class="bank-icon icon-hebbank" title="河北银行"></span>
+                                        <span class="form-control-bank-card">河北银行</span>
+                                    </li>
+                                    <li title="option">
+                                        <span class="bank-icon icon-hsbank" title="微商银行"></span>
+                                        <span class="form-control-bank-card">微商银行</span>
+                                    </li>
+                                    <li title="option">
+                                        <span class="bank-icon icon-qdccb" title="青岛银行"></span>
+                                        <span class="form-control-bank-card">青岛银行</span>
+                                    </li>
+                                    <li title="option">
+                                        <span class="bank-icon icon-ydnsh" title="尧都农商"></span>
+                                        <span class="form-control-bank-card">尧都农商</span>
+                                    </li>
+                                    <li title="option">
+                                        <span class="bank-icon icon-zheshang" title="浙商银行"></span>
+                                        <span class="form-control-bank-card">浙商银行</span>
+                                    </li>
+                                    <li title="option">
+                                        <span class="bank-icon icon-nccbank" title="南昌银行"></span>
+                                        <span class="form-control-bank-card">南昌银行</span>
+                                    </li>
+                                    <li title="option">
+                                        <span class="bank-icon icon-cbhb" title="渤海银行"></span>
+                                        <span class="form-control-bank-card">渤海银行</span>
+                                    </li>
+                                    <li title="option">
+                                        <span class="bank-icon icon-egbank" title="恒丰银行"></span>
+                                        <span class="form-control-bank-card">恒丰银行</span>
+                                    </li>
+                                    <li title="option">
+                                        <span class="bank-icon icon-tianjinbank" title="天津银行"></span>
+                                        <span class="form-control-bank-card">天津银行</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    {# 手机号码 #}
+					<div class="form-group">
+                        <label class="form-control-label" for="yourmobilephone">
+                            <b>*</b>
+                            <span>手机号码</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <input type="text" class="form-control" id="yourmobilephone" value="" placeholder="此卡在银行预留的手机号码">
+                            <ul class="with-lt">
+                                <li>审核结果短信将发送至该手机 。</li>
+                                <li>请与企业经办人授权委托书内容保持一致。<br/>如不一致，您的申请将不通过。</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    {# 验证码 #}
+                    <div class="form-group">
+                        <label class="form-control-label" for="***">
+                            <b>*</b>
+                            <span>验证码</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <div class="form-control-verify">
+                                <input type="text" class="form-control" id="***">
+                                <button class="btn form-control-verify-btn">
+                                    获取验证码 
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <h4 class="form-section-title fn-ml-10 fn-mb-20 fn-mt-50">
+                        法定代表人其他材料
+                    </h4>
+
+                    {# 法定代表人征信查询授权书 #}
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            <b>*</b>
+                            <span>法定代表人征信查询授权书</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-data form-control-check">
+                            <button class="btn small-btn secondary">点击上传</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-control-data fn-pb-20" style="height: auto;">
+                            <ul class="with-lt">
+                                <li>请点击下载 <a href="###" class="link-standard">个人征信查询授权书</a>，打印填写并签名上传。</li>
+                            </ul>
+                        </div>
+                    </div>
+                    {# 企业经办人授权委托书 #}
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            <b>*</b>
+                            <span>企业经办人授权委托书</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-data form-control-check">
+                            <button class="btn small-btn secondary">点击上传</button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-control-data fn-pb-20" style="height: auto;">
+                            <ul class="with-lt">
+                                <li>请点击下载 <a href="###" class="link-standard">企业经办人授权委托书</a>，打印填写并签盖公司公章，不能是合同/业务专用章。</li>
+                                <li>请与银行账户验证的手机号保持一致，如不一致，您的申请将不通过。</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    {# 个人征信查询结果书 #}
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            <span>个人征信查询结果书</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-data form-control-check">
+                            <button class="btn small-btn secondary">点击上传</button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-control-data fn-pb-20" style="height: auto;">
+                            <ul class="with-lt">
+                                <li>可进入网上 <a href="###" class="link-standard">中国人民银行征信中心</a> 查询个人信用报告，下载后上传。查看 <a
+                                        href="###" class="link-standard">个人信用报告样本</a>。
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            <span>附件要求</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-data"  style="height: auto;">
+                            <ul class="with-lt">
+                                <li>上传清晰彩色原件扫描件或数码照，图片大小不超过10M，支持的文件后缀类型为.jpg .jpeg .bmp .png .gif .doc .docx .pdf。</li>
+                                <li>如果提交的证件错误，您的申请将不通过。</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-control-wrap">
+                            <a href="核身-企业融资人核身-step2经办人认证-人脸识别起始页.html" class="btn primary" role="button">确认无误，下一步</a>
+                            <a href="核身-企业融资人核身-step2经办人认证-完善经办人信息-基本信息.html" class="btn links">上一步</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+	</div>
+
+
+<!--支持银行卡认证的银行-->
+<div class="modal-background display-none " tabindex="-1" role="dialog" id="bankModal">
+    <div class="modal-layer">
+        <div class="modal-position">
+            <div class="modal-wrap">
+                <div class="modal-head">
+                    支持银行卡认证的银行
+                    <button class="modal-close" title="关闭">
+                        <i></i>
+                    </button>
+                </div>
+                <div class="modal-body" style="padding:30px;">
+
+                    <ul class="pop-bank-list clearfix">
+                        <li>工商银行</li>
+                        <li>工商银行</li>
+                        <li>工商银行</li>
+                        <li>工商银行</li>
+                        <li>中国民生银行</li>
+                        <li>中国交通银行</li>
+                        <li>北京农村商业银行</li>
+                        <li>工商银行</li>
+                        <li>工商银行</li>
+                        <li>工商银行</li>
+                        <li>工商银行</li>
+                        <li>中国民生银行</li>
+                        <li>中国交通银行</li>
+                        <li>北京农村商业银行</li>
+                        <li>工商银行</li>
+                        <li>工商银行</li>
+                        <li>工商银行</li>
+                        <li>工商银行</li>
+                        <li>中国民生银行</li>
+                        <li>中国交通银行</li>
+                        <li>北京农村商业银行</li>
+                        <li>工商银行</li>
+                        <li>工商银行</li>
+                        <li>工商银行</li>
+                        <li>工商银行</li>
+                        <li>中国民生银行</li>
+                        <li>中国交通银行</li>
+                        <li>北京农村商业银行</li>
+                        <li>工商银行</li>
+                        <li>工商银行</li>
+                        <li>工商银行</li>
+                        <li>工商银行</li>
+                        <li>中国民生银行</li>
+                        <li>中国交通银行</li>
+                        <li>北京农村商业银行</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block jsPage %}
+<script>
+	$(function() {
+		
+	})
+</script>
+{% endblock %}
+
+

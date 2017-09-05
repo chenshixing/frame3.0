@@ -1,0 +1,151 @@
+{% extends "_layout/wrapper.html" %}
+{# content内容 #}
+{% block content %}
+
+    {# 菜单导航 #}
+    {{ navigator.current('nav2') }}
+
+    <!-- tab -->
+    <div class="tabs-wrap type1 fn-mb-10">
+      <ul class="tabs">
+        <li  class="active">
+          <a href="融资产品-订单融资-融资记录.html" class="tabs-btn tab-disabled">融资记录</a>
+        </li>
+        <li>
+          <a href="融资产品-订单融资-标的物管理.html" class="tabs-btn tab-disabled">标的物管理</a>
+        </li>
+      </ul>
+    </div>
+
+<h5 class="fn-pt-10 fn-mb-15">融资信息</h5>
+<table class="table border-bottom inverse fn-mb-20 table-view">
+    <tbody>
+    <tr>
+        <th>融资订单号</th>
+        <td>2JZT23480780997793</td>
+        <th>状态</th>
+        <td>处理中</td>
+    </tr>
+    <tr>
+        <th>融资合同编号</th>
+        <td>201512241111202398</td>
+        <th>申请时间</th>
+        <td>2015-10-29 16:22:00</td>
+    </tr>
+    <tr>
+        <th>合同协议</th>
+        <td colspan="3"><a href="####" class="link-standard">20160106质押协议.pdf</a>，<a href="####" class="link-standard">20160106融资协议.pdf</a>
+        </td>
+    </tr>
+    <tr>
+        <th>备注</th>
+        <td colspan="3">
+        </td>
+    </tr>
+    <!--<tr>
+        <th>融资人收款账户名称</th>
+        <td>哎呦喂淘气股份有限公司</td>
+        <th>融资人收款银行账号</th>
+        <td>招商银行&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;尾号1234</td>
+    </tr>
+    <tr>
+        <th>所属省市</th>
+        <td>广东省广州市</td>
+        <th>分支行</th>
+        <td>体育西路支行</td>
+    </tr>
+    <tr>
+        <th>质押合同</th>
+        <td><a href="###" class="link-standard">20160106质押协议.pdf</a></td>
+        <th>融资合同</th>
+        <td><a href="####" class="link-standard">20160106融资协议.pdf</a></td>
+    </tr>
+    <tr>
+        <th>备注</th>
+        <td colspan="3"></td>
+    </tr>-->
+    </tbody>
+</table>
+
+<h5 class="fn-pt-10 fn-mb-15">融资款定向收款账户</h5>
+<table class="table border-bottom inverse fn-mb-20 table-view">
+    <colgroup>
+        <col style="width: 150px">
+    </colgroup>
+    <tbody>
+    <tr>
+        <th>收款账户名称</th>
+        <td>哎呦喂淘气股份有限公司</td>
+    </tr>
+    <tr>
+        <th>收款银行账号</th>
+        <td>招商银行  | 6222 0000 0000 0000</td>
+    </tr>
+    </tbody>
+</table>
+
+
+    <h5 class="fn-pt-10 fn-mb-15">试算本息
+        <span class="fn-ml-15 warning-FontColor fs-12">以下仅为试算数据，实际以审批通过并确认融资起息为准。</span>
+    </h5>
+    <table class="table border-bottom inverse fn-mb-20 table-view">
+        <tbody>
+        <tr>
+            <th>预计融资起息日</th>
+            <td>2015-10-30</td>
+            <th>预计融资到期日</th>
+            <td>2015-11-30</td>
+        </tr>
+        <tr>
+            <th>融资申请金额</th>
+            <td>100,000,000.00  元</td>
+            <th>试算融资期限</th>
+            <td>30 天</td>
+        </tr>
+        <tr>
+            <th>还款方式</th>
+            <td>固定期限到期还本付息</td>
+            <th>试算融资本金</th>
+            <td>800.00 元</td>
+        </tr>
+        <tr>
+            <th>试算融资利率（年化）</th>
+            <td>4.05%</td>
+            <th>试算融资成本率（年化）</th>
+            <td>4.70%</td>
+        </tr>
+        <tr>
+            <th>试算融资成本</th>
+            <td>400.00 元</td>
+            <th>试算融资到账金额</th>
+            <td>74,000.00元</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h5 class="fn-pt-10 fn-mb-15">标的物信息</h5>
+    <table class="table border-bottom inverse fn-mb-20">
+    <thead>
+    <tr>
+        <th>标的物编号</th>
+        <th>质押率</th>
+        <th>质押状态</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>42349702983989237049</td>
+        <td>80%</td>
+        <td>质押申请处理中</td>
+        <td><a href="###" class="link-standard">详情</a></td>
+    </tr>
+    </tbody>
+</table>
+
+    <div class="text-align-center fn-mt-40">
+        <a href="融资产品-订单融资-融资记录.html" class="btn primary">返回</a>
+    </div>
+{% endblock %}
+
+

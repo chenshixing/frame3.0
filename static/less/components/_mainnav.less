@@ -1,0 +1,34 @@
+//样式重置
+//ul, li{list-style: none; margin: 0; padding: 0;}
+
+//主导航
+.main-nav-wrap {
+    height: 52px;
+    background-color: #84889d;
+}
+
+.main-nav {
+    .clearfix();
+    margin: 0;
+    padding:4px 0 0 20px;
+    > li {
+        width: 110px;
+        height: 48px;
+        line-height: 48px;
+        float: left;
+        .reset-list(0,0,16px,48px);
+        > a {
+            .link-custom( #fff,#fff,none );
+            text-align: center;
+            display: block;
+        }
+
+        &.current {
+            > a {
+                background-color: @base-BgColor;
+                color: #84889d;
+            }
+        }
+
+    }
+}

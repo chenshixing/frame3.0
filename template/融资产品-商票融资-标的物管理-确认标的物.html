@@ -1,0 +1,166 @@
+{% extends "_layout/wrapper.html" %}
+{# content内容 #}
+{% block content %}
+
+    {# 菜单导航 #}
+    {{ navigator.current('nav1') }}
+
+    <!-- tab -->
+    <div class="tabs-wrap type1 fn-mb-10">
+      <ul class="tabs">
+        <li>
+          <a href="融资产品-商票融资-融资记录.html" class="tabs-btn tab-disabled" >融资记录</a>
+        </li>
+        <li class="active">
+          <a href="融资产品-商票融资-标的物管理.html" class="tabs-btn tab-disabled">标的物管理</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="table-wrap">
+        <h5 class="fn-mb-10">
+            标的物信息
+        </h5>
+        <div class="table-wrap fn-mb-20">
+            <table class="table border-bottom inverse fn-mb-20 table-view">
+                <tbody>
+                <tr>
+                    <th>标的物编号</th>
+                    <td>201512241111202398</td>
+                    <th>审核状态</th>
+                    <td>审核中</td>
+                </tr>
+                <tr>
+                    <th>票据类型</th>
+                    <td>商票</td>
+                    <th>票据形式</th>
+                    <td>实物票据</td>
+                </tr>
+                <tr>
+                    <th>票据编号</th>
+                    <td>201512241111202398</td>
+                    <th>交易合同编号</th>
+                    <td>65574645497</td>
+                </tr>
+                <tr>
+                    <th>票据金额</th>
+                    <td>8,978,983.00  元</td>
+                    <th>质押率</th>
+                    <td>80%</td>
+                </tr>
+                <tr>
+                    <th>出票人</th>
+                    <td>张三</td>
+                    <th>出票日期</th>
+                    <td>2015-11-11</td>
+                </tr>
+                <tr>
+                    <th>承兑人全称</th>
+                    <td>叶晓</td>
+                    <th>汇票到期日</th>
+                    <td>2016-11-11</td>
+                </tr>
+                <tr>
+                    <th>票据期限</th>
+                    <td>180天</td>
+                    <th></th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>收款人账户名称</th>
+                    <td>xxx</td>
+                    <th></th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>收款人银行账号</th>
+                    <td colspan="3">招商银行&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;6220 0000 0000 0000</td>
+                </tr>
+                <tr>
+                    <th>所属省市</th>
+                    <td colspan="3">广东省广州市</td>
+                </tr>
+                <tr>
+                    <th>分支行</th>
+                    <td colspan="3">体育西路支行</td>
+                </tr>
+                <tr>
+                    <th>付款人账户名称</th>
+                    <td>xxx</td>
+                    <th></th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>付款人银行账号</th>
+                    <td colspan="3">招商银行&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;6220 0000 0000 0000</td>
+                </tr>
+                <tr>
+                    <th> <b class="error-FontColor1 fs-16">*</b> 附件</th>
+                    <td colspan="3">
+                        xxx.jpg &nbsp;&nbsp;&nbsp; <button class="btn small-btn secondary">点击上存</button>
+                        <p class="viceText-FontColor">建议上传基础贸易合同或发票等扫描件。</p>
+                    </td>
+                </tr>
+                <tr>
+                    <th>备注</th>
+                    <td colspan="3">
+                        abc
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="text-align-center plural-btns fn-mt-40">
+        <button type="button" class="btn primary" onclick="location.href='融资产品-商票融资-标的物管理-确认标的物-确认成功页.html'">确认信息无误</button>
+        <a href="###" data-toggle="modal" data-target="#myModal" class="btn links">信息有误</a>
+        <a href="融资产品-商票融资-标的物管理.html" class="btn links">返回</a>
+    </div>
+
+<!--信息有误-->
+<div class="modal-background fade display-none" id="myModal" role="dialog" tabindex="-1" aria-hidden="true" style="display: none;">
+    <div class="modal-layer">
+        <div class="modal-position">
+            <div class="modal-wrap">
+                <div class="modal-head">
+                    提示
+                    <button class="modal-close" title="关闭">
+                        <i></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-frame noborder">
+                        <div class="form-layer1">
+                            <div class="form-layer2">
+                                <form autocomplete="off">
+                                    <div class="form-group">
+                                        <label class="form-control-label">
+                                            <span>备注</span>
+                                            <em>：</em>
+                                        </label>
+                                        <div class="form-control-wrap">
+                                            <textarea class="form-textarea">请简要描述信息有误原因，限300字以内</textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-control-wrap text-align-left plural-btns margin-top-20px">
+                                            <button type="button" class="btn primary" onclick="location.href='融资产品-商票融资-标的物管理-确认标的物-确认成功页.html'">确定</button>
+                                            <a href="###" class="btn links"  data-dismiss="modal">不填写</a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock %}
+
+

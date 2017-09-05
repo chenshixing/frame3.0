@@ -1,0 +1,27 @@
+{% extends "_layout/wrapper.html" %}
+{# content内容 #}
+{% block content %}
+
+    <h3 class="fn-pb-20">
+        XXX企业 邀请您完成法定代表人实名验证，请如实填写以下信息，谢谢！
+    </h3>
+
+    {# 步骤 #}
+    {{ Step.foursteps('pass4','基础信息','人脸识别','实名认证','提交结果') }}
+
+    <div class="notice-wrap info">
+        <div class="notice-box">
+            <span class="notice-img"></span>
+            <h3 class="success-FontColor1">验证申请已提交
+            </h3>
+            <p>
+                目前进入审核阶段，预计24小时内处理完成，结果将会以短信发送到企业联系手机号：13312341234。<br/>
+                期间无法使用融资平台的融资功能和其他高级功能。<br/>
+                如需修改信息请联系客服电话：400-106-6698 <br/>
+
+            </p>
+            <a href="###" class="link-standard">返回首页</a>     
+        </div>
+    </div>
+
+{% endblock %}

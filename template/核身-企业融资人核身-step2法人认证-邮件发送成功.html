@@ -1,0 +1,49 @@
+{% extends "_layout/wrapper.html" %}
+{# content内容 #}
+{% block content %}
+    
+    <h3 class="fn-pb-20">
+        请完成以下资料填写，以便为您开通融资服务。
+    </h3>
+    
+	{# 步骤 #}
+	{{ Step.foursteps('pass2','完善企业信息','身份验证','企业安全验证','提交结果') }}
+
+    {# 基本信息 #}
+	<div class="notice-wrap info">
+        <div class="notice-box">
+            <span class="notice-img"></span>
+            <h3 class="success-FontColor1">邮件发送成功！
+            </h3>
+            <p>
+                <strong>法人代表认证链接邮件已发送至：<span class="warning-FontColor">59*********@qq.com</span></strong>
+                <br>
+                <span class="viceText-FontColor">登录邮箱点击链接即可进行认证操作。</span>
+            </p>
+            <br />
+            <p>
+                没有收到邮件？
+            </p>
+            <ul class="with-lt" style="margin-top: 0;">
+                <li>可能被误认为垃圾邮件，请在垃圾邮件目录下找回。</li>
+                <li>没有收到邮件，您还可以秒重新发送认证链接邮件， <a href="#" class="link-standard">重新发送</a>。</li>
+            </ul>
+            <div class="text-align-left plural-btns fn-pt-30">
+                <a href="核身-企业融资人核身-step3企业用户安全验证.html" class="btn primary">下一步</a>
+                <a href="核身-企业融资人核身-step2法人认证-法人认证提醒.html" class="btn links">上一步</a>
+            </div>
+            
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block jsPage %}
+<script>
+	$(function() {
+		
+	})
+</script>
+{% endblock %}
+
+

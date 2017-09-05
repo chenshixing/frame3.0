@@ -1,0 +1,52 @@
+{% extends "_layout/wrapper.html" %}
+{# content内容 #}
+{% block content %}
+    
+    <h3 class="fn-pb-20">
+        请完成以下资料填写，以便为您开通融资服务。
+    </h3>
+    
+	{# 步骤 #}
+	{{ Step.foursteps('pass2','完善企业信息','身份验证','企业安全验证','提交结果') }}
+
+    {# 基本信息 #}
+	<div class="form-frame fn-mb-10">
+        <div class="form-title">
+			法人代表信息
+		</div>
+        <div class="centerwrap55">
+            <p class="fn-pt-30">
+                为了保证个人信息安全，我们需要法人代表填写相应的基本信息，完成人脸识别，具体步骤如下：
+            </p>
+            <ul class="with-lt">
+                <li>填写个人基本信息。</li>
+                <li>上传相应的扫描件。</li>
+                <li>个人银行卡核实。</li>
+                <li>完成人脸识别。</li>
+            </ul>
+            <p class="fn-pt-30 text-align-center">
+                请输入法人代表常用邮箱接收法人代表认证链接认证，完成法人代表认证：
+            </p>
+            <div class="form-control-wrap centerwrap55 fn-pt-20">
+                <input type="text" class="form-control" placeholder="请输入法人代表常用邮箱">
+            </div>
+            <div class="text-align-center fn-pt-20">
+                <a class="btn primary" href="核身-企业融资人核身-step2法人认证-邮件发送成功.html">
+                    发送邮件
+                </a>
+            </div>
+        </div>
+
+	</div>
+
+{% endblock %}
+
+{% block jsPage %}
+<script>
+	$(function() {
+		
+	})
+</script>
+{% endblock %}
+
+

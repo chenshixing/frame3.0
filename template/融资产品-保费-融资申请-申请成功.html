@@ -1,0 +1,56 @@
+{% extends "_layout/wrapper.html" %}
+
+{# content #}
+{% block content %}
+    
+    {# 菜单导航 #}
+    {{ navigator.current('nav4') }}
+    
+    <!-- tab -->
+    <div class="tabs-wrap type1 fn-mb-10">
+      <ul class="tabs">
+        <li>
+          <a href="融资产品-保费-融资记录.html" class="tabs-btn tab-disabled">融资记录</a>
+        </li>
+          <li>
+                <a href="融资产品-保费-车险记录.html" class="tabs-btn tab-disabled">车险记录</a>
+            </li>
+        <li class="active">
+          <a href="javascript:;void(0)" class="tabs-btn tab-disabled">融资申请</a>
+        </li>
+          <li>
+              <a href="融资产品-保费-还款计划.html" class="tabs-btn tab-disabled">还款计划</a>
+          </li>
+          <li>
+              <a href="融资产品-保费-还款记录.html" class="tabs-btn tab-disabled">还款记录</a>
+          </li>
+      </ul>
+    </div>
+
+    {# 步骤 #}
+	{{ Step.foursteps('pass4','支付保证金','填写信息','确认信息','申请成功') }}
+
+    <div class="notice-wrap success">
+        <div class="notice-box">
+            <span class="notice-img"></span>
+            <h3>融资申请已提交！
+            </h3>
+            <p>
+                请耐心等待，申请结果将会以短信通知。
+            </p>
+            <p>
+                点击链接下载附件：<a href="###" class="link-standard">20160106融资协议.pdf</a>
+            </p>
+            <br />
+            <a href="融资产品-保费-融资记录.html" class="btn primary">查看明细</a>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block jsPage %}
+    <script>
+    </script>
+{% endblock %}
+
+

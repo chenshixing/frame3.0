@@ -1,0 +1,13 @@
+{% macro tab(tbs, act, type='prototype', disabled='') %}
+    <div class="tabs-wrap {{ type }}">
+        <ul class="tabs">
+            {% for item in tbs %}
+            <li {% if loop.index == act %}class="active"{% endif %}>
+                <a href="{{ item.url }}" class="tabs-btn {{ disabled }}">
+                    {{ item.text }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endmacro %}

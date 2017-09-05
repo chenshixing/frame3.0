@@ -1,0 +1,131 @@
+{% extends "_layout/wrapper.html" %}
+{# content内容 #}
+{% block content %}
+
+    {# 菜单导航 #}
+    {{ navigator.current('nav4') }}
+
+    <!-- tab -->
+    <div class="tabs-wrap type1 fn-mb-10">
+      <ul class="tabs">
+        <li>
+          <a href="融资产品-保费-融资记录.html"  class="tabs-btn tab-disabled">融资记录</a>
+        </li>
+          <li>
+                <a href="融资产品-保费-车险记录.html" class="tabs-btn tab-disabled">车险记录</a>
+            </li>
+        <li >
+          <a href="融资产品-保费-融资申请-支付保证金.html" class="tabs-btn tab-disabled">融资申请</a>
+        </li>
+        <li>
+            <a href="融资产品-保费-还款计划.html"  class="tabs-btn tab-disabled">还款计划</a>
+        </li>
+        <li class="active">
+            <a href="javascript:;void(0)" class="tabs-btn tab-disabled">还款记录</a>
+        </li>
+      </ul>
+    </div>
+    
+    <form action="##" method="post" class="form-frame form-frame-filter fn-mb-20">
+        <div class="form-layer-gray-box">
+            <div class="form-group">
+                <label class="form-control-label">
+                    <span>状态</span><em>：</em>
+                </label>
+                <div class="form-control-wrap">
+                    <div class="form-control-check" data-toggle="switcher" data-keep="true" data-item=".filter-check-item">
+                        <label class="filter-check-item active">
+                            <input type="radio" name="type" checked="">全部</label>
+                        <label class="filter-check-item">
+                            <input type="radio" name="type">处理中</label>
+                        <label class="filter-check-item">
+                            <input type="radio" name="type">已放款<span class="warning-FontColor">（10）</span></label>
+                        <label class="filter-check-item">
+                            <input type="radio" name="type">已结清</label>
+                        <label class="filter-check-item">
+                            <input type="radio" name="type">已逾期</label>
+                        <label class="filter-check-item">
+                            <input type="radio" name="type">失败</label>
+                        <label class="filter-check-item">
+                            <input type="radio" name="type">还款处理中</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-control-label">
+                    <span>时间</span><em>：</em>
+                </label>
+                <div class="form-control-wrap">
+                    <div class="form-control-check" data-toggle="switcher" data-keep="true" data-item=".filter-check-item">
+                        <label class="filter-check-item active">
+                            <input type="radio" name="type" checked="">全部</label>
+                        <label class="filter-check-item">
+                            <input type="radio" name="type">最近三个月</label>
+                        <label class="filter-check-item">
+                            <input type="radio" name="type">三个月前</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-control-label">
+                    <span>关键字</span>
+                    <em>：</em>
+                </label>
+                <div class="form-control-wrap form-control-helper">
+                    <input type="text" class="form-control" placeholder="流水号" data-toggle="searchInput">
+                    <button type="button" class="btn primary small-btn hidden">搜索</button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <table class="table inverse">
+        <colgroup>
+            <col/>
+            <col/>
+            <col/>
+            <col/>
+            <col/>
+            <col/>
+        </colgroup>
+        <thead>
+        <tr>
+            <th>创建时间</th>
+            <th>还款流水号</th>
+            <th>融资订单号</th>
+            <th>还款金额（元）</th>
+            <th>状态</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>2015-10-24</td>
+            <td>4648575dsaf</td>
+            <td>asd79467487</td>
+            <td>
+                1000.00&nbsp;
+                <i class="icon-info h4" data-toggle="tooltips" title="本金：2818.94元；融资成本：31.94元（含融资利息：19.97元）"></i>
+            </td>
+            <td>处理中</td>
+            <td><a href="融资产品-保费-还款记录-还款详情.html" class="link-standard">详情</a></td>
+        </tr>
+        <tr>
+            <td>2015-10-24</td>
+            <td>4648575dsaf</td>
+            <td>asd79467487</td>
+            <td>
+                1000.00&nbsp;
+                <i class="icon-info h4" data-toggle="tooltips" title="本金：2818.94元；融资成本：31.94元（含融资利息：19.97元）"></i>
+            </td>
+            <td>成功</td>
+            <td><a href="融资产品-保费-还款记录-还款详情.html" class="link-standard">详情</a></td>
+        </tr>
+        </tbody>
+    </table>
+    {# 分页 #}
+    {{ Pager.render() }}
+
+{% endblock %}
+
+

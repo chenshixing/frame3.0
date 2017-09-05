@@ -1,0 +1,330 @@
+{% extends "_layout/wrapper.html" %}
+{# content内容 #}
+{% block content %}
+
+    {# 菜单导航 #}
+    {{ navigator.current('nav3') }}
+
+    <!-- tab -->
+    <div class="tabs-wrap type1 fn-mb-10">
+      <ul class="tabs">
+        <li>
+          <a href="融资产品-商票融资-融资记录.html" class="tabs-btn tab-disabled">融资记录</a>
+        </li>
+        <li class="active">
+          <a href="融资产品-商票融资-标的物管理.html" class="tabs-btn tab-disabled">标的物管理</a>
+        </li>
+      </ul>
+    </div>
+    <form>
+        <div class="form-frame">
+            <div class="form-layer1">
+                <div class="form-layer2">
+                    <div class="form-section-title">票据基本信息</div>
+                    <div class="form-group">
+                        <label class="form-control-label" for="type">
+                            <span>票据形式</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <div class="form-control-check">
+                                <label>
+                                    实物票据
+                                    <input type="radio" name="type">
+                                </label>
+                                <label>
+                                    电子票据
+                                    <input type="radio" name="type">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-control-label" for="input2">
+                            <span>票据编号</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <input type="text" class="form-control" id="input2" value="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-control-label" for="input3">
+                            <span>交易合同编号</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <input type="text" class="form-control" id="input3" value="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-control-label" for="input4">
+                            <span>票据金额</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <input type="text" class="form-control" id="input4" value="">
+                            <div class="form-control-tools-link default-FontColor">元</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-control-label" for="input5">
+                            <span>出票日期</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <div class="form-control-date">
+                                <span class="form-control-date-btn"><i></i></span>
+                                <input type="text" data-toggle="datetimepicker" class="form-control" id="input5" value="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-control-label" for="input6">
+                            <span>汇票到期日</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <div class="form-control-date">
+                                <span class="form-control-date-btn"><i></i></span>
+                                <input type="text" data-toggle="datetimepicker" class="form-control" id="input6" value="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-control-label" for="input7">
+                            <span>承兑人全称</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <input type="text" class="form-control" id="input7" value="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-control-label" for="input8">
+                            <span>出票人全称</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <input type="text" class="form-control" id="input8" value="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-control-label" for="input9">
+                            <b>*</b>
+                            <span>附件上传</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <div class="form-control-data">
+                                <button class="btn small-btn secondary">点击上传</button>
+                            </div>
+                            <p class="viceText-FontColor">建议上传基础贸易合同或发票等扫描件。</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-control-label" for="input9">
+                            <span>备注</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <textarea class="form-textarea" id="input9"></textarea>
+                            <p class="fn-pt-10 text-align-right">限 <b class="warning-FontColor">300</b> 字以内 </p>
+                        </div>
+                    </div>
+
+                    <div class="form-section-title fn-pt-20">票据收款人</div>
+                    <div class="form-group">
+                        <label class="form-control-label" for="input11">
+                            <span>收款人账户名称</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <input type="text" class="form-control" id="input11" value="xxx" readonly>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-control-label" for="input12">
+                            <span>收款人银行账号</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap clearfix">
+                            <div class="clearfix">
+                                <div class="float-left" style="width: 49%">
+                                    <input type="text" class="form-control float-left" id="input12" value="" >
+                                </div>
+                                <div class="float-right" style="width: 49%">
+                                    <div class="form-control-dropdown">
+                                    <span class="form-control-dropdown-btn">
+                                        <i></i>
+                                    </span>
+                                        <div class="form-control-dropdown-value" aria-expanded="false">
+                                            <span class="bank-icon icon-cmb" title="招商银行"></span>
+                                            <span class="form-control-bank-card">招商银行</span>
+                                        </div>
+                                        <ul class="form-control-dropdown-menu">
+                                            <li title="option">
+                                                <span class="bank-icon icon-cmb" title="招商银行"></span>
+                                                <span class="form-control-bank-card">招商银行</span>
+                                            </li>
+                                            <li title="option">
+                                                <span class="bank-icon icon-icbc" title="工商银行"></span>
+                                                <span class="form-control-bank-card">工商银行</span>
+                                            </li>
+                                            <li title="-1">
+                                                <!--<span class="bank-icon icon-icbc" title="工商银行"></span>-->
+                                                <span class="form-control-bank-card">其他银行</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-control-tools-link fn-pa-0 display-none ">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group" style="*z-index: 4">
+                        <label class="form-control-label">
+                            <span>所属省市</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap smallsize">
+                            <div class="form-control-dropdown form-inline drop-select-province with-keyin">
+                                <span class="form-control-dropdown-btn">
+                                    <i></i>
+                                </span>
+                                <div class="form-control-dropdown-value" tabindex="2" title="请选择省份"><span class="form-placeholder">请选择省份</span></div>
+                                <ul class="form-control-dropdown-menu">
+                                    <li title="北京">北京
+                                    </li>
+                                    <li title="上海">上海
+                                    </li>
+                                    <li title="广东">广东
+                                    </li>
+                                    <li title="浙江">浙江
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="form-control-dropdown form-inline drop-select-city with-keyin">
+                                <span class="form-control-dropdown-btn">
+                                    <i></i>
+                                </span>
+                                <div class="form-control-dropdown-value" tabindex="3" title="请选择城市"><span class="form-placeholder">请选择城市</span></div>
+                                <ul class="form-control-dropdown-menu">
+                                    <li title="北京">北京
+                                    </li>
+                                    <li title="上海">上海
+                                    </li>
+                                    <li title="广州">广州
+                                    </li>
+                                    <li title="杭州">杭州
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            <span>分支行</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <div class="form-control-dropdown">
+                                <span class="form-control-dropdown-btn">
+                                    <i></i>
+                                </span>
+                                <input type="text" data-toggle="dropdown" class="form-control" id="subbank" placeholder="请输入分支行名称" value="分支行1" aria-expanded="false">
+                                <ul class="form-control-dropdown-menu">
+                                    <li title="分支行1">分支行1
+                                    </li>
+                                    <li title="分支行2">分支行2
+                                    </li>
+                                    <li title="分支行3">分支行3
+                                    </li>
+                                    <li title="分支行4">分支行4
+                                    </li>
+                                    <li title="分支行5">分支行5
+                                    </li>
+                                    <li title="分支行6">分支行6
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section-title fn-pt-20">票据付款人</div>
+                    <div class="form-group">
+                        <label class="form-control-label" for="input13">
+                            <span>付款人账户名称</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <input type="text" class="form-control" id="input13" value="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-control-label" for="input14">
+                            <span>付款人银行账号</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap clearfix">
+                            <div class="clearfix">
+                                <div class="float-left" style="width: 49%">
+                                    <input type="text" class="form-control float-left" id="input14" value="" >
+                                </div>
+                                <div class="float-right" style="width: 49%">
+                                    <div class="form-control-dropdown">
+                                    <span class="form-control-dropdown-btn">
+                                        <i></i>
+                                    </span>
+                                        <div class="form-control-dropdown-value" aria-expanded="false">
+                                            <span class="bank-icon icon-cmb" title="招商银行"></span>
+                                            <span class="form-control-bank-card">招商银行</span>
+                                        </div>
+                                        <ul class="form-control-dropdown-menu">
+                                            <li title="option">
+                                                <span class="bank-icon icon-cmb" title="招商银行"></span>
+                                                <span class="form-control-bank-card">招商银行</span>
+                                            </li>
+                                            <li title="option">
+                                                <span class="bank-icon icon-icbc" title="工商银行"></span>
+                                                <span class="form-control-bank-card">工商银行</span>
+                                            </li>
+                                            <li title="-1">
+                                                <!--<span class="bank-icon icon-icbc" title="工商银行"></span>-->
+                                                <span class="form-control-bank-card">其他银行</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-control-tools-link fn-pa-0 display-none ">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="text-align-center fn-mt-30">
+                <div class="btn-with-viceLink text-align-center plural-btns">
+                    <button type="button" class="btn primary" onclick="location.href='融资产品-商票融资-融资申请-证书安装.html'">发起融资</button>
+                    <button type="button" class="btn primary" >提交审核</button>
+                    <a href="融资产品-商票融资-标的物管理-确认标的物-确认成功页.html" class="btn-vicelink">保存，暂不审核</a>
+                    <a href="融资产品-商票融资-标的物管理.html" class="btn-vicelink" style="right: -150px">返回</a>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+{% endblock %}
+

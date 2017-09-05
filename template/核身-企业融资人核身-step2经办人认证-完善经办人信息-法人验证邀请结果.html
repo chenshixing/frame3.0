@@ -1,0 +1,61 @@
+{% extends "_layout/wrapper.html" %}
+{# content内容 #}
+{% block content %}
+    
+    <h3 class="fn-pb-20">
+        请完成以下资料填写，以便为您开通融资服务。
+    </h3>
+    
+	{# 步骤 #}
+	{{ Step.foursteps('pass2','完善企业信息','身份验证','企业安全认证','提交结果') }}
+    <div class=" fn-mb-20">
+        <h4 class="fn-mb-20">经办人申请</h4>
+        <div class="step-flows">
+            <ul class="clearfix four-li">
+                <li class="cur">经办人基本信息</li>
+                <li class="cur">经办人其他信息</li>
+                <li class="cur">经办人人脸识别</li>
+                <li class="cur">法人验证邀请</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="notice-wrap success">
+        <div class="notice-box">
+        <span class="notice-img"></span>
+        <h3>
+            已发送验证邀请，请在72小时内完成法定代表人验证。
+        </h3>
+        <h4 class="fs-18">法人身份识别码为：<b class="warning-FontColor">123456</b>，请扫描以下二维码下载APP，进行实名认证。</h4>
+        <p class="fn-pt-10 fn-mb-15">
+            验证短信已发送到手机：13312341234
+            <br>
+            验证邮件已发送到邮箱：1234@1234.com
+            <br>
+            请及时联系法定代表人完成验证。
+        </p>
+        <div class="fn-pa-10 text-align-center code-border">
+            <p class="fn-mb-5">扫码下载APP进行人脸识别<br>（仅支持安卓系统）</p>
+            <div class="pic"><img src="{{static}}/images/code.png" /></div>
+        </div>
+
+        <div class="code-pic"></div>
+            <div class="fn-mt-40 plural-btns">
+                <a href="###" class="btn primary">下一步</a>
+                <a href="核身-企业融资人核身-step2经办人认证-完善经办人信息-法人验证邀请.html" class="btn links">信息有误，返回修改 </a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block jsPage %}
+<script>
+	$(function() {
+		
+	})
+</script>
+{% endblock %}
+
+

@@ -1,0 +1,27 @@
+{% extends "_layout/wrapper.html" %}
+{# content内容 #}
+{% block content %}
+
+    <h3 class="fn-pb-20">
+        请完成以下资料填写，以便为您开通融资服务。
+    </h3>
+    
+	{# 步骤 #}
+	{{ Step.fivesteps2('pass5','完善个人信息','人脸认证','绑定银行卡','设置支付密码','提交结果') }}
+
+    <div class="notice-wrap info">
+        <div class="notice-box">
+            <span class="notice-img"></span>
+            <h3 class="success-FontColor1">验证申请已提交
+            </h3>
+            <p>
+                目前进入审核阶段，预计24小时内处理完成，结果将会以短信通知您。<br/>
+                期间无法使用融资平台的融资功能和其他高级功能。<br/>
+                如需修改信息请联系客服电话：400-106-6698 <br/>
+
+            </p>
+            <a href="###" class="link-standard">返回首页</a>     
+        </div>
+    </div>
+
+{% endblock %}

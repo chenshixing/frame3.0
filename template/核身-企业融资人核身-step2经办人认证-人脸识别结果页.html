@@ -1,0 +1,71 @@
+{% extends "_layout/wrapper.html" %}
+{# content内容 #}
+{% block content %}
+    
+    <h3 class="fn-pb-20">
+        请完成以下资料填写，以便为您开通融资服务。
+    </h3>
+    
+	{# 步骤 #}
+	{{ Step.foursteps('pass2','完善企业信息','身份验证','企业安全验证','提交结果') }}
+
+<div class=" fn-mb-20">
+    <h4 class="fn-mb-20">经办人申请</h4>
+    <div class="step-flows">
+        <ul class="clearfix four-li">
+            <li class="cur">经办人基本信息</li>
+            <li class="cur">经办人其他信息</li>
+            <li class="cur">经办人人脸识别</li>
+            <li>法人验证邀请</li>
+        </ul>
+    </div>
+</div>
+
+    {# 基本信息 #}
+	<div class="form-frame fn-mb-10 fn-pt-30">
+
+        
+        <div class="facevr-wrap">
+            <div class="notice-wrap success" style="border: none;">
+                <div class="notice-box">
+                    <span class="notice-img"></span>
+                    <h3>人脸认证已通过！</h3>
+                    <div class="text-align-center plural-btns fn-pt-30">
+                        <a href="核身-企业融资人核身-step2经办人认证-完善法人信息-基本信息.html" class="btn primary">下一步</a>
+                        <a href="核身-企业融资人核身-step2经办人认证-完善经办人信息-基本信息.html" class="btn links">上一步</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="facevr-wrap">
+            <div class="notice-wrap error" style="border: none;">
+                <div class="notice-box">
+                    <span class="notice-img"></span>
+                    <h3>人脸认证未通过！
+                    </h3>
+                    <p>
+                        原因：身份证与人脸识别结果可能非同一人
+                    </p>
+                    <div class="plural-btns fn-pt-30">
+                        <a href="核身-企业融资人核身-step2经办人认证-人脸识别起始页.html" class="btn primary">重新认证</a>
+                        <a href="核身-企业融资人核身-step3企业用户安全验证.html#" class="btn links">跳过，下一步</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+	</div>
+
+{% endblock %}
+
+{% block jsPage %}
+<script>
+	$(function() {
+	    
+	})
+</script>
+{% endblock %}
+
+

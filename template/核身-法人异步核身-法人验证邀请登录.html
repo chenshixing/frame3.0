@@ -1,0 +1,80 @@
+{% extends "_layout/default_login_layout.html" %}
+{# content内容 #}
+{% block bodyClass %}
+class="login-body"
+{% endblock %}
+{% block content %}
+    <div class="default-login-wrap">
+        
+        <!-- head -->
+        <div class="default-login-head clearfix">
+            <div class="default-login-main-wrap">
+                <div class="eaccount-logo-wrap">
+                    <a href="default_login.html">
+                        <img src="{{ static }}/images/eaccountlogo.png" alt=""/>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- body -->
+        <div class="default-login-bg-wrap default-login-corporation">
+            <div class="default-login-main-wrap in-bg-wrap">
+                <div class="login-code"><img src="{{ static }}/images/code.png"/></div>
+                <div class="default-login-form-box">
+                    <div class="login-tab-box">
+                        <div class="login-tab-title">
+                            企业法定代表人验证邀请
+                        </div>
+                    </div>
+
+                    <div class="tabs-content">
+                        <div class="default-login-remind-box">
+                            <i class="icon-error"></i>
+                            企业名称或身份识别码错误！
+                        </div>
+
+                        <form>
+                            <div class="theform">
+                                <div class="formcase turename">
+                                    <input type="text" class="form-control formcass" placeholder="企业名称" disabled/>
+                                    <!--<a href="###" class="link-standard download">请点击下载并安装安全认证控件</a>-->
+                                </div>
+                                <div class="formcase username">
+                                    <input type="text" class="form-control formcass" placeholder="身份识别码"/>
+                                </div>
+                                <div class="formcase vrcode" style="display: none;">
+                                    <input type="text" class="form-control formcass" placeholder="验证码"/>
+                                    <a href="javascript:;void(0)">
+                                        <img src="{{ static }}/images/yzm.jpg"/>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="fn-pl-20 fn-mb-10"><a href="javascript:;void(0)" class="link-standard">下载客户端</a></div>
+                            <div class="fn-ml-20 fn-mr-20 fn-mb-15" >
+                                <button type="button" class="btn primary " style="display: block; width: 100%;">登录</button>
+                            </div>
+                            <div class="fn-ml-20" >
+                                <a href="###" class="link-standard" >切换至用户登录</a>
+
+
+                            </div>
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+{% endblock %}
+
+
+{% block jsPage %}
+
+{% endblock %}
+

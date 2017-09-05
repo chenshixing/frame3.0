@@ -1,0 +1,311 @@
+{% extends "_layout/wrapper.html" %}
+{# content内容 #}
+{% block content %}
+
+{# 菜单导航 #}
+{{ navigator.current('nav3') }}
+
+<!-- tab -->
+<div class="tabs-wrap type1 fn-mb-10">
+    <ul class="tabs">
+        <li>
+            <a href="融资产品-收融易-融资记录.html" class="tabs-btn tab-disabled" >融资记录</a>
+        </li>
+        <li class="active">
+            <a href="融资产品-收融易-标的物管理.html" class="tabs-btn tab-disabled">标的物管理</a>
+        </li>
+    </ul>
+</div>
+<ol class="breadcrumb fn-mb-10">
+    <li>
+        <a href="融资产品-收融易-标的物管理.html">
+            标的物管理
+            <i class="icon-chevron-thin-right"></i>
+        </a>
+    </li>
+    <li>
+        融资申请
+    </li>
+</ol>
+
+{{ Step.render(step='pass2', text1='填写资料', text2='确认信息', text3='申请成功', mb="fn-mb-20") }}
+
+<div class="table-wrap">
+    <h5 class="fn-mb-10">标的物信息</h5>
+    <table class="table border-bottom inverse table-view">
+        <tbody>
+        <tr>
+            <th>应收账编号</th>
+            <td>65685629545656</td>
+            <th>交易合同编号</th>
+            <td>4513452346234</td>
+        </tr>
+        <tr>
+            <th>应收账金额</th>
+            <td>4,017,000,000.00  元</td>
+            <th>应收账债务人</th>
+            <td>阿里巴巴</td>
+        </tr>
+        <tr>
+            <th>应收账生成日</th>
+            <td>2015-12-02</td>
+            <th>应收账到期日</th>
+            <td>2016-01-30</td>
+        </tr>
+        <tr>
+            <th>应收账期限</th>
+            <td colspan="3">180 天</td>
+        </tr>
+        <tr>
+            <th>收款人全称</th>
+            <td colspan="3">张三</td>
+        </tr>
+        <tr>
+            <th>收款人银行账号</th>
+            <td colspan="3">
+                招商银行
+                &nbsp;|&nbsp;
+                6220 0000 0000 0000
+            </td>
+        </tr>
+        <tr>
+            <th>付款人全称</th>
+            <td colspan="3">张三</td>
+        </tr>
+        <tr>
+            <th>付款人银行账号</th>
+            <td colspan="3">
+                招商银行
+                &nbsp;|&nbsp;
+                6220 0000 0000 0000
+            </td>
+        </tr>
+        <tr>
+            <th>备注</th>
+            <td colspan="3">xxx</td>
+        </tr>
+        </tbody>
+    </table>
+    <h5 class="fn-mb-10 fn-pt-20">融资信息</h5>
+    <table class="table border-bottom inverse table-view">
+        <tbody>
+        <tr>
+            <th>质押率</th>
+            <td>8%</td>
+            <th>融资申请金额</th>
+            <td>800,000.00</td>
+        </tr>
+        <tr>
+            <th>预计融资起息日</th>
+            <td>2015-10-30</td>
+            <th>融资到期日</th>
+            <td>2015-11-30</td>
+        </tr>
+        <tr>
+            <th>预计融资期限</th>
+            <td>30 天</td>
+            <th>还款方式</th>
+            <td>固定期限到期还本付息</td>
+        </tr>
+        <tr>
+            <th>试算融资本金</th>
+            <td>800,000.00  元</td>
+            <th>试算融资利率（年化）</th>
+            <td>5.00%</td>
+        </tr>
+        <tr>
+            <th>试算融资成本率（年化）</th>
+            <td>4.70%</td>
+            <th>试算融资成本</th>
+            <td>40,000.00  元</td>
+        </tr>
+        <tr>
+            <th>试算融资到账金额</th>
+            <td>760,000.00  元</td>
+            <th>融资人收款账户名</th>
+            <td>哎呀呀淘气股份有限公司</td>
+        </tr>
+        <tr>
+            <th>融资人收款账号</th>
+            <td colspan="3">
+                招商银行
+                &nbsp;|&nbsp;
+                6220 0000 0000 0000
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+
+<div class="form-frame" style="border: none">
+    <div class="form-layer1">
+        <div class="form-layer2">
+            <form autocomplete="off">
+                <div class="form-group  form-layer-gray-box fn-pt-20">
+                    <label class="form-control-label">
+                        <span></span>
+                        <em></em>
+                    </label>
+                    <div class="form-control-wrap">
+                        为确保您的合法权益，请仔细阅读并确认以下合同：
+                        <div class="form-control-check">
+                            <label class="agreement-check">
+                                <a href="javascript:void(0);" data-href="融资产品-商票融资-融资申请-融资订单确认-标的物质押合同签章.html#check1" class="link-standard j-agree-check">点击阅读质押合同&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                                <input type="checkbox" name="" id="check1" disabled>
+                            </label>
+                            <label class="agreement-check">
+                                <a href="javascript:void(0);" data-href="融资产品-商票融资-融资申请-融资订单确认-标的物质押合同签章.html#check2" class="link-standard j-agree-check">点击阅读融资合同</a>
+                                <input type="checkbox" name="" id="check2" disabled>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="j-hidden" id="j-step2">
+                    <h5 class="form-section-title fn-mt-50">
+                        本人已确认上述合同或协议信息无误,并同意签署。
+                    </h5>
+                    <div class="form-group">
+                        <label class="form-control-label" for="trade-password">
+                            <span>交易密码</span>
+                            <em>：</em>
+                        </label>
+
+                        <div class="form-control-wrap">
+                            <input type="text" class="form-control" id="trade-password" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-control-wrap text-align-left plural-btns margin-top-20px">
+                            <button type="button" class="btn primary" id="j-sign-btn">同意并签署以上合同</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="j-hidden fn-mt-20" id="j-step3">
+                    <div class="form-group">
+                        <label class="form-control-label" for="input22">
+                            <span>绑定手机号码</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <input type="text" class="form-control" id="input22" value="13800138000" disabled>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-control-label" for="Text1">
+                            <b></b>
+                            <span>验证码 </span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <div class="form-control-verify">
+                                <input type="text" class="form-control" id="Text1">
+                                <button class="btn form-control-verify-btn">
+                                    获取验证码
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group fn-mt-30">
+                        <div class="form-control-wrap">
+                            <div class="text-align-left plural-btns">
+                                <button type="button"  class="btn primary" onclick="location.href='融资产品-商票融资-融资申请-融资申请成功.html'">确认无误，下一步</button>
+                                <a href="融资产品-商票融资-融资申请-填写融资资料.html" class="btn links">上一步</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+
+
+{% block jsPage %}
+<script>
+    // 协议1,协议二
+    var ck1, ck2;
+    function checkChoice(id) {
+        switch (id) {
+            case '#check1':
+                ck1 = true;
+                break;
+            case '#check2':
+                ck2 = true;
+                break;
+        }
+
+        // 都选上,显示同意签章
+        ck1 && ck2 && $('#j-step2').show();
+    }
+    // 同意合同
+    function setEnabledCheck(id) {
+        // 勾上
+        $(id).prop({ checked: true });
+        // 检测是否都选上
+        checkChoice(id);
+    }
+
+    // 显示合同
+    function showModal(title, url){
+        // ie8-不兼容
+        /*var a = document.createElement('a');
+         a.href = url;
+         a.search = '?t='+ (1 * new Date()) + ( ck1 && ck2 ? '&preview=1' : (ck1 ? '&preview=c1' : ( ck2 ? '&preview=check2' : '')));
+         */
+        var arrUrl = url.split('#');
+        arrUrl[0] = arrUrl[0] + '?t='+ (1 * new Date()) + ( ck1 && ck2 ? '&preview=1' : (ck1 ? '&preview=c1' : ( ck2 ? '&preview=check2' : '')));
+
+        // 弹出 pdf
+        $('#modal-agreement-doc').iframeModal({
+            title: title,
+            url: arrUrl.join('#')
+        });
+
+        //a = null;
+    }
+    // 隐藏合同
+    function hideModal(id) {
+        $('#modal-agreement-doc').iframeModal('hide');
+        id && setEnabledCheck(id);
+    }
+
+    // 签章
+    // TODO: 测试代码
+    function ajaxSign() {
+        setTimeout(function() {
+            $('#modal-waiting').hideLoading();
+
+            // 隐藏第二步显示第三步
+            $('#j-step2').hide() && $('#j-step3').show();
+        }, 3e3)
+    }
+
+    $(function() {
+        // 同意协议
+        $('.j-agree-check').on('click', function() {
+            var $target = $(this);//.find('a');
+            var url = $target.attr('data-href');
+            var title = $target.html();
+            showModal(title, url);
+        });
+
+        // 同意并签署
+        $('#j-sign-btn').on('click', function() {
+            $('#modal-waiting').showLoading('系统正在申请证书及签章', '请勿关闭当前页面');
+
+            // TODO: ajax 后台提交
+            ajaxSign();
+        })
+    })
+</script>
+{% endblock %}
+
+

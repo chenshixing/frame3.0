@@ -1,0 +1,57 @@
+{% extends "_layout/wrapper.html" %}
+{# content内容 #}
+{% block content %}
+    
+    <h3 class="fn-pb-20">
+        XXX企业 邀请您完成法定代表人实名验证，请如实填写以下信息，谢谢！
+    </h3>
+
+    {# 步骤 #}
+    {{ Step.foursteps('pass2','基础信息','人脸识别','实名认证','提交结果') }}
+
+    {# 基本信息 #}
+	<div class="form-frame fn-mb-10 fn-pt-30">
+        
+        <div class="facevr-wrap">
+            <div class="notice-wrap success" style="border: none;">
+                <div class="notice-box">
+                    <span class="notice-img"></span>
+                    <h3>人脸认证已通过！</h3>
+                    <div class="plural-btns fn-pt-30">
+                        <a href="核身-法人异步核身-STEP3实名认证.html" class="btn primary">下一步</a>
+                        <a href="核身-法人异步核身-STEP1基础信息.html" class="btn links">上一步</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="facevr-wrap">
+            <div class="notice-wrap error" style="border: none;">
+                <div class="notice-box">
+                    <span class="notice-img"></span>
+                    <h3>人脸认证未通过！
+                    </h3>
+                    <p>
+                        原因：身份证与人脸识别结果可能非同一人
+                    </p>
+                    <div class="plural-btns fn-pt-30">
+                        <a href="核身-法人异步核身-STEP2人脸识别.html" class="btn primary">重新认证</a>
+                        <a href="核身-法人异步核身-STEP3实名认证.html" class="btn links">跳过，下一步</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+	</div>
+
+{% endblock %}
+
+{% block jsPage %}
+<script>
+	$(function() {
+	    
+	})
+</script>
+{% endblock %}
+
+

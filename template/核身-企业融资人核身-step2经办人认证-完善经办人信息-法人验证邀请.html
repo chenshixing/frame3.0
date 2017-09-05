@@ -1,0 +1,109 @@
+{% extends "_layout/wrapper.html" %}
+{# content内容 #}
+{% block content %}
+    
+    <h3 class="fn-pb-20">
+        请完成以下资料填写，以便为您开通融资服务。
+    </h3>
+    
+	{# 步骤 #}
+	{{ Step.foursteps('pass2','完善企业信息','身份验证','企业安全认证','提交结果') }}
+    <div class=" fn-mb-20">
+        <h4 class="fn-mb-20">经办人申请</h4>
+        <div class="step-flows">
+            <ul class="clearfix four-li">
+                <li class="cur">经办人基本信息</li>
+                <li class="cur">经办人其他信息</li>
+                <li class="cur">经办人人脸识别</li>
+                <li class="cur">法人验证邀请</li>
+            </ul>
+        </div>
+    </div>
+
+
+    {# 法人代表信息 #}
+	<div class="form-frame fn-mb-10">
+        <div class="form-title">法定代表人信息</div>
+        <div class="form-layer1">
+            <div class="form-layer2">
+                <form autocomplete="off">
+                    {# 法定代表人姓名 #}
+					<div class="form-group">
+                        <label class="form-control-label" for="yourname">
+                            <b>*</b>
+                            <span>法定代表人姓名</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <input type="text" class="form-control" id="yourname" placeholder="">
+                        </div>
+                    </div>
+
+
+                    {# 手机号码 #}
+					<div class="form-group">
+                        <label class="form-control-label" for="yourID">
+                            <b>*</b>
+                            <span>手机号码</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <input type="text" class="form-control" id="yourID" value="" placeholder="用于接收验证邀请短信">
+                        </div>
+                    </div>
+
+                    {# 联系邮箱 #}
+                    <div class="form-group">
+                        <label class="form-control-label" for="email">
+                            <b>*</b>
+                            <span>联系邮箱</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <input type="text" class="form-control" id="email" value="" placeholder="用于接收验证邀请邮件">
+                        </div>
+                    </div>
+                    {# 附件 #}
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            <span>法人征信查询授权书附件</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-data form-control-check">
+                            <button class="btn small-btn secondary">点击上传</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-control-label"></label>
+                        <div class="form-control-wrap">
+                            <ul class="with-lt">
+                                <li>请点击下载 <a href="###" class="link-standard">个人征信查询授权书</a>，打印填写并签名。</li>
+                                <li>上传清晰彩色原件扫描件或数码照，图片大小不超过10M，仅支持jpg，jpeg，bmp的图片格式。</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-control-wrap">
+                            <a href="核身-企业融资人核身-step2经办人认证-完善经办人信息-法人验证邀请结果.html" class="btn primary" role="button">确认无误，下一步</a>
+                            <a href="#" class="btn links">已验证，下一步</a>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+	</div>
+
+{% endblock %}
+
+{% block jsPage %}
+<script>
+	$(function() {
+		
+	})
+</script>
+{% endblock %}
+
+

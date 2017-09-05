@@ -1,0 +1,115 @@
+{% extends "_layout/wrapper.html" %}
+{# content内容 #}
+{% block content %}
+
+    {# 菜单导航 #}
+    {{ navigator.current('nav4') }}
+
+    <!-- tab -->
+    <div class="tabs-wrap type1 fn-mb-10">
+      <ul class="tabs">
+        <li>
+          <a href="融资产品-保费-融资记录.html"  class="tabs-btn tab-disabled">融资记录</a>
+        </li>
+          <li>
+                <a href="融资产品-保费-车险记录.html" class="tabs-btn tab-disabled">车险记录</a>
+            </li>
+        <li >
+          <a href="融资产品-保费-融资申请-支付保证金.html" class="tabs-btn tab-disabled">融资申请</a>
+        </li>
+          <li>
+              <a href="融资产品-保费-还款计划.html"  class="tabs-btn tab-disabled">还款计划</a>
+          </li>
+          <li class="active">
+              <a href="javascript:;void(0)" class="tabs-btn tab-disabled">还款记录</a>
+          </li>
+      </ul>
+    </div>
+
+
+    <h5 class="fn-pt-10 fn-mb-15">还款信息</h5>
+    <table class="table border-bottom inverse fn-mb-20 table-view">
+        <tbody>
+        <tr>
+            <th>创建时间</th>
+            <td>2015.10.29 16:22:00</td>
+            <th>还款流水号</th>
+            <td>JZT51243123412</td>
+        </tr>
+        <tr>
+            <th>还款状态</th>
+            <td>成功</td>
+            <th>融资订单号</th>
+            <td>JZT51243123412</td>
+        </tr>
+        <tr>
+            <th>备注</th>
+            <td colspan="3">xxxx</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h5 class="fn-pt-10 fn-mb-15">本期还款明细</h5>
+    <table class="table border-bottom inverse fn-mb-20 table-view">
+        <tbody>
+        <tr>
+            <th>期数</th>
+            <td>第1期</td>
+            <th>还款金额</th>
+            <td>
+                1000.00 元
+                <i class="icon-info h4" data-toggle="tooltips" title="本金：2818.94元；融资成本：31.94元（含融资利息：19.97元）"></i>
+            </td>
+        </tr>
+        <tr>
+            <th>剩余期数</th>
+            <td>11期</td>
+            <th>剩余应还总额</th>
+            <td>300.00 元</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h5 class="fn-pt-10 fn-mb-15">融资信息</h5>
+    <table class="table border-bottom inverse fn-mb-20 table-view">
+        <tbody>
+        <tr>
+            <th>融资订单号</th>
+            <td>JZT23480780997793</td>
+            <th>合同编号</th>
+            <td>JZT23480780997793</td>
+        </tr>
+        <tr>
+            <th>融资申请金额</th>
+            <td>100.00 元</td>
+            <th>融资本金</th>
+            <td>800.00 元</td>
+        </tr>
+        <tr>
+            <th>融资利率（年化）</th>
+            <td>5.00%</td>
+            <th>融资成本率（年化）</th>
+            <td>4.70%</td>
+        </tr>
+        <tr>
+            <th>融资起息日</th>
+            <td>2015-10-10</td>
+            <th>融资到期日</th>
+            <td>2016-10-10</td>
+        </tr>
+        <tr>
+            <th>融资期限</th>
+            <td>12个月</td>
+            <th>还款方式</th>
+            <td>分期还款，等额本息</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div class="text-align-center fn-pt-40 ">
+        <a href="融资产品-保费-还款记录.html" class="btn primary">返回</a>
+    </div>
+
+{% endblock %}
+
+

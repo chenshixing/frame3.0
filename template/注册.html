@@ -1,0 +1,221 @@
+{% extends "_layout/wrapper.html" %}
+{# content内容 #}
+{% block content %}
+
+<div class="form-frame register-main">
+	<div class="form-title fn-mb-30">填写注册信息</div>
+	<div class="tabs-wrap type1 fn-mb-20">
+		<ul class="tabs clearfix">
+			<li class="active">
+				<a href="#ttp1" class="tabs-btn" aria-expanded="true">个人用户</a>
+			</li>
+			<li>
+				<a href="#ttp2" class="tabs-btn" aria-expanded="false">企业用户</a>
+			</li>
+		</ul>
+	</div>
+	<div class="tabs-panel active" id="ttp1">
+		<form autocomplete="off">
+			<div class="form-layer1">
+				<div class="form-layer2">
+						<div class="form-group">
+							<label class="form-control-label" for="input2">
+								<span>邀请码</span>
+								<em>：</em>
+							</label>
+							<div class="form-control-wrap">
+								<input type="text" class="form-control" id="input2" value="">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="form-control-label" for="input2">
+								<span>真实姓名</span>
+								<em>：</em>
+							</label>
+							<div class="form-control-wrap">
+								<input type="text" class="form-control" id="input2" value="">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="form-control-label" for="input2">
+								<span>用户名</span>
+								<em>：</em>
+							</label>
+							<div class="form-control-wrap">
+								<input type="text" class="form-control" id="input2" placeholder="4-20个英文字母、数字">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="form-control-label" for="input2">
+								<span>登录密码</span>
+								<em>：</em>
+							</label>
+							<div class="form-control-wrap">
+								<input type="password" class="form-control" id="input2" placeholder="8-20位英文字母、数字或符号的组合，字母区分大小写">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="form-control-label" for="input2">
+								<span>确认密码</span>
+								<em>：</em>
+							</label>
+							<div class="form-control-wrap">
+								<input type="password" class="form-control" id="input2" placeholder="">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="form-control-label" for="input2">
+								<span>验证码</span>
+								<em>：</em>
+							</label>
+							<div class="form-control-wrap">
+								<input type="password" class="form-control" id="input2" placeholder="">
+								<div class="form-control-tools-link fn-pa-0">
+									<span class="code-pic"><img src="/static/images/yzm.jpg"></span>
+									<a href="###" class="link-standard fn-pl-10">换一张</a>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="form-control-label" for="input2">
+								<span>手机号码</span>
+								<em>：</em>
+							</label>
+							<div class="form-control-wrap">
+								<input type="text" class="form-control" id="input2" placeholder="">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="form-control-label" for="***">
+								<span>短信验证码</span>
+								<em>：</em>
+							</label>
+							<div class="form-control-wrap">
+								<div class="form-control-verify">
+									<input type="text" class="form-control" id="***">
+									<button class="btn form-control-verify-btn">
+										获取验证码
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="form-group fn-mt-20">
+							<div class="form-control-wrap ">
+								<button type="button" class="btn primary">下一步</button>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="form-control-wrap">
+								<div class="form-control-data">已有账号？ <a href="###" class="link-standard">直接登录</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+		</form>
+	</div>
+	<div class="tabs-panel" id="ttp2">
+		<div class="alert alert-warning alert-width">
+			<i></i>
+			<em></em>
+			您的真实姓名与手机号，应与您提供的“企业委托授权书”上的信息一致。
+		</div>
+		<form autocomplete="off">
+			<div class="form-layer1">
+				<div class="form-layer2">
+					<div class="form-group">
+						<label class="form-control-label" for="input2">
+							<span>邀请码</span>
+							<em>：</em>
+						</label>
+						<div class="form-control-wrap">
+							<input type="text" class="form-control" id="input2" value="">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="form-control-label" for="input2">
+							<span>企业名称</span>
+							<em>：</em>
+						</label>
+						<div class="form-control-wrap">
+							<input type="text" class="form-control" id="input2" value="">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="form-control-label" for="input2">
+							<span>用户名</span>
+							<em>：</em>
+						</label>
+						<div class="form-control-wrap">
+							<input type="text" class="form-control" id="input2" placeholder="4-20个英文字母、数字">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="form-control-label" for="input2">
+							<span>登录密码</span>
+							<em>：</em>
+						</label>
+						<div class="form-control-wrap">
+							<input type="password" class="form-control" id="input2" placeholder="8-20位英文字母、数字或符号的组合，字母区分大小写">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="form-control-label" for="input2">
+							<span>确认密码</span>
+							<em>：</em>
+						</label>
+						<div class="form-control-wrap">
+							<input type="password" class="form-control" id="input2" placeholder="">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="form-control-label" for="input2">
+							<span>管理员手机号码</span>
+							<em>：</em>
+						</label>
+						<div class="form-control-wrap">
+							<input type="text" class="form-control" id="input2" placeholder="">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="form-control-label" for="***">
+							<span>短信验证码</span>
+							<em>：</em>
+						</label>
+						<div class="form-control-wrap">
+							<div class="form-control-verify">
+								<input type="text" class="form-control" id="***">
+								<button class="btn form-control-verify-btn">
+									获取验证码
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="form-group fn-mt-20">
+						<div class="form-control-wrap ">
+							<button type="button" class="btn primary">下一步</button>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="form-control-wrap">
+							<div class="form-control-data">已有账号？ <a href="###" class="link-standard">直接登录</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+
+
+</div>
+
+
+
+
+
+{% endblock %}
+
+
+{% block jsPage %}
+
+{% endblock %}
+

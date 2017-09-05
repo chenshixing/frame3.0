@@ -1,0 +1,213 @@
+{% extends "_layout/wrapper.html" %}
+{# content内容 #}
+{% block content %}
+    
+    <h3 class="fn-pb-20">
+        请完成以下资料填写，以便为您开通融资服务。
+    </h3>
+    
+	{# 步骤 #}
+	{{ Step.foursteps('pass2','完善企业信息','身份验证','企业安全认证','提交结果') }}
+    <div class="form-frame noborder">
+        <div class="form-layer1">
+            <div class="form-layer2">
+                <form autocomplete="off">
+                    {# 操作人身份 #}
+                    <div class="form-group">
+                        <label class="form-control-label" for="name1">
+                            <span>操作人身份</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <div class="form-control-check" id="j-radio">
+                                <label>
+                                    法人代表
+                                    <input type="radio" name="person" checked value="1"></label>
+                                <label>
+                                    经办人
+                                    <input type="radio" name="person" value="2"></label>
+                            </div>
+                            <div class="form-control-bar warning-FontColor display-none" style="left: 200px; width: auto; white-space: nowrap;" id="j-tab-tip">
+                                <i class="icon-error"></i>
+                                同时还需法人代表完善法人相关信息并完成法人人脸识别。
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <h4 class="fn-mb-20" id="j-title">法人代表申请</h4>
+        <div class="step-flows" id="j-flows-1">
+            <ul class="clearfix">
+                <li class="cur">基本信息</li>
+                <li>其他信息</li>
+                <li>人脸识别</li>
+            </ul>
+        </div>
+        <div class="step-flows j-hidden" id="j-flows-2">
+            <ul class="clearfix four-li">
+                <li class="cur">经办人基本信息</li>
+                <li>经办人其他信息</li>
+                <li>经办人人脸识别</li>
+                <li>法人验证邀请</li>
+            </ul>
+        </div>
+    </div>
+
+
+    {# 法人代表信息 #}
+	<div class="form-frame fn-mb-10">
+        <div class="form-title">法人代表信息</div>
+        <div class="form-layer1">
+            <div class="form-layer2">
+                <form autocomplete="off" id="j-form" action="核身-企业融资人核身-step2法人代表认证-完善经办人信息-法人经办.html" method="get">
+                    <!-- TODO: 传输当前选择操作人身份 -->
+                    <input type="hidden" name="person" id="person-input">
+                    {# 你的真实姓名 #}
+					<div class="form-group">
+                        <label class="form-control-label" for="yourname">
+                            <b>*</b>
+                            <span>你的真实姓名</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <input type="text" class="form-control" id="yourname" value="XXX" readonly>
+                        </div>
+                    </div>
+
+                    {# 手机号码 #}
+					<div class="form-group">
+                        <label class="form-control-label" for="yourmobilephone">
+                            <b>*</b>
+                            <span>手机号码</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <input type="text" class="form-control" id="yourmobilephone" value="133****1234" readonly>
+                            <p class="viceText-FontColor fn-pt-5">
+                                审核结果将通过短信发送至该手机
+                            </p>
+                        </div>
+                    </div>
+
+                    {# 身份证号码 #}
+					<div class="form-group">
+                        <label class="form-control-label" for="yourID">
+                            <b>*</b>
+                            <span>身份证号码</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <input type="text" class="form-control" id="yourID" value="">
+                        </div>
+                    </div>
+
+                    {# 身份证图片正面 #}
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            <b>*</b>
+                            <span>身份证图片正面</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-data form-control-check">
+                            <button class="btn small-btn secondary">点击上传</button>
+                        </div>
+                    </div>
+
+                    {# 身份证图片反面 #}
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            <b>*</b>
+                            <span>身份证图片反面</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-data form-control-check">
+                            <button class="btn small-btn secondary">点击上传</button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            <span>证件要求</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-data fn-pb-20" style="height: auto;">
+                            <ul class="with-lt">
+                                <li>上传的身份证图片需调整为<span class="warning-FontColor">横向且保证文字方向为正向</span>。</li>
+                                <li>必须为清晰彩色原件扫描件或数码照，图片大小不超过<span class="warning-FontColor">2M</span>，
+                                    <br />
+                                    仅支持jpg,jpeg,bmp的图片格式。</li>
+                                <li>如果提交的证件错误，您的申请将不通过。</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-control-wrap">
+                            <button type="submit" class="btn primary" role="button">确认无误，下一步</button>
+                            <a href="核身-企业融资人核身-step1完善企业信息.html" class="btn links">上一步</a>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+	</div>
+
+{% endblock %}
+
+{% block jsPage %}
+<script>
+	$(function() {
+        // 切换
+        var chanelTabView = {
+            // 表单元素
+            form: $('#j-form'),
+            // 操作人类型隐藏域
+            input: $('#person-input'),
+            tips: $('#j-tab-tip'),
+            title: $('#j-title'),
+            init: function(type) {
+                // 1- 法人 2- 经办人
+                this[type == 2 ? 'deal' : 'legal'](type);
+                this.input.val(type);
+            },
+            // 法人
+            legal: function(type) {
+                // TODO: 切换表单提交路由, 实际后端可根据 person 类型直接跳转
+                this.form.attr('action', '核身-企业融资人核身-step2法人代表认证-完善经办人信息-法人经办.html');
+ 
+                $("#j-flows-1").show();
+                $("#j-flows-2").hide();
+
+                this.title.html('法人代表申请');
+
+                this.tips.hide();
+            },
+            // 经办     
+            deal: function() {
+                // TODO: 切换表单提交路由, 实际后端可根据 person 类型直接跳转
+                this.form.attr('action', '核身-企业融资人核身-step2经办人认证-完善经办人信息-其他信息.html');
+
+                $("#j-flows-1").hide();
+                $("#j-flows-2").show();
+
+                this.title.html('经办人申请');
+
+                // 显示提示
+                this.tips.show();
+            }
+        };
+
+        // 点击选择操作人身份
+        $('#j-radio :radio').on('click', function() {
+            var val = $(this).val();
+            // 视图控制
+            chanelTabView.init(val);
+        })
+	})
+</script>
+{% endblock %}
+
+

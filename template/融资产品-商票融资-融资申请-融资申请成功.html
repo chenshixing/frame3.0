@@ -1,0 +1,49 @@
+{% extends "_layout/wrapper.html" %}
+{# content内容 #}
+{% block content %}
+
+    {# 菜单导航 #}
+    {{ navigator.current('nav1') }}
+
+    <!-- tab -->
+    <div class="tabs-wrap type1 fn-mb-10">
+      <ul class="tabs">
+        <li>
+          <a href="融资产品-商票融资-融资记录.html" class="tabs-btn tab-disabled" >融资记录</a>
+        </li>
+        <li class="active">
+          <a href="融资产品-商票融资-标的物管理.html" class="tabs-btn tab-disabled">标的物管理</a>
+        </li>
+      </ul>
+    </div>
+    <ol class="breadcrumb fn-mb-10">
+        <li>
+            <a href="融资产品-商票融资-标的物管理.html">
+                标的物管理
+                <i class="icon-chevron-thin-right"></i>
+            </a>
+        </li>
+        <li>
+            融资申请
+        </li>
+    </ol>
+
+    {{ Step.render(step='pass3', text1='填写资料', text2='确认信息', text3='申请成功') }}
+
+    <div class="notice-wrap success">
+        <div class="notice-box">
+            <span class="notice-img"></span>
+            <h3 class="success-FontColor1">融资申请已提交！
+            </h3>
+            <p>请耐心等待，申请结果将会以短信通知。</p>
+            <p>点击链接下载附件：<a href="###" class="link-standard">20160106票务质押合同.pdf</a></p>
+            <p style="padding-left: 125px;"><a href="###" class="link-standard">20160106融资协议.pdf</a></p>
+            <div class="text-align-left plural-btns fn-pt-30">
+                <a href="###" class="btn primary">查看明细</a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+

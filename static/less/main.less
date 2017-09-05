@@ -1,0 +1,1238 @@
+/*!
+* @project: 卖家标准版 v3.0
+* @author : tommyshao <jinhong.shao@frontpay.cn>
+* @date   : 2015-08-18
+*/
+
+// log:
+// 2015-08-18 初始化项目
+
+@import '_share';
+@import '_default_login';
+@import '_sprite_all';
+
+//字体颜色类
+.warning-font {
+    color: @warning-FontColor;
+}
+
+// wrapper global
+// --------------
+.wrapper{
+  /*margin: 20px;*/
+}
+
+// Function mixin
+// -----------------
+@import "app/_mixin";
+
+
+// 全局重置
+// -------
+@import "app/_global";
+
+// alert
+// -----
+@import "app/_alert";
+
+
+//
+//--- 充值
+//
+@import "app/_recharge";
+
+//
+// --- 表单
+//
+.drop-select-province,
+.drop-select-city {
+  width: 49%;
+}
+.drop-select-province{
+  margin-right: 2%;
+}
+.drop-select-city{
+  margin-left: -4px;
+}
+
+//
+// --- 账户资料
+//
+.info-list {
+  margin: 0;
+  padding: 0 10px;
+  font-size: @small-FontSize;
+  .clearfix();
+  //
+  overflow: hidden;
+
+  li{
+    float: left;
+    list-style: none;
+    width: 50%;
+    line-height: 40px;
+
+    > dl {
+      margin: 0;
+
+      dt,dd{
+        float: left;
+        margin: 0;
+      }
+
+      dt{
+        margin-right: 10px;
+        padding-left: 20px;
+        min-width: 130px;
+        text-align: right;
+        color: @viceText-FontColor;
+        white-space: nowrap;
+
+        &.default-FontColor {
+          color: @default-FontColor;
+        }
+
+        &.longest {
+          min-width: 210px;
+        }
+      }
+    }
+  }
+}
+
+//
+// --- 重置双色球 ray 20150821
+//
+.ar-data-box {
+
+    > h2 {
+        line-height: 1.8;
+        font-size: @small-FontSize !important;
+    }
+}
+
+//
+// --- 旧版public
+//
+@import "app/_public";
+
+//
+//--- 收银台
+//
+.s-casher-bd{
+    margin: 0 70px;
+
+    .form-control-label{
+        width: 220px;
+    }
+
+    .form-group{
+        padding-left: 230px;
+    }
+
+    .form-control-wrap{
+        width: 370px;
+    }
+}
+
+
+// 测试银行
+.bank-example{
+    background: url("@{images-url}example.jpg") no-repeat 0 3px;
+}
+.icon-example{
+    background: url("@{images-url}icon-example.png") no-repeat 0 0;
+}
+
+// 步骤
+.steps-wrap {
+    //添加“步骤”样式有四步
+    &.foursteps {
+
+        .step {
+
+            &.step1 {
+                left: 0;
+            }
+
+            &.step2 {
+                left: 33.33%;
+                margin-left: -27px;
+            }
+
+            &.step3 {
+                left: 66.66%;
+                margin-left: -27px;
+            }
+
+            &.step4 {
+                right: 0;
+            }
+        }
+
+        .step-bars {
+
+            > div {
+                width: 16.66%;
+            }
+        }
+
+        .step-title {
+
+            &.title1 {
+                left: 0;
+            }
+
+            &.title2 {
+                left: 33.33%;
+                text-align: center;
+                margin-left: -67px;
+            }
+
+            &.title3 {
+                left: 66.66%;
+                text-align: center;
+                margin-left: -67px;
+            }
+
+            &.title4 {
+                right: 0;
+                text-align: right;
+            }
+        }
+
+        &.pass3 {
+
+            .step {
+
+                &.step4 {
+                    background-color: @steps-bgColor1;
+                    color: #fff;
+                }
+            }
+
+            .step-bars {
+
+                > div.bar1,
+                > div.bar2,
+                > div.bar3 {
+                    .rounded( 0 );
+                }
+
+                > div.bar5 {
+                    background-color: @steps-bgColor2;
+                    .rounded( 30px );
+                }
+
+                > div.bar6 {
+                    background-color: @steps-bgColor1;
+                }
+            }
+
+            .step-title {
+                color: @steps-bgColor2;
+
+                &.title4 {
+                    color: @steps-bgColor1;
+                }
+            }
+        }
+
+        &.pass4 {
+
+            .step {
+                background-color: @steps-bgColor2;
+                color: #fff;
+            }
+
+            .step-bars > div {
+                background-color: @steps-bgColor2;
+                .rounded( 0 );
+            }
+
+            .step-title {
+                color: @steps-bgColor2;
+            }
+        }
+    }
+
+  // 添加5步样式
+  &.fivesteps {
+    .step {
+      &.step1 {
+        left: 0;
+      }
+      &.step2 {
+        left: 25%;
+        margin-left: -27px;
+      }
+      &.step3 {
+        left: 50%;
+        margin-left: -27px;
+      }
+      &.step4 {
+        margin-left: -27px;
+        left: 75%;
+      }
+      &.step5 {
+        right: 0;
+      }
+    }
+    .step-bars {
+      > div {
+        width: 12.5%;
+      }
+    }
+    .step-title {
+      &.title1 {
+        left: 0;
+      }
+      &.title2 {
+        left: 25%;
+        text-align: center;
+        margin-left: -67px;
+      }
+      &.title3 {
+        left: 50%;
+        text-align: center;
+        margin-left: -67px;
+      }
+      &.title4 {
+        left: 75%;
+        text-align: center;
+        margin-left: -67px;
+      }
+      &.title5 {
+        right: 0;
+        text-align: right;
+      }
+    }
+    &.pass3 {
+      .step {
+        &.step4,&.step5 {
+          background-color: @steps-bgColor1;
+          color: #fff;
+        }
+      }
+      .step-bars {
+
+        > div.bar1,
+        > div.bar2,
+        > div.bar3 {
+          .rounded( 0 );
+        }
+
+        > div.bar5 {
+          background-color: @steps-bgColor2;
+          .rounded( 30px );
+        }
+
+        > div.bar6, > div.bar7, > div.bar8 {
+          background-color: @steps-bgColor1;
+        }
+      }
+
+      .step-title {
+        color: @steps-bgColor2;
+
+        &.title4,&.title5 {
+          color: @steps-bgColor1;
+        }
+      }
+    }
+
+    &.pass4 {
+
+      .step {
+        background-color: @steps-bgColor2;
+        color: #fff;
+
+        &.step5 {
+          background-color: @steps-bgColor1;
+          color: #fff;
+        }
+      }
+
+      .step-bars > div {
+        background-color: @steps-bgColor2;
+        .rounded( 0 );
+
+        &.bar7 {
+          background-color: @steps-bgColor2;
+          .rounded( 30px );
+        }
+
+        &.bar8 {
+          background-color: @steps-bgColor1;
+        }
+      }
+
+      .step-title {
+        color: @steps-bgColor2;
+
+        &.title5 {
+          color: @steps-bgColor1;
+        }
+      }
+    }
+
+    &.pass5 {
+
+      .step {
+        background-color: @steps-bgColor2;
+        color: #fff;
+      }
+
+      .step-bars > div {
+        background-color: @steps-bgColor2;
+        .rounded( 0 );
+      }
+
+      .step-title {
+        color: @steps-bgColor2;
+      }
+    }
+  }
+}
+
+//注册开通
+.login-wrap{
+  background: url("@{images-url}login-bg.jpg") no-repeat center center;
+  width: 880px;
+  .h2-title{
+    padding: 240px 0 0 0;
+  }
+  .info-title{
+    border-bottom:1px solid #e0e0e0;
+    padding: 120px 0 5px 0;
+    margin: 0 0 10px 0;
+  }
+  .h3-title{
+    padding: 140px 0 55px 0;
+    font-weight: bold;
+  }
+  .repay-method{
+    padding: 0 0 60px 105px;
+    >a{
+      width: 255px;
+      height: 125px;
+      line-height: 125px;
+      padding: 0 0 0 115px;
+      float: left;
+      margin: 0 35px 0 35px;
+      color: @base-BgColor;
+      font-size: @base-FontSize+10px;
+      text-decoration: none;
+      position: relative;
+      >i{
+        position: absolute;
+        left: 30px;
+        top: 30px;
+        display: block;
+      }
+      &.company{
+        background: #8daadd;
+        border: 5px solid #8daadd;
+        border-bottom-color: #6c90d3;
+        >i{
+          background: url("@{images-url}icon-company.png") no-repeat 0 0;
+          width: 72px;
+          height: 50px;
+        }
+        &.active{
+          background: #5777b4;
+          border: 5px solid #9ab3e1;
+        }
+      }
+      &.personal{
+        background: #81b76c;
+        border: 5px solid #81b76c;
+        border-bottom-color:#5da14b ;
+        >i{
+          background: url("@{images-url}icon-personal.png") no-repeat 0 0;
+          width: 67px;
+          height: 58px;
+        }
+        &.active{
+          background: #53943a;
+          border: 5px solid #81b76c;
+        }
+      }
+    }
+  }
+  .repay-agreement{
+    width: 240px;
+    margin: 0 auto;
+    padding-bottom: 60px;
+  }
+  .repay-btn{
+    margin: 0 140px 0 140px;
+    padding: 30px 0 75px 0;
+    border-top: 1px solid #e0e0e0;
+  }
+}
+
+//20151109 ray
+.form-control-bar {
+    position: absolute;
+    top: 0;
+    left: 350px;
+    width: 235px;
+    line-height: 40px;
+}
+
+//20151112 ray
+.with-lt {
+    margin: 10px 0 0 0;
+    padding: 0 0 0 20px;
+    line-height: @line-height-base;
+}
+
+//信用账户二期页面
+.cabalance-wrap {
+    border: 1px solid @primary-BorderColor;
+    border-bottom-width: 2px;
+    padding: 20px 0;
+}
+
+.border-right {
+    border-right: 1px solid @primary-BorderColor;
+}
+
+.cabalance-table {
+    table-layout: fixed;
+    width: 100%;
+
+    td {
+        vertical-align: top;
+        padding: 0 20px;
+    }
+}
+
+//透支明细<i>hover出列表
+.tooltip-table-wrap {
+    .inline-block();
+    position: relative;
+    vertical-align: middle;
+
+    > i {
+        color: @warning-FontColor;
+        font-size: @large-FontSize ;
+    }
+
+    .tooltip-table-box {
+        position: absolute;
+        top: -125px;
+        left: -12px;
+        width: 230px;
+        display: none;
+
+        > table {
+            table-layout: fixed;
+            width: 100%;
+            color: @default-FontColor;
+            text-align: left;
+
+            tr {
+                border: 1px solid #f3dfaf;
+            }
+
+            th, td {
+                border: none;
+                border-bottom: 1px solid #f3dfaf;
+                background-color: @bgColor-default;
+                text-align: left;
+                padding: 10px;
+            }
+
+            th {
+                background-color: #fffbec;
+            }
+        }
+
+        .tooltip-table-arrow {
+            .arrow-up-or-down( border-top,6px,6px,#fffbec );
+            position: absolute;
+            bottom: -5px;
+            left: 17px;
+        }
+
+        .tooltip-table-arrow-shadow {
+            .arrow-up-or-down( border-top,7px,7px,#f3dfaf );
+            position: absolute;
+            bottom: -7px;
+            left: 16px;
+        }
+    }
+
+    &:hover {
+
+        .tooltip-table-box {
+            display: block;
+        }
+    }
+}
+
+//新增表单组件结构 20160113
+.form-control-sub-text {
+    position: absolute;
+    top: 0;
+    right: -( @form-control-label-width + 15px );
+    width: @form-control-label-width;
+    padding: ( @form-control-height - ( @forms-FontSize + 4px ) ) / 2 0 ( @form-control-height - ( @forms-FontSize + 4px ) ) / 2 0;
+    text-align: left;
+    line-height:  @forms-FontSize + 4px;
+    font-size: @smaller-FontSize;
+}
+
+//新增表格样式 20160113
+.border-bottom th, .border-bottom.inverse th{
+  border: 1px solid #e8e8e8;
+}
+.border-bottom td, .border-bottom.inverse td{
+  border: 1px solid #e8e8e8;
+}
+
+
+.form-frame {
+
+    &.noborder {
+        border: none;
+
+        .form-layer-gray-box {
+            background-color: #fff;
+            border-bottom: none;
+            padding-bottom: 15px;
+        }
+    }
+
+  // 表单分组
+  .form-section-title {
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    font-size: @small-FontSize;
+    border-bottom: 1px solid @base-BorderColor;
+
+    > em {
+      font-size: @smallest-FontSize;
+      color: @viceText-FontColor;
+      font-style: normal;
+    }
+  }
+}
+
+// 对公账户
+.ebank-info {
+  .form-group {
+    padding-left: 80px;
+  }
+}
+
+// 协议排版
+.modal-document{
+  line-height: 1.5;
+  p{
+    padding-bottom: 10px;
+    text-indent: 2em;
+  }
+  ul{
+    margin-left: 2em;
+  }
+}
+
+// 表格排版
+.table {
+  &.table-view {
+    th,td{
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    th{
+      text-align: right;
+    }
+    td {
+      text-align: left;
+    }
+  }
+  &.table-nobg{
+   tr{
+      th,td{
+        background-color: @base-BgColor;
+      }
+
+    }
+  }
+
+}
+
+//页头退出登录
+.signout {
+    color: #5f5d5d;
+    float: right;
+    margin-top: 22px;
+}
+
+
+//详情页，标题里有“打印凭证”
+.title-wrap{
+  position: relative;
+  .small-btn{
+    width: 100px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+//div隐藏
+.j-hidden{
+  display: none;
+}
+
+
+// 表格中的银行icon
+.form-control-dropdown-value{
+  &.table-bank{
+    border: none;
+    height: 20px;
+  }
+}
+
+//数据统计部件---3列
+.data-count-wrap {
+  border-top: 1px solid @base-BorderColor;
+  .date-count-ul {
+    >li{
+      width: 33%;
+    }
+  }
+}
+
+.form-textarea {
+  height: 200px;
+  display: block;
+  padding: 10px 15px 9px 15px;
+  width: 100%;
+  outline: none;
+  border: 1px solid @base-BorderColor;
+  line-height: 18px;
+  background-color: @base-BgColor;
+}
+
+// --- 步骤中的步骤
+
+.stepinstep {
+    background-color: transparent;
+    border: none;
+    width: 42.5%;
+    margin: 0 auto;
+}
+
+.stepinstepTitle {
+    border-bottom: 1px solid @form-default-BorderColor;
+}
+
+// --- 人脸识别
+
+.facevr-wrap {
+    width: 834px;
+    margin: 0 auto;
+  margin-top: 50px;;
+    > p {
+      > a {
+        font-size: 14px;
+        color: #666;
+        margin-top: 13px;
+      }
+      .icon-help:before {
+        color: #d2d2d2;
+      }
+    }
+  .face-text{
+  background: #f4f5f5;
+   width: 450px;
+    margin: 0px auto;
+    padding:20px 0;
+    border:1px solid @base-BorderColor;
+    .secondary{
+      background-image:url("@{images-url}icon-phone-ok.png") ;
+      background-repeat: no-repeat;
+      background-position: 15px 5px;
+      padding:0 0 0 35px;
+      width: 230px;
+    }
+
+  }
+}
+
+.facevr-box-step1 {
+    border: 1px solid @form-default-BorderColor;
+    text-align: center;
+    > h2 {
+      font-size: 16px !important;
+      vertical-align: middle;
+      .icon-camera2{
+        margin-right: 12px;
+        font-size: 62px;
+        color: #d2d2d2;
+        vertical-align: middle;
+      }
+    }
+}
+
+.facevr-cut {
+    .square(150px);
+    .rounded(50%);
+    line-height: 150px;
+    margin: 30px auto 0 auto;
+    overflow: hidden;
+
+    > img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        outline: none;
+        border: 0;
+        background-color: @bgColor-type3;
+    }
+}
+
+.pb-wrap {
+
+    > .pb-box {
+        background-color: @bgColor-type1;
+        .rounded(10em);
+        position: relative;
+        height: 20px;
+        .inner-shadow(0,1px,3px,0.1);
+        overflow: hidden;
+        text-align: center;
+        color: darken(@domColor3,40%);
+        font-size: @h6-FontSize;
+        line-height: 20px;
+
+        > em {
+            position: absolute;
+            left: 0;
+            right: 0;
+        }
+
+        > .pb {
+            height: 100%;
+            background-color: @domColor3;
+            .rounded(10em);
+            .outer-shadow(2px,0,3px,0.2);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+}
+
+.code-box {
+  border: 1px solid @base-BorderColor;
+  height: 45px;
+  line-height: 43px;
+  width:145px;
+  padding-left: 25px;
+  background: url("@{images-url}codeicon.jpg") transparent 95px 10px no-repeat;
+  cursor: pointer;
+  position: relative;
+
+  .code-in {
+    position: absolute;
+    top: 43px;
+    left: -1px;
+    line-height: 1.4;
+    width: 228px;
+    background-color: #fff;
+    border: 1px solid @base-BorderColor;
+    display: none;
+    padding-bottom: 15px;
+    z-index: 2;
+
+    > img {
+      .square(122px);
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  &:hover {
+    .code-in {
+      display: block;
+    }
+  }
+}
+
+
+// --- 法人代表信息
+
+.centerwrap55 {
+    width: 55%;
+    margin: 0 auto;
+}
+
+.centerwrap75 {
+    width: 75%;
+    margin: 0 auto;
+}
+
+// --- 核身错误提示
+.vrerror-wrap {
+    border-bottom: 1px solid @primary-BorderColor;
+    line-height: 0;
+    font-size: 0;
+    padding-bottom: 20px;
+
+    > .hsdiv {
+        .inline-block();
+        vertical-align: middle;
+        .square(80px);
+        overflow: hidden;
+        .rounded(50%);
+
+        > img {
+            border: 0;
+            outline: 0;
+            background-color: @bgColor-type1;
+            .square(100%);
+        }
+    }
+
+    > .namediv {
+        .inline-block();
+        vertical-align: middle;
+        padding-left: 30px;
+
+        > h2 {
+            line-height: @line-height-base;
+        }
+
+        > p {
+            font-size: @smaller-FontSize;
+            line-height: @line-height-base;
+        }
+    }
+}
+
+
+//步骤流程
+.step-flows{
+  ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: 1%;
+    >li{
+      list-style: none;
+      .rounded(20px);
+      height: 40px;
+      line-height: 40px;
+      font-size: @base-FontSize+2px;
+      width: 31%;
+      margin: 0 1%;
+      border: 1px solid @base-BorderColor;
+      text-align: center;
+      display: inline;
+      float: left;
+      color: #a4aab6;
+      &.cur{
+        border: 1px solid #54d393 ;
+      }
+    }
+    &.six-li{
+      >li{
+        width: 14%;
+      }
+    }
+    &.four-li{
+      >li{
+        width: 22.8%;
+      }
+    }
+  }
+}
+
+//合同签章
+.seal-page{
+  height: 100%;
+
+  .seal-pdf{
+    height: 100%;
+    min-height: 680px;
+    overflow: hidden;
+    padding-bottom: 74px;
+    //height: 200px;
+    //overflow-y: auto;
+    iframe {
+      display: block;
+    }
+  }
+  .seal-btn{
+
+    background: #e8e8e8;
+    padding: 15px 0;
+
+    &-wrap {
+     // height: 84px;
+    }
+
+    &-fixed {
+      position: fixed;
+      z-index: 100;
+      left: 0;
+      width: 100%;
+      bottom: 0;
+      .opacity(.95);
+    }
+  }
+
+}
+
+
+// 修复modal相对于object层级问题
+.modal-fixed {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  .opacity(0);
+}
+
+
+// 身份证正反面
+.upload-img {
+  &-wrap {
+    position: relative;
+    margin-top: 5px;
+    width: 720px;
+    .clearfix;
+  }
+
+  &-box {
+    float: left;
+    width: 350px;
+    text-align: center;
+
+    &:first-child {
+      margin-right: 20px;
+    }
+
+    > img {
+      display: block;
+      width: 350px;
+      height: 220px;
+    }
+    > p {
+      margin-top: 5px;
+    }
+  }
+
+  &-alert{
+    display: none;
+    position: relative;
+    margin: 10px 0;
+    width: 720px;
+
+    ul {
+      margin: 5px 0;
+      padding: 0 0 0 16px;
+    }
+  }
+}
+
+//二维码边框
+.code-border{
+  width: 220px;
+  border: 1px solid @base-BorderColor;
+}
+
+
+/*上传样式*/
+.upload-box{ position:relative; display:inline-block; height:32px; vertical-align:middle; zoom:1; *display:inline;}
+.upload-box .upload-btn{ display:inline-block; height:32px; zoom:1; *display:inline; }
+.upload-box .upload-progress{ position:absolute; top:0; left:0; padding:2px 5px; width:115px; height:26px; border:1px solid #d7d7d7; background:#fff; overflow:hidden; }
+.upload-box .upload-progress .txt{ display:block; padding-right:10px; font-weight:normal; font-style:normal; font-size:11px; line-height:18px; height:18px; text-overflow:ellipsis; overflow:hidden; }
+.upload-box .upload-progress .bar{ position:relative; display:block; width:112px; height:4px; border:1px solid #1da76b; }
+.upload-box .upload-progress .bar b{ display:block; width:0%; height:4px; font-weight:normal; text-indent:-99em; background:#28B779; overflow:hidden; }
+.upload-box .upload-progress .close{ position:absolute; display:block; top:1px; right:1px; width:14px; height:14px; text-indent:-99em; background:url(/images/skin_icons.png) -56px -196px no-repeat; cursor:pointer; overflow:hidden; }
+
+/*=====================以下部分是WebUploader必须的====================*/
+.webuploader-container{ position:relative; }
+.webuploader-element-invisible{ position:absolute !important; clip: rect(1px 1px 1px 1px); /* IE6, IE7 */ clip: rect(1px,1px,1px,1px); }
+.webuploader-pick{ position:relative; display:inline-block; width:65px; line-height:30px;font-size:12px; height:30px; border:1px solid #5e7aa0; cursor:pointer; background:#7699c8; color:#fff; text-align:center; overflow:hidden; zoom:1; *display:inline;border-radius: 3px;}
+.webuploader-pick-hover{ background:#7091be;border-color:#536b8c;}
+.webuploader-pick-disable{ opacity:0.6; pointer-events:none; }
+/*=====================以上部分是WebUploader必须的====================*/
+
+
+// -- 协议弹层
+#modal-agreement-doc {
+  .modal-wrap {
+    width: 80%;
+    max-width: 1000px;
+  }
+  .modal-body {
+    padding: 0;
+  }
+
+  iframe {
+    display: block;
+  }
+}
+
+
+//下载引导页--PC端
+.download-wrap{
+  background: #6fcdf3;
+  color: #2b455e;
+  filter:none;
+  .default-login-main-wrap{
+    &.in-bg-wrap {
+      background:url("@{images-url}bg-pc.jpg") center bottom no-repeat;
+    }
+  }
+  .fb{
+    font-weight: bold;
+  }
+  h1 ,.h1{
+    font-size: @largest-FontSize+2px!important;
+    color: #2b455e;
+  }
+  h2 ,.h2{
+    font-size: @larger-FontSize+6px!important;
+    color: #2b455e;
+  }
+  .download-content{
+    position: absolute;
+    top: 90px;
+    left: 150px;
+    .download-btn{
+      width: 190px;
+      height: 54px;
+      line-height: 54px;
+      display: block;
+      background: #fe5c5a;
+      border-radius: 5px;
+      color: #fff;
+      font-size: @large-FontSize;
+      position: relative;
+      padding: 0 20px 0 70px;
+      >i{
+        background:url("@{images-url}icon-download.png") center center no-repeat;
+        //width: 40px;
+        //height: 35px;
+        padding: 35px 0 0 50px;
+        position: absolute;
+        left: 15px;
+        top: 10px;
+      }
+    }
+  }
+  //下载引导页--管理端
+  &.download-manage-wrap{
+    background:#fbc370 url("@{images-url}download-manage.jpg") center bottom no-repeat;
+    color: #fff;
+    h1, h2, .h2{
+      color: #fff;
+    }
+    .manage-title{
+      vertical-align: middle;
+    }
+    .default-login-main-wrap{
+      &.in-bg-wrap {
+        background:url("@{images-url}bg-manage.png") center bottom no-repeat;
+      }
+    }
+  }
+
+}
+
+
+//弹层银行列表无icon
+.pop-bank-list{
+  margin:0;
+  padding: 0;
+  li{
+    width: 21%;
+    float: left;
+    line-height: 40px;
+    text-align: left;
+    list-style:none;
+    margin: 0 2%;
+    padding:0;
+    font-size: @base-FontColor;
+  }
+}
+
+
+//核身-企业核身-审核中提示页
+.cms-wrap-in {
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-top: 1px dashed @primary-BorderColor;
+
+  .cms-table {
+    td {
+      padding: 18px 20px;
+      vertical-align: top;
+    }
+  }
+}
+
+//核身-企业核身-step3-2企业对公账户确认
+.two-table-inline {
+  font-size: 0;
+  line-height: 0;
+  margin: 0 30px;
+
+  > .table-wrap {
+    width: 45%;
+    .inline-block();
+    vertical-align: middle;
+  }
+
+  > .ingarp {
+    width: 10%;
+    .inline-block();
+    vertical-align: middle;
+    height: 29px;
+    background: url('@{images-url}arrow.png') transparent center center no-repeat;
+  }
+
+  .garp-table {
+    font-size: 14px;
+    line-height: @line-height-base;
+    border: 1px solid @primary-BorderColor;
+    width: 100%;
+
+    .green-head {
+      background-color: @domColor3;
+      color: #fff;
+      text-align: left;
+      border: 1px solid @domColor3;
+      font-size: 16px;
+    }
+
+    .orange-head {
+      background-color: @domColor6;
+      color: #fff;
+      text-align: left;
+      border: 1px solid @domColor6;
+      font-size: 16px;
+    }
+
+    th {
+      text-align: right;
+      font-weight: normal;
+    }
+
+    td,th {
+      padding: 15px;
+    }
+  }
+}

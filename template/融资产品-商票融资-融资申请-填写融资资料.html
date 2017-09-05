@@ -1,0 +1,320 @@
+{% extends "_layout/wrapper.html" %}
+{# content内容 #}
+{% block content %}
+
+    {# 菜单导航 #}
+    {{ navigator.current('nav1') }}
+
+    <!-- tab -->
+    <div class="tabs-wrap type1 fn-mb-10">
+      <ul class="tabs">
+        <li>
+          <a href="融资产品-商票融资-融资记录.html" class="tabs-btn tab-disabled" >融资记录</a>
+        </li>
+        <li class="active">
+          <a href="融资产品-商票融资-标的物管理.html" class="tabs-btn tab-disabled">标的物管理</a>
+        </li>
+      </ul>
+    </div>
+    <ol class="breadcrumb fn-mb-10">
+        <li>
+            <a href="融资产品-商票融资-标的物管理.html">
+                标的物管理
+                <i class="icon-chevron-thin-right"></i>
+            </a>
+        </li>
+        <li>
+            融资申请
+        </li>
+    </ol>
+
+    {{ Step.render(step='pass1', text1='填写资料', text2='确认信息', text3='申请成功') }}
+
+    <div class="table-wrap fn-mb-20">
+        <div class="tables-title tables-title-border">
+            标的物信息
+        </div>
+        <table class="table border-bottom inverse table-view">
+            <tbody>
+            <tr>
+                <th>票据类型</th>
+                <td>商票</td>
+                <th>票据形式</th>
+                <td>实物票据</td>
+
+            </tr>
+            <tr>
+                <th>票据编号</th>
+                <td>201510565656400</td>
+                <th>交易合同编号</th>
+                <td>4513452346234</td>
+            </tr>
+            <tr>
+                <th>出票人</th>
+                <td>xxx</td>
+                <th>出票日期</th>
+                <td>2016-03-01</td>
+            </tr>
+            <tr>
+                <th>承兑人全称</th>
+                <td>xxx</td>
+                <th>汇票到期日</th>
+                <td>2016-04-01</td>
+            </tr>
+            <tr>
+                <th>票据金额</th>
+                <td>8,978,983.00  元</td>
+                <th>票据期限</th>
+                <td>180 天</td>
+            </tr>
+            <tr>
+                <th>收款人账户名称</th>
+                <td colspan="3">李丽</td>
+            <tr>
+                <th>收款人银行账号</th>
+                <td colspan="3">招商银行&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;6220 0000 0000 0000</td>
+            </tr>
+            <tr>
+                <th>付款人账户名称</th>
+                <td colspan="3">耀明</td>
+            </tr>
+            <tr>
+                <th>付款人银行账号</th>
+                <td colspan="3">招商银行&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;6220 0000 0000 0000</td>
+            </tr>
+            <tr>
+                <th>备注</th>
+                <td colspan="3">thx</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <div class="form-frame">
+        <div class="form-title">
+            融资信息
+        </div>
+        <div class="form-layer1">
+            <div class="form-layer2">
+                <form autocomplete="off">
+                    <h5 class="form-section-title fn-mb-10">
+                        融资款收款账户
+                    </h5>
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            <span>融资人收款账户名称</span>
+                            <em>：</em>
+                        </label>
+
+                        <div class="form-control-wrap">
+                            <div class="form-control-data">
+                                哎呀呀淘气股份有限公司
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            <span>融资人收款银行账号</span>
+                            <em>：
+                            </em>
+                        </label>
+
+                        <div class="form-control-wrap">
+                            <div class="form-control-data">
+                                招商银行&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;尾号1234
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            <span>所属省市</span>
+                            <em>：
+                            </em>
+                        </label>
+
+                        <div class="form-control-wrap">
+                            <div class="form-control-data">
+                                广东省广州市
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            <span>分支行</span>
+                            <em>：
+                            </em>
+                        </label>
+
+                        <div class="form-control-wrap">
+                            <div class="form-control-data">
+                                体育西路支行
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <h5 class="form-section-title fn-mb-10">融资基本信息</h5>
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            <span>票据金额</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <div class="form-control-data">800,000.00 元</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            <span>质押率</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <div class="form-control-data">80%</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            <span>融资申请金额</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <div class="form-control-data">800,000.00 元</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            <span>融资到期日</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <div class="form-control-date">
+                                <span class="form-control-date-btn"><i></i></span>
+                                <input type="text" class="form-control" value="2016-01-22" readonly>
+                                <!-- 可用增加 data-toggle="datetimepicker" -->
+                                <!--<input type="text" class="form-control" value="2016-01-22" data-toggle="datetimepicker"> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            <span>还款方式 </span>
+                            <em>：</em>
+                        </label>
+
+                        <div class="form-control-wrap">
+                            <div class="form-control-data">还本付息</div>
+                        </div>
+                    </div>
+
+                    <h5 class="form-section-title fn-mb-10">
+                        试算融资本息
+                        <span class="fn-ml-15 warning-FontColor fs-12">以下仅为试算数据，实际以审批通过并确认融资起息为准。</span>
+                    </h5>
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            <span>预计融资起息日</span>
+                            <em>：</em>
+                        </label>
+
+                        <div class="form-control-wrap">
+                            <div class="form-control-data">
+                                2016-01-23
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            <span>预计融资期限 </span>
+                            <em>：</em>
+                        </label>
+
+                        <div class="form-control-wrap">
+                            <div class="form-control-data">
+                                31天
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            <span>试算融资本金</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <div class="form-control-data">
+                                4,555.55元
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            <span>试算融资利率（年化）</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <div class="form-control-data">
+                                5.00%
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            <span>试算融资成本率（年化）</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <div class="form-control-data">
+                                4.70%
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            <span>试算融资成本</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <div class="form-control-data">
+                                4,555.55元
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            <span>试算融资到账金额</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <div class="form-control-data">
+                                <strong class="warning-FontColor">795,644.45</strong> 元
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-align-center">
+                        <div class="plural-btns margin-top-20px">
+                            <button type="button" class="btn primary" onclick="location.href='融资产品-商票融资-融资申请-融资订单确认.html'">确认无误，下一步</button>
+                        </div>
+                    </div>
+
+                    <h5 class="fn-mt-40">说明：</h5>
+                    <ul class="with-lt">
+                        <li>融资起息日：以银行工作人员审核通过的下一个工作日起算。</li>
+                        <li>融资信息显示试算融资利息及应还本息，实际融资利息及应还本息以银行审核通过后计算的结果为准。</li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+

@@ -1,0 +1,123 @@
+{% extends "_layout/wrapper.html" %}
+{# content内容 #}
+{% block content %}
+
+    {# 菜单导航 #}
+    {{ navigator.current('nav4') }}
+
+    <!-- tab -->
+    <div class="tabs-wrap type1 fn-mb-10">
+      <ul class="tabs">
+        <li>
+          <a href="融资产品-保费-融资记录.html"  class="tabs-btn tab-disabled">融资记录</a>
+        </li>
+          <li>
+                <a href="融资产品-保费-车险记录.html" class="tabs-btn tab-disabled">车险记录</a>
+            </li>
+        <li >
+          <a href="融资产品-保费-融资申请-支付保证金.html" class="tabs-btn tab-disabled">融资申请</a>
+        </li>
+        <li class="active">
+            <a href="javascript:;void(0)" class="tabs-btn tab-disabled">还款计划</a>
+        </li>
+        <li>
+            <a href="融资产品-保费-还款记录.html" class="tabs-btn tab-disabled">还款记录</a>
+        </li>
+      </ul>
+    </div>
+
+    <h5 class="fn-pt-10 fn-mb-15">融资信息</h5>
+    <table class="table border-bottom inverse fn-mb-20 table-view">
+        <tbody>
+        <tr>
+            <th>融资订单号</th>
+            <td>JZT23480780997793</td>
+            <th>合同编号</th>
+            <td>41234523462345145</td>
+        </tr>
+        <tr>
+            <th>融资申请金额</th>
+            <td>100.00 元</td>
+            <th>融资本金</th>
+            <td>50.00 元</td>
+        </tr>
+        <tr>
+            <th>融资利率（年化）</th>
+            <td>5.00%</td>
+            <th>融资成本率（年化）</th>
+            <td>4.70%</td>
+        </tr>
+        <tr>
+            <th>融资起息日</th>
+            <td>2011-12-12</td>
+            <th>融资到期日</th>
+            <td>2012-3-12</td>
+        </tr>
+        <tr>
+            <th>融资期限</th>
+            <td>12个月</td>
+            <th>还款方式</th>
+            <td>分期还款，等额本息</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h5 class="fn-pt-10 fn-mb-15">还款信息</h5>
+    <div class="form-frame noborder">
+        <div class="form-layer1">
+            <div class="form-layer2">
+                <form autocomplete="off">
+                    <div class="form-group">
+                        <label class="form-control-label" for="input2">
+                            <span>期数</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <div class="form-control-data">第1期</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-control-label" for="input2">
+                            <span>还款日期</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <div class="form-control-data">2015-12-25</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-control-label" for="input2">
+                            <span>应还金额</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <div class="form-control-data">
+                                <b class="warning-FontColor">200.00</b> 元
+                                <div class="tooltips-icon">
+                                    i
+                                    <div class="tooltips">
+                                        本金：2818.94元&nbsp;&nbsp;
+                                        融资成本：31.94元（含融资利息：19.97元）
+                                        <span class="tips-arrow-border"></span>
+                                        <span class="tips-arrow"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-control-wrap text-align-left plural-btns margin-top-20px">
+                            <button type="button" class="btn primary">确认还款</button>
+                            <a href="融资产品-保费-还款计划.html" class="btn links">返回</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock %}
+
+

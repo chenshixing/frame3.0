@@ -1,0 +1,69 @@
+{% extends "_layout/wrapper.html" %}
+
+{% block newNav %}
+{{ navigatorNew.theNav('实名认证') }}
+{% endblock %}
+
+{# content内容 #}
+{% block content %}
+
+    {# 步骤 #}
+    {{ Step.newFourSteps(step='pass4',text1='填写基本信息',text2='身份验证',text3='企业安全验证',text4='提交结果') }}
+
+    <div class="notice-wrap info">
+    <div class="notice-box">
+        <span class="notice-img"></span>
+        <h3>
+            审核申请已提交，小额验证金请在 <b class="fs-24 error-FontColor1">47:59:59</b> 内完成支付。
+        </h3>
+        <p>
+            请向下面的指定账户支付 0.10 元。
+        </p>
+        <div class="form-table-wrap">
+            <table class="form-table">
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                <tr>
+                    <th>账户名称</th>
+                    <th>开户行</th>
+                    <th>银行账号</th>
+                    <th>分支行</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        中金支付有限公司客户备付金
+                    </td>
+                    <td>
+                        招商银行
+                    </td>
+                    <td>
+                        1209 0930 1510 603
+                    </td>
+                    <td>
+                        北京分行宣武门支行
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <p>
+            我们将尽快完成审核，结果将以短信通知您。<br>
+            如需修改信息请联系客服电话：400-106-6698。
+        </p>
+        <a href="###" class="link-standard">返回首页</a>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block jsPage %}
+{% endblock %}
+
+

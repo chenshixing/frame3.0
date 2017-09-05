@@ -1,0 +1,77 @@
+{% extends "_layout/wrapper.html" %}
+{# content内容 #}
+{% block content %}
+
+    <h3 class="fn-pb-20">
+        请完成以下资料填写，以便为您开通融资服务。
+    </h3>
+    
+	{# 步骤 #}
+	{{ Step.fivesteps2('pass4','完善个人信息','人脸认证','绑定银行卡','设置支付密码','提交结果') }}
+
+    {# 填写信息 #}
+	<div class="form-frame fn-mb-10">
+		<div class="form-title">
+            安全设置
+		</div>
+
+        <div class="alert alert-warning">
+            <i></i>
+            <em></em>
+            用于付款或修改帐号信息，请不要与登陆密码一致
+        </div>
+
+        <div class="form-layer1">
+            <div class="form-layer2">
+
+                <form autocomplete="off">
+
+                    {# 设置交易密码 #}
+					<div class="form-group">
+                        <label class="form-control-label" for="password">
+                            <b>*</b>
+                            <span>设置交易密码</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <input type="password" class="form-control" id="password" value="" placeholder="8-20个英文字母，数字或符号的组合">
+                        </div>
+                    </div>
+
+                    {# 确认交易密码 #}
+					<div class="form-group">
+                        <label class="form-control-label" for="passwordConfirm">
+                            <b>*</b>
+                            <span>确认交易密码</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <input type="password" class="form-control" id="passwordConfirm" value="" placeholder="8-20个英文字母，数字或符号的组合">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-control-wrap">
+                            <div class="form-control-check">
+                                <label class="agreement-check">
+                                    我已阅读并同意《<a href="###" class="link-standard">服务协议</a>》
+                                    <input type="checkbox" name="">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-control-wrap text-align-left plural-btns">
+                            <a href="核身-个人核身-验证结果.html" class="btn primary" role="button">确认无误，下一步</a>
+                            <a href="核身-个人核身-绑定银行卡.html" class="btn links">上一步</a>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+	</div>
+
+{% endblock %}

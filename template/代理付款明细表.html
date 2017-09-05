@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      
+      body {
+        background: #f1f1f1;
+        font-family: "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "Hiragino Sans GB", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+        font-size: 14px;
+        line-height: 28px;
+        color: #000;
+      }
+      
+      .wrap {
+        width: 680px;
+        margin: 40px auto;
+        background-color: #fff;
+        padding: 40px;
+        position: relative;
+      }
+      
+      h1 {}
+      
+      h3 {
+        margin-bottom: 10px;
+        font-size: 16px;
+      }
+      
+      .fn-mb-10 {
+        margin-bottom: 10px!important;
+      }
+      
+      .fn-mb-20 {
+        margin-bottom: 20px;
+      }
+      
+      .fn-mb-30 {
+        margin-bottom: 30px;
+      }
+      
+      .fn-mb-50 {
+        margin-bottom: 50px;
+      }
+      
+      .fn-pl-20 {
+        padding-left: 20px;
+      }
+      
+      .fn-pl-30 {
+        padding-left: 30px;
+      }
+      
+      .fn-pl-40 {
+        padding-left: 40px;
+      }
+      
+      .fn-ml-40 {
+        margin-left: 40px;
+      }
+      
+      .text-align-left {
+        text-align: left!important;
+      }
+      
+      .text-align-center {
+        text-align: center!important;
+      }
+      
+      .text-align-right {
+        text-align: right!important;
+      }
+      
+      .lh-36 {
+        line-height: 36px;
+      }
+      
+      .fs-16 {
+        font-size: 16px;
+      }
+      
+      .underline {
+        text-decoration: underline;
+      }
+      
+      .text-indent {
+        text-indent: 35px;
+      }
+      
+      .table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        margin-bottom: 40px;
+        table-layout: fixed;
+      }
+      
+      .table th,
+      .table td {
+        border: 1px solid #999;
+        padding: 10px;
+        text-align: center;
+        font-weight: normal;
+      }
+      
+      .word-break {
+        word-break: break-all;
+        white-space: normal;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <h1 class="text-align-center fn-mb-20">代理付款明细表</h1>
+      <p class="text-align-right fn-mb-20">编号：&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </p>
+      <p class="fn-mb-50"> 致：招商银行股份有限公司 <span class="underline">&nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;</span> 分/支行 </p>
+      <p>鉴于：</p>
+      <ul class="fn-mb-30">
+        <li>一、我司于<span class="underline"> &nbsp; &nbsp;  &nbsp; &nbsp; </span>年<span class="underline"> &nbsp; &nbsp; </span>月<span class="underline"> &nbsp; &nbsp; </span>日与贵行签订了编号为 <span class="underline">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>          的《付款代理（通用版）业务合作协议》。我司向贵行提交本《代理付款明细表》。</li>
+        <li>二、我司基于前述《付款代理（通用版）业务合作协议》的约定，于<span class="underline"> &nbsp; &nbsp;  &nbsp; &nbsp; </span>年<span class="underline"> &nbsp; &nbsp; </span>月<span class="underline"> &nbsp; &nbsp; </span>日与贵行及相关合作单位签署了《互联网供应链业务合作协议》及《互联网供应链业务合作协议之补充协议一》（以下合称《合作协议》），我司可推荐与我司稳定合作的相关方作为用户，在《合作协议》项下的“互联网交易过程电子登记系统”上进行应收账款转让或融资。</li>
+      </ul>
+      <p>我司在此陈述和保证：</p>
+      <ul class="fn-mb-10">
+        <li class="fn-mb-10"> 一、授权贵行在付款条件成就时通过手工操作或系统自动扣划的方式根据下列应付款项信息直接从我司在贵行开立的支付账户中扣划相应款项并对外支付，同时一并扣收相应费用。 </li>
+        <li class="fn-pl-20"> <input type="checkbox" name="ab" id="a" /> <label for="a">对外付款</label> <input type="checkbox" name="ab" id="b" class="fn-ml-40" /> <label for="b">撤销对外付款：</label> </li>
+      </ul>
+      <table class="table fn-mb-10">
+        <colgroup>
+          <col>
+          <col>
+          <col>
+          <col> </colgroup>
+        <tr>
+          <th>应付款项编号</th>
+          <td>
+            <div class="word-break"></div>
+          </td>
+          <th>应付款项金额</th>
+          <td></td>
+        </tr>
+        <tr>
+          <th>应付款项币种</th>
+          <td></td>
+          <th>到期付款日</th>
+          <td></td>
+        </tr>
+        <tr>
+          <th>发票号码</th>
+          <td>
+            <div class="word-break"></div>
+          </td>
+          <th>发票金额</th>
+          <td></td>
+        </tr>
+        <tr>
+          <th>发票开票日期</th>
+          <td></td>
+          <th>商票票号</th>
+          <td>
+            <div class="word-break"></div>
+          </td>
+        </tr>
+        <tr>
+          <th rowspan="3">支付账户信息</th>
+          <td colspan="3" class="text-align-left">户名：</td>
+        </tr>
+        <tr>
+          <td colspan="3" class="text-align-left">账号：</td>
+        </tr>
+        <tr>
+          <td colspan="3" class="text-align-left">开户行：</td>
+        </tr>
+        <tr>
+          <th rowspan="2">合同</th>
+          <td colspan="3" class="text-align-left">
+            <div class="word-break">合同编号：</div>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3" class="text-align-left">
+            <div class="word-break">合同名称：</div>
+          </td>
+        </tr>
+        <tr>
+          <th rowspan="3">收款人账户信息</th>
+          <td colspan="3" class="text-align-left">户名：</td>
+        </tr>
+        <tr>
+          <td colspan="3" class="text-align-left">账号：</td>
+        </tr>
+        <tr>
+          <td colspan="3" class="text-align-left">开户行：</td>
+        </tr>
+        <tr>
+          <th rowspan="2">备注</th>
+          <td>已办理</td>
+          <td colspan="2"></td>
+        </tr>
+        <tr>
+          <td>已撤销</td>
+          <td colspan="2"></td>
+        </tr>
+      </table>
+      <p class="fn-pl-20">共计：应付款项笔数<span class="underline">&nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;</span>总金额<span class="underline">&nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;</span></p>
+      <ul class="fn-mb-50">
+        <li> 二、基于《合作协议》的约定，若我司推荐的用户通过使用“互联网交易过程电子登记系统”进行融资（包括但不限于将其对我司所持有的债权进行质押或进行全部/部分转让）并签署相关法律文件，导致上述应付款项信息发生变更的，则我司无条件认可“互联网交易过程电子登记系统”中的交易记录、根据交易情况即时生成的“当前付款状态详情”以及每笔应付款项的《最终付款明细表》（《代理付款明细表》所列信息与《最终付款明细表》不一致的，以该系统最终生成并于我司用户界面显示的《最终付款明细表》为准）。我司在此不可撤销地授权贵行依据“互联网交易过程电子登记系统”以《合作协议》约定的方式最终向我司发送的《最终付款明细表》按前款约定的方式进行扣划及对外支付。除此之外，非经贵行同意，我司不得撤销或变更本明细表。我司如需增加对外支付委托，或撤销部分/全部对外付款的，将向贵行提交新的明细表，该明细表并经贵行确认同意后即构成本明细表的补充，两者不一致的，以日期在后的明细表为准。
+          </li>
+        <li> 三、我司知悉并同意，如因我司支付账户余额不足或其他任何原因导致我司未按期足额履行本明细表项下的支付义务，贵行有权但无义务向我司发放流动资金贷款，并有权直接扣划贷款资金支付本明细表及《最终付款明细表》列明的应付款项。 </li>
+        <li> 四、我司知悉并同意，一旦发生《付款代理（通用版）业务合作协议》约定的违约事项，即使本明细表所载明的到期付款日尚未届至，我司亦认可贵行通过手工或系统自动方式从我行支付账户及其他账户扣款，用于提前清偿应付款项。 </li>
+        <li> 五、我司同意根据贵行的要求，提供流动资金贷款的相应资料，如借款合同，借款借据等。 </li>
+        <li> 六、我司知悉并同意，本明细表通过加盖我司在贵行预留印鉴或我司线上确认后立即生效，本《代理付款明细表》一式二份，并构成《付款代理（通用版）业务合作协议》不可分割的组成部分。 </li>
+      </ul>
+      <div class="text-align-right"> 申请人（印鉴）：&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br> 日期：&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </div>
+    </div>
+  </body>
+
+</html>

@@ -1,0 +1,90 @@
+{% extends "_layout/wrapper.html" %}
+{# content内容 #}
+{% block content %}
+    
+    <h3 class="fn-pb-20">
+        请完成以下资料填写，以便为您开通融资服务。
+    </h3>
+    
+	{# 步骤 #}
+	{{ Step.fivesteps2('pass2','完善个人信息','人脸认证','绑定银行卡','设置支付密码','提交结果') }}
+
+	<div class="form-frame fn-mb-10 fn-pt-30">
+        
+        <div class="facevr-wrap" id="videoCase1">
+            <p class="text-align-center fs-16 lh-36">请在光线充足情况下验证，应尽量避免光斑、佩戴墨镜、带帽等。<a href="#" class="icon-help float-right">帮助</a></p>
+            <div class="facevr-box-step1 fn-pa-30 fn-mt-10">
+                <h2 class="fn-pb-20"><span class="icon-camera2"></span>请保持摄像头处于开启状态</h2>
+                <div>
+                    <a href="#" class="btn primary" id="videoStart">开始录制</a>
+                </div>
+            </div>
+            <p class="text-align-center fn-pt-20">
+                <a class="link-standard" href="核身-企业融资人核身-step2经办人认证-其他信息.html">
+                    上一步
+                </a>
+            </p>
+        </div>
+        <div class="facevr-wrap" style="display: none;" id="videoCase2">
+            <div class="text-align-right plural-btns fn-mb-10">
+                <button type="button" class="btn primary small-btn">重新认证</button>
+                <button type="button" class="btn primary small-btn disabled" disabled="disabled">停止</button>
+            </div>
+            <div class="facevr-box-step1 fn-pa-30">
+                <h2 class="fn-pb-20">
+                    请平视前方
+                </h2>
+                <div class="pb-wrap">
+                    <div class="pb-box">
+                        <div class="pb" style="width: 50%;"></div>
+                        <em>剩余时间</em>
+                    </div>
+                </div>
+                <!--<button type="button" class="btn primary fn-mt-20 fn-mb-20" id="videoConfirm">确定</button>-->
+                <div class="fn-mt-30" id="videoConfirm">
+                    <video style="background-color: #f3f3f3; width: 100%;"></video>
+                </div>
+            </div>
+        </div>
+        <div class="facevr-wrap" style="display: none;" id="videoCase3">
+            <div class="facevr-box-step1 fn-pa-30">
+                <h2 class="fn-pb-20">
+                    录制完成
+                </h2>
+                <div class="notice-wrap waiting in-modal">
+                    <div class="notice-box">
+                        <span class="notice-img"></span>
+                        <h3>处理中...
+                        </h3>
+                        <p>
+                            请不要关闭浏览器，系统正在处理中
+                        </p>
+                    </div>
+                </div>
+                <div class="facevr-cut">
+                    <img src="" alt="用户头像" />
+                </div>
+            </div>
+        </div>
+
+	</div>
+
+
+{% endblock %}
+
+{% block jsPage %}
+<script>
+	$(function() {
+	    $("#videoStart").click(function () {
+	        $("#videoCase2").show();
+	        $("#videoCase1").hide();
+	    });
+	    $("#videoConfirm").click(function () {
+	        $("#videoCase2").hide();
+	        $("#videoCase3").show();
+	    });
+	})
+</script>
+{% endblock %}
+
+

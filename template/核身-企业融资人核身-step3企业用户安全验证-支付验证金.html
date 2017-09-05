@@ -1,0 +1,226 @@
+{% extends "_layout/wrapper.html" %}
+{# content内容 #}
+{% block content %}
+    
+    <h3 class="fn-pb-20">
+        请完成以下资料填写，以便为您开通融资服务。
+    </h3>
+    
+	{# 步骤 #}
+	{{ Step.foursteps('pass3','完善企业信息','身份验证','企业安全认证','提交结果') }}
+
+    {# 基本信息 #}
+	<div class="form-frame fn-mb-10">
+        <div class="form-title">
+			企业用户安全验证
+		</div>
+
+        <div class="alert alert-warning fn-ml-10 fn-mb-20">
+            <i></i>
+            <em></em>
+            为了验证您的企业信息，请您使用对公账户向指定账户支付一笔小额验证金，本验证流程不收取任何的手续费，如产生手续费等，由发卡行收取。
+        </div>
+
+        <div class="form-layer1">          
+            <div class="form-layer2">
+                <form autocomplete="off">
+
+                    {# 验证金额 #}
+                    <div class="form-group">
+                        <label class="form-control-label" for="form-control-5">
+                            <span>验证金额</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <div class="form-control-data">
+                                <strong class="h2 warning-FontColor">0.10</strong>&nbsp;元
+                            </div>
+                        </div>
+                    </div>
+                    {# 账户名称 #}
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            <b>*</b>
+                            <span>账户名称</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap ">
+                            <div class="form-control-data">广东钱途互联商务服务有限公司</div>
+                        </div>
+                    </div>
+
+                    {# 银行账号 #}
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            <b>*</b>
+                            <span>银行账号</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap form-control-helper">
+                            <input type="text" class="form-control" placeholder="请输入您的对公账户">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-control-label" for="input2">
+                            <b>*</b>
+                            <span>开户行</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap form-control-multi">
+                            <div class="form-control-tools-link fn-pa-0" style="left: 0; width: 218px;">
+                                <div class="form-control-dropdown">
+                                    <span class="form-control-dropdown-btn">
+                                        <i></i>
+                                    </span>
+                                    <div class="form-control-dropdown-value" aria-expanded="false">
+                                        <span class="bank-icon icon-cmb" title="招商银行"></span>
+                                        <span class="form-control-bank-card">招商银行</span>
+                                    </div>
+                                    <ul class="form-control-dropdown-menu">
+                                        <li title="option">
+                                            <span class="bank-icon icon-cmb" title="招商银行"></span>
+                                            <span class="form-control-bank-card">招商银行</span>
+                                        </li>
+                                        <li title="option">
+                                            <span class="bank-icon icon-icbc" title="工商银行"></span>
+                                            <span class="form-control-bank-card">工商银行</span>
+                                        <li title="-1">
+
+                                            <span class="form-control-bank-card">其他银行</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="form-control-bar display-none" style="left: 228px; width: 218px;">
+                                <input type="text" class="form-control" placeholder="请输入银行名称">
+                            </div>
+                        </div>
+                    </div>
+
+                    {# 所属省市 #}
+                    <div class="form-group" style="*z-index: 4">
+                        <label class="form-control-label">
+                            <b>*</b>
+                            <span>所属省市</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap smallsize">
+                            <div class="form-control-dropdown form-inline drop-select-province with-keyin">
+                                <span class="form-control-dropdown-btn">
+                                    <i></i>
+                                </span>
+                                <div class="form-control-dropdown-value" tabindex="2" title="请选择省份"><span class="form-placeholder">请选择省份</span></div>
+                                <ul class="form-control-dropdown-menu">
+                                    <li title="北京">北京
+                                    </li>
+                                    <li title="上海">上海
+                                    </li>
+                                    <li title="广东">广东
+                                    </li>
+                                    <li title="浙江">浙江
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="form-control-dropdown form-inline drop-select-city with-keyin">
+                                <span class="form-control-dropdown-btn">
+                                    <i></i>
+                                </span>
+                                <div class="form-control-dropdown-value" tabindex="3" title="请选择城市"><span class="form-placeholder">请选择城市</span></div>
+                                <ul class="form-control-dropdown-menu">
+                                    <li title="北京">北京
+                                    </li>
+                                    <li title="上海">上海
+                                    </li>
+                                    <li title="广州">广州
+                                    </li>
+                                    <li title="杭州">杭州
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    {# 分支行 #}
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            <b>*</b>
+                            <span>分支行</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <div class="form-control-dropdown">
+                                <span class="form-control-dropdown-btn">
+                                    <i></i>
+                                </span>
+                                <input type="text" data-toggle="dropdown" class="form-control" id="subbank" placeholder="请输入分支行名称" value="分支行1" aria-expanded="false">
+                                <ul class="form-control-dropdown-menu">
+                                    <li title="分支行1">分支行1
+                                    </li>
+                                    <li title="分支行2">分支行2
+                                    </li>
+                                    <li title="分支行3">分支行3
+                                    </li>
+                                    <li title="分支行4">分支行4
+                                    </li>
+                                    <li title="分支行5">分支行5
+                                    </li>
+                                    <li title="分支行6">分支行6
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+        <div class="centerwrap75 fn-pt-30">
+            <p class="fn-mb-10">向下方账户支付一笔小额金额进行验证：</p>
+            <table class="form-table">
+                <thead>
+                    <tr>
+                        <th>银行</th>
+                        <th>账户名称</th>
+                        <th>对公账户</th>
+                        <th>开户行</th>
+                        <th>金额（元）</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>招商银行</td>
+                        <td>中金支付有限公司客户备付金</td>
+                        <td>120909301510603</td>
+                        <td>北京分行宣武门支行</td>
+                        <td>0.10</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="text-align-center fn-pt-30 fn-pb-15">
+            <label class="agreement-check">
+                <input type="checkbox" name="">
+                我已阅读并同意《<a href="###" class="link-standard">服务协议</a>》
+            </label>
+        </div>
+
+        <div class="text-align-center">
+            <a href="核身-企业融资人核身-step4验证结果.html" class="btn primary">确认，下一步</a>
+        </div>
+
+	</div>
+
+{% endblock %}
+
+{% block jsPage %}
+<script>
+	$(function() {
+		
+	})
+</script>
+{% endblock %}
+
+

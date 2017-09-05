@@ -1,0 +1,50 @@
+{% extends "_layout/wrapper.html" %}
+
+{% block newNav %}
+{{ navigatorNew.theNav('实名认证') }}
+{% endblock %}
+
+{# content内容 #}
+{% block content %}
+
+    <!--<div class="vrerror-wrap">
+        <div class="hsdiv">
+            <img src="" alt=""/>
+        </div>
+        <div class="namediv">
+            <h2>
+                XXX
+            </h2>
+            <p>
+                xxxxxxxxx-xxxxxxxx
+            </p>
+        </div>
+    </div>-->
+    <div class="notice-wrap error">
+        <div class="notice-box">
+            <span class="notice-img"></span>
+            <h3>广东亿达有限公司
+            </h3>
+            <p><b>您的资料审核不通过，具体原因请联系分行客户经理。</b></p>
+            <br>
+            <p>
+                可能原因如下：
+            </p>
+            <ul class="fn-pl-20 fn-mb-40">
+                <li>
+                    企业证件资料有误。
+                </li>
+                <li>
+                    法定代表人信息与《企业法定代表人身份证明书》内容不符。
+                </li>
+                <li>
+                    经办人信息与《经办人授权委托书》内容不符。
+                </li>
+            </ul>
+            <p>
+                <a href="###" class="btn secondary">重新认证</a>
+            </p>
+        </div>
+    </div>
+
+{% endblock %}

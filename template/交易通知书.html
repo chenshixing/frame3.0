@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+    }
+    body{
+      background: #f1f1f1;
+      font-family: "Helvetica Neue",Helvetica,"Nimbus Sans L",Arial,"Liberation Sans","Hiragino Sans GB","Microsoft YaHei","Wenquanyi Micro Hei","WenQuanYi Zen Hei","ST Heiti",SimHei,"WenQuanYi Zen Hei Sharp",sans-serif;
+      font-size: 14px;
+      color: #666;
+    }
+    .wrap {
+      width: 680px;
+      margin: 40px auto;
+      background-color: #fff;
+      padding: 60px 40px 40px 40px;
+      position: relative;
+    }
+    h1{
+      text-align: center;
+      margin-bottom:40px;
+      color: #333333;
+    }
+    h4{
+      font-weight: normal;
+      position: relative;
+      margin-bottom: 10px;
+    }
+    h4 span{
+      position: absolute;
+      right: 0;
+      top:0;
+      font-size: 14px;
+    }
+    .wrap .bank-wrap{
+      position: absolute;
+      left: 25px;
+      top: 20px;
+    }
+    .wrap .bank-wrap .bank{
+      height: 28px;
+      vertical-align: middle;
+    }
+    .wrap .bank-wrap .line{
+      font-size: 24px;
+      color: #e2e3e3;
+      vertical-align: middle;
+      padding:0 5px 0 5px;
+    }
+    .table{
+      width: 100%;
+      border-collapse: collapse;
+      border-spacing: 0;
+      margin-bottom: 40px;
+      table-layout: fixed;
+    }
+    .table th, .table td{
+      border:1px solid #999;
+      padding:10px;
+      text-align: center;
+    }
+    .table.table-align th{
+      text-align: right;
+    }
+    .table.table-align td{
+      text-align: left;
+    }
+    .word-break{
+      word-break: break-all;
+      white-space: normal;
+    }
+    .time{
+      margin-bottom: 20px;
+    }
+    .btn {
+      display: inline-block;
+      border-radius: 5px;
+      width: 198px;
+      height: 44px;
+      border: none;
+      border-bottom-width: 2px;
+      border-bottom-style: solid;
+      text-align: center;
+      font-size: 16px;
+      line-height: 44px;
+      list-style: none;
+      outline: 0;
+      cursor: pointer;
+      padding: 0;
+      vertical-align: middle;
+      color: #fff;
+      text-decoration: none;
+      margin:0;
+    }
+    .btn.primary {
+      background-color: #fd8832;
+      border-color: #ca6d28;
+    }
+    .text-align-center{
+      text-align: center;
+    }
+    .seal{
+      text-align: right;
+    }
+  </style>
+  <style media="print">
+    .btn{
+      display: none;
+
+    }
+  </style>
+
+</head>
+
+<body>
+    <div class="wrap">
+      <h1>投融资平台交易通知书</h1>
+      <div class="bank-wrap">
+        <img class="bank" src="{{ static }}/images/bank-large/bank-cmb.png">
+        <span class="line">|</span>
+        <img class="bank" src="{{ static }}/images/logo-xqy.png">
+      </div>
+
+      <h4>项目信息</h4>
+      <table class="table table-align" >
+        <colgroup>
+          <col width="22%">
+          <col>
+          <col width="22%">
+          <col>
+        </colgroup>
+        <tr>
+          <th>融资项目编号</th>
+          <td><div class="word-break">25436475768679725436475768679725436</div></td>
+          <th>融资金额（元）</th>
+          <td><div class="word-break">CNY163,388,804.00</div></td>
+        </tr>
+        <tr>
+          <th>融资成本率（年化）</th>
+          <td>6.20 %</td>
+          <th>起息日</th>
+          <td>2014-10-10</td>
+        </tr>
+        <tr>
+          <th>到期日</th>
+          <td>2016-12-06</td>
+          <th>融资期限</th>
+          <td>180 天</td>
+        </tr>
+        <tr>
+          <th>还款方式</th>
+          <td>开放日还款 <br>（每月5号/每月20号未开放还款日）</td>
+          <th>总还款期数</th>
+          <td></td>
+        </tr>
+      </table>
+
+      <h4>还款计划</h4>
+      <table class="table">
+        <colgroup>
+          <col>
+          <col>
+          <col>
+          <col>
+          <col>
+          <col>
+        </colgroup>
+        <tr>
+          <th>还款期数</th>
+          <th>还款日期</th>
+          <th>还款金额（元）</th>
+          <th>融资金额（元）</th>
+          <th>融资成本（元）</th>
+          <th>应付利息（元）</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>2014-10-10</td>
+          <td>100.00</td>
+          <td>100.00</td>
+          <td>50.00</td>
+          <td>40.00</td>
+        </tr>
+      </table>
+
+      <h4>融资款项收款账户</h4>
+      <table class="table table-align">
+        <colgroup>
+          <col width="22%">
+          <col>
+          <col width="22%">
+          <col>
+        </colgroup>
+        <tr>
+          <th>账户名称</th>
+          <td><div class="word-break">xxx公司</div></td>
+          <th>银行账号</th>
+          <td><div class="word-break">62222222222222222222</div></td>
+        </tr>
+        <tr>
+          <th>开户行</th>
+          <td>招商银行</td>
+          <th>开户省市</th>
+          <td>广东省广州市</td>
+        </tr>
+        <tr>
+          <th>分支行</th>
+          <td colspan="3">招商银行体育西分行</td>
+        </tr>
+      </table>
+
+      <h4>订单信息</h4>
+      <table class="table">
+        <colgroup>
+          <col width="22%">
+          <col>
+          <col width="22%">
+          <col>
+        </colgroup>
+        <tr>
+          <th>订单编号</th>
+          <td><div class="word-break">12415465464654</div></th>
+          <th>订单金额（元）</th>
+          <td>100.00</td>
+        </tr>
+      </table>
+      <p class="time">打印时间：2016-07-06</p>
+      <div class="seal">
+        <img src="{{ static }}/images/seal-xqy.png">
+      </div>
+      <div class="text-align-center">
+        <a href="javascript:window.print();" class="btn primary" id="print">打印</a>
+        <a href="###" class="btn primary">返回</a>
+      </div>
+
+    </div>
+
+
+</body>
+</html>
+

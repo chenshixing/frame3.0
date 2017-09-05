@@ -1,0 +1,54 @@
+{% extends "_layout/wrapper.html" %}
+
+{# content #}
+{% block content %}
+    
+    {# 菜单导航 #}
+    {{ navigator.current('nav4') }}
+    
+    <!-- tab -->
+    <div class="tabs-wrap type1 fn-mb-10">
+        <ul class="tabs">
+            <li>
+                <a href="融资产品-保费-融资记录.html"  class="tabs-btn tab-disabled">融资记录</a>
+            </li>
+            <li>
+                <a href="融资产品-保费-车险记录.html" class="tabs-btn tab-disabled">车险记录</a>
+            </li>
+            <li >
+                <a href="融资产品-保费-融资申请-支付保证金.html" class="tabs-btn tab-disabled">融资申请</a>
+            </li>
+            <li>
+                <a href="融资产品-保费-还款计划.html"  class="tabs-btn tab-disabled">还款计划</a>
+            </li>
+            <li class="active">
+                <a href="javascript:;void(0)" class="tabs-btn tab-disabled">还款记录</a>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="notice-wrap success">
+        <div class="notice-box">
+            <span class="notice-img"></span>
+            <h3>还款申请已提交</h3>
+            <p>
+                请确保已支付成功，如支付失败本次还款申请将不受理。<br>
+                等待银行处理期间，请留意融资记录的还款状态。<br>
+                如有问题，请联系客服电话：400-106-6698
+            </p>
+            <br />
+            <a href="融资产品-保费-还款计划.html.html" class="btn primary">
+                返回还款计划
+            </a>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block jsPage %}
+    <script>
+    </script>
+{% endblock %}
+
+

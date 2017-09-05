@@ -1,0 +1,110 @@
+{% extends "_layout/wrapper.html" %}
+{# content内容 #}
+{% block content %}
+
+    {# 菜单导航 #}
+    {{ navigator.current('nav3') }}
+
+    <!-- tab -->
+    <div class="tabs-wrap type1 fn-mb-10">
+      <ul class="tabs">
+        <li>
+          <a href="融资产品-收融易-融资记录.html" class="tabs-btn tab-disabled" >融资记录</a>
+        </li>
+        <li class="active">
+          <a href="融资产品-收融易-标的物管理.html" class="tabs-btn tab-disabled">标的物管理</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="table-wrap">
+        <h5 class="fn-mb-10">
+            标的物信息
+        </h5>
+        <div class="table-wrap fn-mb-20">
+            <table class="table border-bottom inverse table-view">
+                <tbody>
+                <tr>
+                    <th>标的物编号</th>
+                    <td>42349702983989237049</td>
+                    <th>审核状态</th>
+                    <td>融资中</td>
+
+                </tr>
+                <tr>
+                    <th>应收账编号</th>
+                    <td>65685629545656</td>
+                    <th>交易合同编号</th>
+                    <td>4513452346234</td>
+                </tr>
+                <tr>
+                    <th>应收账金额</th>
+                    <td>400.00 元</td>
+                    <th>质押率</th>
+                    <td>8%</td>
+                </tr>
+                <tr>
+                    <th>应收账债务人</th>
+                    <td>阿里巴巴</td>
+                    <th>应收账生成日</th>
+                    <td>2010-10-20</td>
+                </tr>
+                <tr>
+                    <th>应收账到期日</th>
+                    <td>2014-12-21</td>
+                    <th>应收账期限</th>
+                    <td>180 天</td>
+                </tr>
+                <tr>
+                    <th>收款人账户名称</th>
+                    <td colspan="3">李丽</td>
+                </tr>
+                <tr>
+                    <th>收款人银行账号</th>
+                    <td colspan="3">
+                        招商银行
+                        &nbsp;|&nbsp;
+                        6220 0000 0000 0000
+                    </td>
+                </tr>
+                <tr>
+                    <th>所属省市</th>
+                    <td colspan="3">广东省广州市</td>
+                </tr>
+                <tr>
+                    <th>分支行</th>
+                    <td colspan="3">体育西路支行</td>
+                </tr>
+                <tr>
+                    <th>付款人账户名称</th>
+                    <td colspan="3">耀明</td>
+                </tr>
+                <tr>
+                    <th>付款人银行账号</th>
+                    <td colspan="3">
+                        招商银行
+                        &nbsp;|&nbsp;
+                        6220 0000 0000 0000
+                    </td>
+                </tr>
+                <tr>
+                    <th>附件</th>
+                    <td colspan="3"><a href="###" class="link-standard">查看附件</a></td>
+                </tr>
+                <tr>
+                    <th>备注</th>
+                    <td colspan="3">xxx</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="text-align-center plural-btns fn-mt-40">
+        <button type="button" class="btn primary" onclick="location.href='融资产品-收融易-标的物管理-确认标的物-确认成功页.html'">确认信息无误</button>
+        <a href="融资产品-收融易-标的物管理.html" class="btn links">返回</a>
+    </div>
+
+
+{% endblock %}
+
+

@@ -1,0 +1,141 @@
+{% extends "_layout/wrapper.html" %}
+
+{% block newNav %}
+{{ navigatorNew.theNav('实名认证') }}
+{% endblock %}
+
+{# content内容 #}
+{% block content %}
+
+    {# 步骤 #}
+    {{ Step.newFourSteps(step='pass3',text1='填写基本信息',text2='身份验证',text3='企业安全验证',text4='提交结果') }}
+
+    {# 基本信息 #}
+	<div class="form-frame fn-mb-10">
+        <div class="form-title">
+			企业对公账户确认
+		</div>
+        <h3 class="text-align-center fn-pa-30">请在 <span class="error-FontColor1">48小时</span> 以内，通过<span class="error-FontColor1">网上银行</span>或<span class="error-FontColor1">银行柜台</span>，使用您的对公账户向指定收款账户支付验证金 <b class="error-FontColor1 fs-24">0.10</b> 元。</h3>
+        <div class="two-table-inline">
+            <div class="table-wrap">
+                <table class="garp-table">
+                    <colgroup>
+                        <col style="width: 100px;">
+                        <col>
+                    </colgroup>
+                    <thead>
+                    <th colspan="2" class="green-head">
+                        你的对公账户
+                    </th>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th>
+                            账户名称
+                        </th>
+                        <td>
+                            广东亿达有限公司
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            开户行
+                        </th>
+                        <td>
+                            招商银行
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            银行账号
+                        </th>
+                        <td>
+                            1209 0930 1510 603
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            分支行
+                        </th>
+                        <td>
+                            北京分行宣武门支行
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="ingarp">
+                >
+            </div>
+            <div class="table-wrap">
+                <table class="garp-table">
+                    <colgroup>
+                        <col style="width: 100px;">
+                        <col>
+                    </colgroup>
+                    <thead>
+                    <th colspan="2" class="orange-head">
+                        你的对公账户
+                    </th>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th>
+                            账户名称
+                        </th>
+                        <td>
+                            广东亿达有限公司
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            开户行
+                        </th>
+                        <td>
+                            招商银行
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            银行账号
+                        </th>
+                        <td>
+                            1209 0930 1510 603
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            分支行
+                        </th>
+                        <td>
+                            北京分行宣武门支行
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="text-align-center fn-pa-20">
+            <ul class="inline-block text-align-left viceText-FontColor">
+                <li>
+                    若超时支付或公司名和对公账户开户名不一致，验证失败。
+                </li>
+                <li>
+                    本平台不收取任何手续费，如产生手续费等，由发卡行收取。
+                </li>
+            </ul>
+        </div>
+        <div class="text-align-center">
+            <div class="btn-with-viceLink text-align-center plural-btns">
+                <button type="button" class="btn primary">确认信息无误</button>
+                <a href="###" class="btn-vicelink">修改对公账户</a>
+            </div>
+        </div>
+	</div>
+
+{% endblock %}
+
+{% block jsPage %}
+{% endblock %}
+
+

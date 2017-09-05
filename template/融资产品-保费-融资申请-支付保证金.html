@@ -1,0 +1,267 @@
+{% extends "_layout/wrapper.html" %}
+{# content内容 #}
+{% block content %}
+
+    {# 菜单导航 #}
+    {{ navigator.current('nav4') }}
+
+    <!-- tab -->
+    <div class="tabs-wrap type1 fn-mb-10">
+      <ul class="tabs">
+        <li>
+          <a href="融资产品-保费-融资记录.html" class="tabs-btn tab-disabled">融资记录</a>
+        </li>
+          <li>
+                <a href="融资产品-保费-车险记录.html" class="tabs-btn tab-disabled">车险记录</a>
+            </li>
+        <li class="active">
+          <a href="javascript:;void(0)" class="tabs-btn tab-disabled">融资申请</a>
+        </li>
+          <li>
+              <a href="融资产品-保费-还款计划.html" class="tabs-btn tab-disabled">还款计划</a>
+          </li>
+          <li>
+              <a href="融资产品-保费-还款记录.html" class="tabs-btn tab-disabled">还款记录</a>
+          </li>
+      </ul>
+    </div>
+
+    {# 步骤 #}
+	{{ Step.foursteps('pass1','支付保证金','填写信息','确认信息','申请成功') }}
+
+    <div class="form-frame fn-mb-10">
+
+        <div class="form-layer1">
+            <div class="form-layer2">
+                <form autocomplete="off">
+
+                    {# 投保编号 #}
+					<div class="form-group">
+                        <label class="form-control-label">
+                            <span>投保编号</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <input type="text" class="form-control" value="">
+                        </div>
+                    </div>
+
+                    {# 车险保费 #}
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            <span>商业车险保费</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <input type="text" class="form-control" value="">
+                            <div class="form-control-tools-link default-FontColor">元 <span class="viceText-FontColor">（不含交强险保费和车船税）</span></div>
+                        </div>
+                    </div>
+
+                    {# 保证金费率 #}
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            <span>保证金费率
+                            </span>
+                            <em>：
+                            </em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <div class="form-control-data">
+                                30%
+                            </div>
+                        </div>
+                    </div>
+
+                    {# 保证金 #}
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            <span>保证金
+                            </span>
+                            <em>：
+                            </em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <div class="form-control-data">
+                                <b class="warning-FontColor">0.00</b>&nbsp;元
+                            </div>
+                        </div>
+                    </div>
+
+                    {# 履约险编号 #}
+					<div class="form-group">
+                        <label class="form-control-label">
+                            <span>履约险编号</span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <input type="text" class="form-control" value="">
+                        </div>
+                    </div>
+
+                    {# 履约险投保费率（年化） #}
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            <span>履约险投保费率（年化）
+                            </span>
+                            <em>：
+                            </em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <div class="form-control-data">
+                                2.00%
+                            </div>
+                        </div>
+                    </div>
+
+                    {# 履约险投保金额 #}
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            <span>履约险投保金额
+                            </span>
+                            <em>：
+                            </em>
+                        </label>
+                        <div class="form-control-wrap">
+                            <div class="form-control-data">
+                                <b class="warning-FontColor">0.00</b>&nbsp;元
+                            </div>
+                        </div>
+                    </div>
+
+                    {# 附件上传 #}
+                    <div class="form-group">
+                        <label class="form-control-label">
+                            <span>附件上传
+                            </span>
+                            <em>：</em>
+                        </label>
+                        <div class="form-control-data form-control-check">
+                            <button class="btn small-btn secondary">点击上传</button>
+                        </div>
+                    </div>
+
+                    <!-- 判断申请人绑定账户不是招行的，出以下这陀-->
+                    <div id="notForCMB">
+                        {# 应付金额 #}
+                        <div class="form-group">
+                            <label class="form-control-label">
+                                <span>应付金额
+                                </span>
+                                <em>：
+                                </em>
+                            </label>
+                            <div class="form-control-wrap">
+                                <div class="form-control-data">
+                                    <b class="warning-FontColor">0.00</b>&nbsp;元
+                                </div>
+                                <p class="viceText-FontColor">
+                                    请进行网上银行支付，支付成功后可进行融资申请。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 申请人绑定账户是招行的，出这陀-->
+                    <!--<div id="forCMB">
+                        {# 应付金额 #}
+                        <div class="form-group">
+                            <label class="form-control-label">
+                                <span>应付金额
+                                </span>
+                                <em>：
+                                </em>
+                            </label>
+                            <div class="form-control-wrap">
+                                <div class="form-control-data">
+                                    <b class="warning-FontColor">0.00</b>&nbsp;元
+                                </div>
+                                <p class="viceText-FontColor">
+                                    请进行网上银行支付，支付成功后可进行融资申请。
+                                </p>
+                            </div>
+                        </div>
+                        {# 您的代扣账户 #}
+                        <div class="form-group">
+                            <label class="form-control-label">
+                                <span>您的代扣账户
+                                </span>
+                                <em>：
+                                </em>
+                            </label>
+                            <div class="form-control-wrap">
+                                <div class="form-control-data">
+                                    <span class="bank-icon icon-cmb" title="招商银行"></span>
+                                    <span class="form-control-bank-card">招商银行&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;尾号1234</span>
+                                </div>
+                            </div>
+                        </div>
+                        {# 绑定手机号 #}
+					    <div class="form-group">
+                            <label class="form-control-label">
+                                <span>绑定手机号</span>
+                                <em>：</em>
+                            </label>
+                            <div class="form-control-wrap">
+                                <input type="text" class="form-control" value="13920886544" readonly>
+                            </div>
+                        </div>
+                        {# 验证码 #}
+                        <div class="form-group">
+                            <label class="form-control-label">
+                                <b>* </b>
+                                <span>输入验证码 </span>
+                                <em>: </em>
+                            </label>
+                            <div class="form-control-wrap">
+                                <div class="form-control-verify">
+                                    <input type="text" class="form-control">
+                                    <button class="btn form-control-verify-btn">
+                                        获取验证码 
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        {# 支付密码 #}
+					    <div class="form-group">
+                            <label class="form-control-label">
+                                <span>支付密码</span>
+                                <em>：</em>
+                            </label>
+                            <div class="form-control-wrap">
+                                <input type="password" class="form-control">
+                            </div>
+                        </div>
+                    </div>-->
+
+                    <div class="form-group">
+                        <div class="form-control-wrap text-align-left plural-btns">
+                            <a href="####" class="btn primary" id="j-btn">确认支付</a>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+	</div>
+    
+
+{% endblock %}
+
+{% block jsPage %}
+<script>
+    $(function(){
+        $('#j-btn').on('click', function(event) {
+            event.preventDefault();
+            confirmModalLayer({
+                title: '请确认融资保费已剔除交强险和车船税！',
+                callback: function(){
+                    // 跳转到处理页面
+                    location.href = '融资产品-保费-融资申请-支付保证金-收银台.html';
+                }
+            });
+        })
+    })
+</script>
+{% endblock %}

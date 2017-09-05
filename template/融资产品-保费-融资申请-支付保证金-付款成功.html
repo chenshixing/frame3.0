@@ -1,0 +1,55 @@
+{% extends "_layout/wrapper.html" %}
+
+{# content #}
+{% block content %}
+    
+    {# 菜单导航 #}
+    {{ navigator.current('nav4') }}
+    
+    <!-- tab -->
+    <div class="tabs-wrap type1 fn-mb-10">
+      <ul class="tabs">
+        <li>
+          <a href="融资产品-保费-融资记录.html" class="tabs-btn tab-disabled">融资记录</a>
+        </li>
+          <li>
+                <a href="融资产品-保费-车险记录.html" class="tabs-btn tab-disabled">车险记录</a>
+            </li>
+        <li class="active">
+          <a href="javascript:;void(0)" class="tabs-btn tab-disabled">融资申请</a>
+        </li>
+          <li>
+              <a href="融资产品-保费-还款计划.html" class="tabs-btn tab-disabled">还款计划</a>
+          </li>
+          <li>
+              <a href="融资产品-保费-还款记录.html" class="tabs-btn tab-disabled">还款记录</a>
+          </li>
+      </ul>
+    </div>
+
+    {# 步骤 #}
+	{{ Step.foursteps('pass1','支付保证金','填写信息','确认信息','申请成功') }}
+
+    <div class="notice-wrap success">
+        <div class="notice-box">
+            <span class="notice-img"></span>
+            <h3>车险保证金支付申请已提交！
+            </h3>
+            <p>
+                请确保已支付成功，如支付失败本次融资申请将不受理
+            </p>
+            <br />
+            <a href="融资产品-保费-融资申请-填写融资资料.html" class="btn primary">
+                发起融资
+            </a>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block jsPage %}
+    <script>
+    </script>
+{% endblock %}
+
+

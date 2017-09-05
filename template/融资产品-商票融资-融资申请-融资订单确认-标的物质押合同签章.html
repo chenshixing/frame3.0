@@ -1,0 +1,101 @@
+{% extends "_layout/layout.html" %}
+
+{% block stylePage %}
+<style>
+    body{ min-width: 100%; overflow-x: auto; }
+</style>
+{% endblock %}
+
+{# content内容 #}
+{% block body %}
+    <div class="seal-page">
+        <div class="text-align-center seal-pdf">
+            <div id="PDFCtrlPlaceHolder" style="width: 100%; height: 100%;">
+                <!-- 插件自动打开 pdf -->
+                <a href="{{ static }}/images/preview.pdf" class="media"></a>
+            </div>
+        </div>
+        <div class="seal-btn-wrap seal-btn-fixed">
+            <div class="seal-btn">
+                <div class="text-align-center">
+                    <button type="button" class="btn" id="j-btn" disabled>我已阅读并同意上述内容</button>
+                    <button type="button" class="btn primary" style="display:none" id="j-btn-back">返回</button>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block jsPage %}
+<script src="{{ static }}/js/jquery.media.js"></script>
+<script>
+    // 判断是否在 iframe 嵌套容器内
+    var pWindow = parent === this ? window : this.parent;
+    var countTime = null;
+
+    // 设置合同容器高度
+    function setPDFHeight() {
+        var viewHeight = parent.$(pWindow).height();
+        var $pdf = $('.seal-pdf');
+        $pdf.css({ height: viewHeight * 0.8 +'px' });
+    }
+
+    // 倒计时激活按钮
+    function countDownActiveBtn(n) {
+        clearTimeout(countTime);
+        countTime = setTimeout(function(){
+            $('#j-btn').prop('disabled', !1).addClass('primary')
+        }, n * 1e3);
+    }
+
+    // hook
+    function hideModal() {}
+
+    // 切换按钮
+    function toggleButton() {
+        // 隐藏
+        $('#j-btn').hide();
+        // 显示返回
+        $('#j-btn-back').show();
+    }
+
+    // 页面布局初始化
+    $(function() {
+        var url = location.href;
+        var hash = location.hash;
+        // 是否预览
+        var isPreview = url.indexOf('preview=1') > -1;
+        if(url.indexOf('preview=c1') > -1 && hash.indexOf('check1') > -1) isPreview = true;
+        if(url.indexOf('preview=c2') > -1 && hash.indexOf('check2') > -1) isPreview = true;
+
+        // 设置 pdf 容器高度
+        setPDFHeight();
+        // 10s后激活按钮
+        countDownActiveBtn(1);
+        // 点击按钮
+        $('#j-btn').on('click', function() {
+            pWindow.hideModal(hash);
+            // 切换按钮
+            toggleButton();
+        });
+
+        // 返回按钮
+        $('#j-btn-back').on('click', function() {
+            pWindow.hideModal();
+        });
+
+        // 已是签署,预览方式
+        isPreview && toggleButton();
+
+        // pdf预览
+        var $holder = $('#PDFCtrlPlaceHolder');
+        if ($.browser.pdf) {
+            $('.media').media({width: $(window).width(), height: $holder.height() });
+        } else {
+            $('.seal-btn-wrap').hide();
+            $holder.html('<div class="text-align-center fn-pt-30 fn-pb-20"><img src="{{ static }}/images/error-pic.jpg" alt="提示" /><h3>很抱歉,暂时不能提供预览!您尚未安装PDF 阅读器及相关插件</h3><h5 class="fn-mt-15">您已安装了Adobe Reader? <a href="javascript:parent.location.reload();" class="link-standard">立即刷新</a></h5><p class="fn-mt-20"><a href="https://get.adobe.com/cn/reader/" target="_blank" class="btn primary">立即下载 Adobe Reader</a></a></p></div>');
+        }
+
+    });
+</script>
+{% endblock %}

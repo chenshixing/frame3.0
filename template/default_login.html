@@ -1,0 +1,299 @@
+{% extends "_layout/default_login_layout.html" %}
+{# content内容 #}
+{% block bodyClass %}
+class="login-body"
+{% endblock %}
+{% block content %}
+    <div class="default-login-wrap">
+        
+        <!-- head -->
+        <div class="default-login-head">
+            <div class="default-login-main-wrap">
+                <div class="eaccount-logo-wrap">
+                    <a href="default_login.html">
+                        <img src="{{ static }}/images/eaccountlogo.png" alt=""/>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- body -->
+        <div class="default-login-bg-wrap">
+            <div class="default-login-main-wrap in-bg-wrap">
+                <div class="default-login-form-box">
+
+                    <div class="login-tab-box">
+                        <ul class="tabs">
+                            <li class="active">
+                                <a href="#ttp1" data-toggle="tab">个人用户
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#ttp2" data-toggle="tab">企业用户
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tabs-content">
+                        <div class="tabs-panel active" id="ttp1">
+                            <div class="default-login-remind-box">
+                                <i class="icon-error"></i>
+                                仅支持IE8以上版本的浏览器，请切换浏览器！
+
+                            </div>
+
+                            <form>
+                                <div class="theform">
+                                    <div class="formcase turename">
+                                        <input type="text" class="form-control formcass" placeholder="真实姓名" disabled/>
+                                        <!--<a href="###" class="link-standard download">请点击下载并安装安全认证控件</a>-->
+                                    </div>
+                                    <div class="formcase username">
+                                        <input type="text" class="form-control formcass" placeholder="用户名"/>
+                                    </div>
+                                    <div class="formcase password">
+                                        <input type="password" class="form-control formcass" placeholder="登录密码"/>
+                                    </div>
+                                    <div class="formcase vrcode">
+                                        <input type="text" class="form-control formcass" placeholder="验证码"/>
+                                        <a href="javascript:;void(0)">
+                                            <img src="{{ static }}/images/yzm.jpg"/>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="fn-ml-20 fn-mr-20 fn-mb-15 fn-pt-10" >
+                                    <button type="button" class="btn primary  j-submit-btn" style="display: block; width: 100%;">登录</button>
+                                </div>
+                                <div class="fn-ml-20" >
+                                    <a href="###" class="link-standard" >新用户注册</a>
+                                    <!-- 系统检测到控件不符合条件时-->
+                                    <div class="tooltips-icon login-tooltips" style="display: none;" >
+                                        新用户注册
+                                        <div class="tooltips">
+                                            仅支持IE8以上版本的浏览器，请切换浏览器！
+                                            <span class="tips-arrow-border"></span>
+                                            <span class="tips-arrow"></span>
+                                        </div>
+                                    </div>
+                                    &nbsp;|&nbsp;
+                                    <a href="核身-法人异步核身-法人验证邀请登录.html" class="link-standard">企业法定代表人验证入口</a>
+                                    <div class="tooltips-icon login-tooltips login-tooltips2">
+                                        <img src="{{static}}/images/default-login-tooltips.png" alt=""/>
+                                        <div class="tooltips">
+                                            如您收到企业实名认证验证邀请，可使用此功能
+                                            <span class="tips-arrow-border"></span>
+                                            <span class="tips-arrow"></span>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+                            </form>
+                            
+                        </div>
+                        <div class="tabs-panel" id="ttp2">
+                            <div class="default-login-remind-box">
+                                <i class="icon-error"></i>
+                                用户信息/验证码/登录密码错误
+                            </div>
+
+                            <form>
+                                <div class="theform">
+                                    <div class="formcase turename">
+                                        <input type="text" class="form-control formcass" placeholder="企业名称" disabled/>
+                                        <!--<a href="###" class="link-standard download">请点击下载并安装安全认证控件</a>-->
+                                    </div>
+                                    <div class="formcase username">
+                                        <input type="text" class="form-control formcass" placeholder="用户名"/>
+                                    </div>
+                                    <div class="formcase password">
+                                        <input type="password" class="form-control formcass" placeholder="登录密码"/>
+                                    </div>
+                                    <div class="formcase vrcode">
+                                        <input type="text" class="form-control formcass" placeholder="验证码"/>
+                                        <a href="javascript:;void(0)">
+                                            <img src="{{ static }}/images/yzm.jpg"/>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="fn-ml-20 fn-mr-20 fn-mb-15 fn-pt-10" >
+                                    <button type="button" class="btn primary  j-submit-btn" style="display: block; width: 100%;">登录</button>
+                                </div>
+                                <div class="fn-ml-20" >
+                                    <a href="###" class="link-standard" >新用户注册</a>
+                                    <!-- 系统检测到控件不符合条件时-->
+                                    <div class="tooltips-icon login-tooltips" style="display: none;" >
+                                        新用户注册
+                                        <div class="tooltips">
+                                            仅支持IE8以上版本的浏览器，请切换浏览器！
+                                            <span class="tips-arrow-border"></span>
+                                            <span class="tips-arrow"></span>
+                                        </div>
+                                    </div>
+                                    &nbsp;|&nbsp;
+                                    <a href="核身-法人异步核身-法人验证邀请登录.html" class="link-standard">企业法定代表人验证入口</a>
+                                    <div class="tooltips-icon login-tooltips login-tooltips2">
+                                        <img src="{{static}}/images/default-login-tooltips.png" alt=""/>
+                                        <div class="tooltips">
+                                            如您收到企业实名认证验证邀请，可使用此功能
+                                            <span class="tips-arrow-border"></span>
+                                            <span class="tips-arrow"></span>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 提示审核 -->
+    <div class="layer-bg" id="msg-tip">
+        <div class="layer-wrap">
+            <div class="layer">
+                <div class="layer-title">
+                    <h3>提示</h3>
+                </div>
+                <div class="notice-wrap info">
+                    <div class="notice-box">
+                        <span class="notice-img"></span>
+                        <h3 class="fn-mt-25">
+                            您的账号正在审核中,请耐心等待!
+                        </h3>
+                        <div class="fn-mt-50">
+                            <button type="button" class="layer-btn btn primary" data-fn="ok">确定</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 提示审核 -->
+    <div class="layer-bg" id="select-business">
+        <div class="layer-wrap">
+            <div class="layer">
+                <div class="layer-title layer-title-border clearfix">
+                    <h3 class="float-left">请选择业务</h3>
+                    <a href="javascript:;void(0)" class="default-FontColor float-right fs-20" data-fn="cancel">X</a>
+                </div>
+                <div class="layer-content">
+                    <ul class="business-list">
+                        <!-- data-cid 渠道 id -->
+                        <li title="温州万科公积金过桥贷" data-cid="1">
+                            温州万科公积金过桥贷
+                        </li>
+                        <li title="温州万科公积金过桥贷" data-cid="2">
+                            公积金过桥贷
+                        </li>
+                        <li title="温州万科公积金过桥贷" data-cid="3">
+                            温州万科贷
+                        </li>
+                        <li title="温州万科公积金过桥贷" data-cid="4">
+                            万科公积金过桥贷
+                        </li>
+                        <li title="温州万科公积金过桥贷" data-cid="5">
+                            温州万科公积金过桥贷
+                        </li>
+                        <li title="温州万科公积金过桥贷" data-cid="6">
+                            公积金过桥贷
+                        </li>
+                        <li title="温州万科公积金过桥贷"  data-cid="7">
+                            温州万科贷
+                        </li>
+                        <li title="温州万科公积金过桥贷" data-cid="8">
+                            万科公积金过桥贷
+                        </li>
+                    </ul>
+                    <div class="layer-buttons">
+                        <button type="button" class="layer-btn primary btn layer-btn-sure">确定</button>
+                        <!--<button type="button" class="layer-btn layer-btn-secondary" data-fn="cancel">取消</button>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--公告弹层-->
+<div class="modal-background display-none in" tabindex="-1" role="dialog" id="bankModal" style="display: none">
+    <div class="modal-layer">
+        <div class="modal-position">
+            <div class="modal-wrap">
+                <div class="modal-head">
+                    系统公告
+                </div>
+                <div class="modal-body">
+                    尊敬的客户： <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;您好！ <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;为向您提供更优质的客户服务，系统将于2016年7月6日23:00至7月7日06:00进行升级维护，届时将临时暂停相关功能。不便之处，敬请谅解！ <br>
+                    <br>
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如有疑问，请您及时与我司联系。 <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;感谢您对我司工作的理解和支持！ <br>
+
+                    <div class="text-align-right fn-pt-30">
+                        广东钱途互联商务服务有限公司 <br>
+                        2016年7月6日
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block jsPage %}
+<script src="{{ static }}/js/layer.js"></script>
+    <script>
+        $(function() {
+            // 业务单选
+            var $bList = $('.business-list');
+            var cid = null;
+            // 点击选择业务
+            $bList.on('click', 'li', function() {
+                // 高亮选择项
+                $(this).addClass('active').siblings().removeClass('active');
+                // 获取当前选择渠道号
+                cid = $(this).attr('data-cid');
+            });
+
+            // 监听按钮
+            $('#select-business').on('btn.layer', function(e, obj) {
+               var self = $(obj);
+                console.log(self,self.is('.layer-btn-sure'));
+                if(self.is('.layer-btn-sure')) { // 确定按钮
+                    if($bList.find('.active').length) {
+                        if(cid !== null) location.href='融资产品-商票融资-融资记录.html?cid='+cid;
+                    } else { // 没有选择
+                        alert('请先选择业务');
+                    }
+                }
+            });
+
+            $('.j-submit-btn').on('click', function() {
+                // todo: 测试代码
+                var rand = Math.random() > 0.5;
+                if(rand) { // 随机
+                    // 显示账号审核中
+                    $('#msg-tip').layer();
+                } else {
+                    $('#select-business').layer();
+                }
+            });
+        })
+    </script>
+{% endblock %}
+

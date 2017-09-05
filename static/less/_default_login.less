@@ -1,0 +1,450 @@
+/*!
+* @project: 融资标准版项目通用登录页面独立样式 v1.0
+* @author : ray <siwei.dai@frontpay.cn>
+* @date   : 2016-03-02
+*/
+
+@height-default-login-head: 72px;
+@bgColor-default-login-head: #fff;
+@bgColor-default-login-bg: #7cb4e8;
+@width-default-login-main-wrap: 1200px;
+
+.default-login-wrap {
+    position: relative;
+}
+
+.default-login-main-wrap {
+    width: @width-default-login-main-wrap;
+    height: @height-default-login-head;
+    margin: 0 auto;
+    position: relative;
+
+    &.in-bg-wrap {
+        background: url("@{images-url}default_login_bgimg.png") center center no-repeat;
+        position: relative;
+        height: 100%;
+    }
+}
+
+.default-login-head {
+    background-color: @bgColor-default-login-head;
+
+    .eaccount-logo-wrap {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        margin-top: -((@height-default-login-head * 0.8)/2);
+
+        > a > img {
+            display: block;
+            border: none;
+            outline: none;
+            max-height: @height-default-login-head * 0.8;
+        }
+    }
+}
+
+.default-login-bg-wrap {
+    //background-color: @bgColor-default-login-bg;
+    background: -webkit-linear-gradient(left, #fd5067 , #fd664c); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #fd5067, #fd664c); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #fd5067, #fd664c); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #fd5067 , #fd664c); /* 标准的语法 */
+
+    filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#fd5067,endcolorstr=#fd664c,gradientType=1);  /*ie8,ie9 滤镜*/
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: @height-default-login-head;
+    bottom: @height-default-login-head - 1px;
+}
+
+.default-login-form-box {
+    width: 360px;
+    height: 440px;
+    background: @base-BgColor;
+    position: absolute;
+    top: 50%;
+    right: 130px;
+    margin-top: -220px;
+    .login-tooltips{
+        width: 60px;
+        border: none;
+        background: none;
+        margin: 0;
+        padding: 0;
+        .tooltips{
+            left: -100px;
+            color: #ff8587;
+            border-color: #fe8831;
+            .tips-arrow-border{
+                left: 119px;
+                border-top-color: #fe8831;
+            }
+            .tips-arrow{
+                left: 120px;
+            }
+        }
+    }
+    .login-tooltips2{
+        width: 25px;
+        margin-top: -3px;
+        .tooltips{
+            left: -118px;
+        }
+    }
+}
+
+.login-tab-box {
+    position: relative;
+
+    > ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        .clearfix();
+
+        > li {
+            width: 50%;
+            float: left;
+
+            > a {
+                display: block;
+                background: -webkit-linear-gradient(#f3f6fa, #dbdcdd); /* Safari 5.1 - 6.0 */
+                background: -o-linear-gradient(#f3f6fa, #dbdcdd); /* Opera 11.1 - 12.0 */
+                background: -moz-linear-gradient(#f3f6fa, #dbdcdd); /* Firefox 3.6 - 15 */
+                background: linear-gradient(#f3f6fa, #dbdcdd); /* 标准的语法 */
+
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f6fa', endColorstr='#dbdcdd',GradientType=0 );  /*ie8,ie9 滤镜*/
+
+                -moz-box-shadow:1px 1px 1px #fff inset;
+                -webkit-box-shadow:1px 1px 1px #fff inset;
+                box-shadow:0px 1px 1px #fff inset;
+
+                border: 1px solid #dedede;
+                text-align: center;
+                color:@base-FontColor;
+                height: 46px;
+                line-height: 46px;
+                font-size: 18px;
+            }
+
+            &.active {
+                
+                > a {
+                    background: @base-BgColor;
+                    color: @heading-FontColor;
+                    border: none;
+                    filter: none;
+                }
+            }
+        }
+    }
+}
+
+.default-login-remind-box {
+    margin: 15px 0 0 0;
+    background-color: #fff8e2;
+    position: relative;
+    padding: 8px 8px 8px 45px;
+    color: #ff8587;
+    font-size: 14px;
+    line-height: @line-height-base;
+
+    > i {
+        color: #ff8587;
+        position: absolute;
+        top: 6px;
+        left: 18px;
+        font-size: 22px;
+    }
+}
+
+.theform {
+    //border: 1px solid #dfe0e1;
+    margin: 15px 20px 0 20px;
+    //padding: 0 12px;
+    background-color: #fff;
+
+    > .formcase {
+        border: 1px solid #dcdcdc;
+        position: relative;
+        margin: 0 0 10px 0;
+
+        // 下载控件
+        .download {
+            position: absolute;
+            top: 0;
+            left: 29px;
+            height: 40px;
+            width: 210px;
+            line-height: 40px;
+            font-size: @base-FontSize;
+            background: #fff;
+        }
+
+        &.turename {
+            background: url("@{images-url}default-login-icon-1.png") #fff 10px center no-repeat;
+        }
+
+        &.username {
+            background: url("@{images-url}default-login-icon-2.png") #fff 10px center no-repeat;
+        }
+
+        &.password {
+            background: url("@{images-url}default-login-icon-3.png") #fff 10px center no-repeat;
+        }
+
+        &.vrcode {
+            background: url("@{images-url}default-login-icon-4.png") #fff 10px center no-repeat;
+            position: relative;
+            width: 220px;
+
+            > a {
+                position: absolute;
+                width: 40%;
+                height: 30px;
+                top: 5px;
+                right: -100px;
+
+                > img {
+                    .square(100%);
+                    border: none;
+                    outline: none;
+                }
+            }
+
+            > .formcass {
+                padding-right: 110px;
+            }
+        }
+
+
+        > .formcass {
+            border: none;
+            background-color: transparent;
+            padding-left: 50px;
+            /*&[disabled] {
+                background-color: #f5f5f5;
+            }*/
+        }
+
+        > label.form-placeholder {
+                font-size: 14px;
+                line-height: @line-height-base;
+                color: #999;
+                position: absolute;
+                top: 10px;
+                left: 50px;
+        }
+    }
+}
+
+.checkcheck {
+    display: block;
+    padding: 8px 0 8px 40px;
+    position: relative;
+    font-size: 14px;
+    line-height: @line-height-base;
+    color: #333;
+
+    > input[type='checkbox'] {
+        position: absolute;
+        top: 11px;
+        left: 20px;
+    }
+}
+
+
+// 弹层
+.layer{
+    &-bg{
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: table;
+        width: 100%;
+        height: 100%;
+        background: url("@{images-url}black50.png");
+        background: rgba(0,0,0,.5);
+        z-index: 8888;
+        text-align: center;
+        transiton: all .5s;
+        visibility: hidden;
+        opacity: 0;
+
+        &-show {
+            visibility: visible;
+            opacity: 1;
+
+            .layer {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    }
+
+    &-wrap {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    margin: 0 auto;
+    width: 600px;
+    min-height: 220px;
+    text-align: left;
+    background: #fff;
+    transition: all .2s ease-out;
+    transform: scale(1.1);
+
+    border: 1px solid #d2d9e3;
+    //box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.05);
+
+    // title
+    &-title {
+        padding: 15px 0;
+        margin: 0 20px;
+
+        &-border{
+            border-bottom: 1px solid #d2d9e3;
+        }
+    }
+
+    &-content {
+        padding: 20px;
+    }
+
+    &-content &-alert {
+        padding: 15px 30px 15px 50px;
+        .clearfix;
+        > i {
+            float: left;
+            margin-right: 20px;
+            font-size: 42px;
+            color: #40c2f0;
+        }
+
+        &-body {
+            padding: 10px 0 0;
+            overflow: hidden;
+            font-size: 18px;
+        }
+    }
+
+    &-buttons {
+        margin-top: 20px;
+        text-align: center;
+        font-size: 0;
+    }
+
+    &-btn {
+        //margin: 0 12px;
+        //padding: 10px;
+        //border: none;
+        //background: #e24d46;
+        //border-radius: 4px;
+        //box-shadow: inset 0px -2px 0px 0px rgba(10, 1, 2, 0.1);
+        //color: #fff;
+        //font-size: 16px;
+        //min-width: 150px;
+
+        &:hover {
+            background-color: lighten(#e24d46, 5%);
+        }
+
+        &-secondary {
+            background-color: #6f6f6f;
+
+            &:hover{
+                background-color: lighten(#6f6f6f, 5%);
+            }
+        }
+    }
+}
+
+
+// 业务列表选择
+.business-list {
+    .reset-list(left, inline, 16px, 48px);
+    .clearfix;
+
+    position: relative;
+    margin-left: -20px;
+
+    > li {
+        margin: 0 0 10px 20px;
+        width: 45%;
+        padding: 0 15px;
+        overflow: hidden;
+        -ms-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        color: @default-FontColor;
+        border: 1px solid #bdbdbd;
+        cursor: pointer;
+        text-align: center;
+        //height: 48px;
+        //line-height: 48px;
+        .rounded(5px);
+        background: #eee;
+
+        &:hover,&.active {
+            color: #ff8587;
+            border-color: #ff8587;
+            background: @base-BgColor;
+        }
+    }
+}
+
+
+//法人异步核身-法人验证邀请登录
+
+.default-login-corporation{
+    .default-login-form-box{
+        height: 360px;
+    }
+    .login-code{
+        position: absolute;
+        top: 43%;
+        left: 243px;
+    }
+    .login-tab-title{
+        height: 46px;
+        line-height: 46px;
+        margin: 0 20px;
+        font-size: @small-FontSize;
+        padding: 10px 0 0 0;
+    }
+    .default-login-main-wrap{
+        &.in-bg-wrap {
+            background: url("@{images-url}default_login_corporation.png") center center no-repeat;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

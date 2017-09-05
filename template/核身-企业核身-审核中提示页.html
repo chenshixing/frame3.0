@@ -1,0 +1,130 @@
+{% extends "_layout/wrapper.html" %}
+
+{% block newNav %}
+{{ navigatorNew.theNav('实名认证') }}
+{% endblock %}
+
+{# content内容 #}
+{% block content %}
+    <div class="notice-wrap info" style="border: none;">
+        <div class="notice-box" style="margin-left: -400px;">
+            <span class="notice-img"></span>
+            <h3>广东亿达有限公司
+            </h3>
+            <p>
+                账号正在审核中，我们将尽快完成审核，结果将以短信通知您。<br>
+                请尽快完成以下认证条件，如需修改信息请联系客服电话：400-106-6698。
+            </p>
+        </div>
+    </div>
+    <div class="cms-wrap-in">
+        <div>
+            <table class="cms-table">
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <tbody>
+                <tr>
+                    <td>
+                        企业基本资料
+                    </td>
+                    <td colspan="3" class="success-FontColor2">
+                        已提交
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        法定代表人认证
+                    </td>
+                    <td class="error-FontColor1">
+                        待认证
+                    </td>
+                    <td colspan="2">
+                        <a href="#" class="link-standard">重新发送短信验证码</a>&nbsp;&nbsp;&nbsp;<span style="color: #ccc;">|</span>&nbsp;&nbsp;&nbsp;<a href="#" class="link-standard">修改接受手机号</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        经办人认证
+                    </td>
+                    <td class="error-FontColor1">
+                        待认证
+                    </td>
+                    <td colspan="2">
+                        <a href="#" class="link-standard">重新发送短信验证码</a>&nbsp;&nbsp;&nbsp;<span style="color: #ccc;">|</span>&nbsp;&nbsp;&nbsp;<a href="#" class="link-standard">修改接受手机号</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        经办人认证
+                    </td>
+                    <td class="error-FontColor1">
+                        未收到小额验证金
+                    </td>
+                    <td colspan="2" style="padding-top: 0;">
+                        <p><b>请在&nbsp;&nbsp;<span class="fs-32 error-FontColor1">47:59:59</span>&nbsp;&nbsp;内完成支付。</b></p>
+
+                        <!--超时状态的文字提示-->
+                        <!--<p style="padding-top: 18px"><b>超过约定时间，系统未收到小额验证金。</b></p>-->
+
+                        <p>如您确定已向下面的指定账户支付 <b>0.1</b> 元，请点击&nbsp;<a href="#" class="link-standard">重新查询</a></p>
+                        <div class="table-wrap fn-mt-10">
+                            <table class="table inverse" style="width: auto">
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                </colgroup>
+                                <thead>
+                                <tr>
+                                    <th>
+                                        账户名称
+                                    </th>
+                                    <th>
+                                        开户行
+                                    </th>
+                                    <th>
+                                        银行账号
+                                    </th>
+                                    <th>
+                                        分支行
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        中金支付有限公司客户备付金
+                                    </td>
+                                    <td>
+                                        招商银行
+                                    </td>
+                                    <td>
+                                        1209 0930 1510 603
+                                    </td>
+                                    <td>
+                                        北京分行宣武门支行
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4" class="text-align-left">
+                                        <p>如对公账户信息有误，请点击&nbsp;<a href="#" class="link-standard">修改对公账户</a></p>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+<div style="border-top: 1px solid #ededed;" class="fn-pt-30">
+    <p>如您想更换账号，请点击&nbsp;<a href="#" class="link-standard">重新登陆</a></p>
+</div>
+{% endblock %}

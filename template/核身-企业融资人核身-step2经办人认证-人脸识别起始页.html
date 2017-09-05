@@ -1,0 +1,200 @@
+{% extends "_layout/wrapper.html" %}
+{# content内容 #}
+{% block content %}
+    
+    <h3 class="fn-pb-20">
+        请完成以下资料填写，以便为您开通融资服务。
+    </h3>
+    
+	{# 步骤 #}
+	{{ Step.foursteps('pass2','完善企业信息','身份验证','企业安全认证','提交结果') }}
+    <div class=" fn-mb-20">
+        <h4 class="fn-mb-20">经办人申请</h4>
+        <div class="step-flows">
+            <ul class="clearfix four-li">
+                <li class="cur">经办人基本信息</li>
+                <li class="cur">经办人其他信息</li>
+                <li class="cur">经办人人脸识别</li>
+                <li>法人验证邀请</li>
+            </ul>
+        </div>
+    </div>
+
+	<div class="form-frame fn-mb-10">
+
+        <div id="videoCase1">
+            <div class="form-title lh-30 clearfix">人脸识别
+                <span class="float-right fn-mr-10 fs-14 default-FontColor">您还可以在PC端进行人脸识别 <a href="#" class="btn primary fn-ml-10 small-btn" id="videoStart" style="width: 90px">开始PC录制</a></span>
+            </div>
+            <div  class="facevr-wrap">
+            <div class="text-align-center">
+                <h3><b>扫描二维码下载APP进行人脸识别</b> </h3>
+                <p class=" fn-pt-30 fs-16 fn-pb-10">请在光线充足情况下验证 <br>应尽量避免光斑、佩戴墨镜、带帽等。</p>
+                <img src="{{static}}/images/code.png" alt="">
+                <p class="fn-pt-10 fn-mb-40">（支持iPhone及Android）</p>
+                <div class="face-text text-align-center">
+                    <p class="fn-mb-10">若您已在APP上完成人脸识别验证 请点击</p>
+                    <button class="secondary btn">已在APP完成人脸识别</button>
+                </div>
+            </div>
+
+            <p class="text-align-center fn-pt-40">
+                <a class="link-standard" href="核身-企业融资人核身-step2经办人认证-完善经办人信息-其他信息.html">
+                    上一步
+                </a>
+                <a href="####" class="link-standard fn-pl-20">已验证，下一步</a>
+            </p>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <div class="facevr-wrap" style="display: none;" id="videoCase2">
+            <div class="text-align-right plural-btns fn-mb-10">
+                <button type="button" class="btn primary small-btn">重新认证</button>
+                <button type="button" class="btn primary small-btn disabled" disabled="disabled">停止</button>
+            </div>
+            <div class="facevr-box-step1 fn-pa-30">
+                <h2 class="fn-pb-20">
+                    请平视前方
+                </h2>
+                <div class="pb-wrap">
+                    <div class="pb-box">
+                        <div class="pb" style="width: 50%;"></div>
+                        <em>剩余时间</em>
+                    </div>
+                </div>
+                <!--<button type="button" class="btn primary fn-mt-20 fn-mb-20" id="videoConfirm">确定</button>-->
+                <div class="fn-mt-30" id="videoConfirm">
+                    <video style="background-color: #f3f3f3; width: 100%;"></video>
+                </div>
+            </div>
+        </div>
+        <div class="facevr-wrap" style="display: none;" id="videoCase3">
+            <div class="facevr-box-step1 fn-pa-30">
+                <h2 class="fn-pb-20">
+                    录制完成
+                </h2>
+                <div class="notice-wrap waiting in-modal">
+                    <div class="notice-box">
+                        <span class="notice-img"></span>
+                        <h3>处理中...
+                        </h3>
+                        <p>
+                            请不要关闭浏览器，系统正在处理中
+                        </p>
+                    </div>
+                </div>
+                <div class="facevr-cut">
+                    <img src="" alt="用户头像" />
+                </div>
+            </div>
+        </div>
+
+	</div>
+
+
+
+<!--AAP完成人脸识别--成功-->
+<div class="modal-background fade display-none" id="successModal" role="dialog">
+    <div class="modal-layer">
+        <div class="modal-position">
+            <div class="modal-wrap">
+                <div class="modal-head">
+                    <button class="modal-close" title="关闭">
+                        <i></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="notice-wrap success in-modal">
+                        <div class="notice-box">
+                            <span class="notice-img"></span>
+                            <h3>您已在APP中完成人脸识别。<br/>请继续完成余下验证。</h3>
+                            <a href="核身-企业融资人核身-step2法人认证-法人认证提醒.html" class="btn primary fn-mt-30">下一步</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--AAP完成人脸识别--失败-->
+<div class="modal-background fade display-none" id="failModal" role="dialog">
+    <div class="modal-layer">
+        <div class="modal-position">
+            <div class="modal-wrap">
+                <div class="modal-head">
+                    <button class="modal-close" title="关闭">
+                        <i></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="notice-wrap error in-modal">
+                        <div class="notice-box">
+                            <span class="notice-img"></span>
+                            <h3>您还未完成人脸识别验证。<br>是否继续验证？</h3>
+                        </div>
+                        <div class="text-align-center margin-top-40px">
+                            <div class="btn-with-viceLink text-align-center plural-btns">
+                                <button type="button" class="btn primary" data-dismiss="modal">重新验证</button>
+                                <a href="###" class="btn-vicelink" data-toggle="modal" data-target="#tipsModal" data-dismiss="modal">跳过，下一步</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--AAP完成人脸识别--失败提示-->
+<div class="modal-background fade display-none" id="tipsModal" role="dialog">
+    <div class="modal-layer">
+        <div class="modal-position">
+            <div class="modal-wrap">
+                <div class="modal-head">
+                    <button class="modal-close" title="关闭">
+                        <i></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="notice-wrap info in-modal">
+                        <div class="notice-box">
+                            <span class="notice-img"></span>
+                            <h3 class="fn-mt-20">这将会影响您的审核结果，您确定跳过此步骤？</h3>
+                        </div>
+                        <div class="text-align-center margin-top-40px">
+                            <div class="btn-with-viceLink text-align-center plural-btns">
+                                <button type="button" class="btn primary" data-dismiss="modal">确定</button>
+                                <a href="###" class="btn-vicelink">取消</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block jsPage %}
+<script>
+	$(function() {
+	    $("#videoStart").click(function () {
+	        $("#videoCase2").show();
+	        $("#videoCase1").hide();
+	    });
+	    $("#videoConfirm").click(function () {
+	        $("#videoCase2").hide();
+	        $("#videoCase3").show();
+	    });
+	})
+</script>
+{% endblock %}
+
+

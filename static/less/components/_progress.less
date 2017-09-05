@@ -1,0 +1,40 @@
+/*
+* 进度条组件
+*/
+.progress {
+  height: 30px;
+  overflow: hidden;
+  background: @bgColor-type2;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+  border: 1px solid #fcfcfc;
+
+  &-bar {
+    float: left;
+    height: 100%;
+    line-height: 30px;
+    color: #fff;
+    text-align: center;
+    background: @domColor2;
+    box-shadow: inset 0 -2px 0 rgba(0,0,0,.15);
+    transition: width .6s ease;
+    min-width: 5%;
+    width: 5%;
+
+    background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+    background-size: 40px 40px;
+  }
+
+  &.active &-bar {
+    animation: progress-bar 2s linear infinite
+  }
+
+  @keyframes progress-bar{
+    from{background-position:40px 0}
+    to{background-position:0 0}
+  }
+
+  &-danger &-bar {
+      background-color: @domColor5;
+  }
+}
